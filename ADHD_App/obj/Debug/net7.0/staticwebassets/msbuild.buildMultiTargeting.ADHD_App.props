@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ADHD_App.props" />
+</Project>
