@@ -20,7 +20,7 @@
     }
 
     .login-button {
-        background-color: light-green;
+        background-color: lightgreen;
     }
 </style>
 <div class="text-center">
@@ -44,3 +44,10 @@
         <button type="submit" class="login-button">Inloggen</button>
     </form>
 </div>
+
+@foreach (var product in Model.Products)
+{
+    <h2>
+        @product.Name
+    </h2>
+}
