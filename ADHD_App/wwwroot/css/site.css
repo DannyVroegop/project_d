@@ -1,22 +1,73 @@
+/* Standaard styling */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+
+
+/* Homepage */
+.intro-text {
+    font-family: Arial;
+    font-size: 15pt;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    padding-top: 5%;
+    margin-bottom: 5%;
+    text-shadow: -2px -2px 0 black
 }
 
-body {
-  margin-bottom: 60px;
+.login-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    width: 450px;
+    height: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+    .login-box form {
+        margin: 20% auto;
+    }
+
+    .login-box h2 {
+        text-align: center;
+    }
+
+    .login-box button {
+        background-color: greenyellow;
+        color: black;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 30%;
+        border: none;
+        border-radius: 20px;
+    }
+
+        .login-box button:hover {
+            background-color: green;
+        }
+
+    .login-box label {
+        display: block;
+        margin-top: 10px;
+    }
+
+/* Registreren */
+.register-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    padding: 20px;
 }
