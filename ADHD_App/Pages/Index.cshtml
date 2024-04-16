@@ -4,6 +4,7 @@
     ViewData["Title"] = "Home page";
 }
 
+
 <div class="intro-text">
     <h2><b>Welkom! log in met je gebruikersnaam en wachtwoord!</b></h2>
 </div>
@@ -19,12 +20,7 @@
         <button type="submit">Inloggen</button>
     </form>
     <p>Ben je nieuw? <a href="Register">Registreer je hier!</a></p>
+    <p>[Tijdelijk]<a href="Profiel"> Profiel bekijken </a></p>
 </div>
 
 
-@foreach (var product in Model.Products)
-{
-    <h2>
-        @product.Name
-    </h2>
-}

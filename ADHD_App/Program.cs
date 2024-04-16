@@ -12,7 +12,7 @@ namespace ADHD_App
             // Add services to the container.
             builder.Services.AddRazorPages();
 
-            builder.Services.AddTransient<JsonFileProductService>();
+            builder.Services.AddTransient<JsonFilePeopleService>();
 
             var app = builder.Build();
 
