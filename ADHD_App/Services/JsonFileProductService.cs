@@ -1,7 +1,11 @@
-﻿using System.Linq.Expressions;
+﻿using System.Diagnostics;
+using System.Linq.Expressions;
 using System.Text.Json;
 using ADHD_App.Models;
 using Microsoft.AspNetCore.Hosting;
+using Newtonsoft.Json;
+using System.IO;
+
 
 namespace ADHD_App.Services
 {
@@ -19,15 +23,25 @@ namespace ADHD_App.Services
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
         }
 
-        public IEnumerable<Product> GetProducts()
+        public Product[] GetProducts()
         {
-            using (var jsonFileReader = File.OpenText(JsonFileName))
+            try
             {
-                return JsonSerializer.Deserialize<Product[]>(jsonFileReader.ReadToEnd(),
-                    new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true
-                    });
+                using (var jsonFileReader = File.OpenText(JsonFileName))
+                {
+
+                    string json = jsonFileReader.ReadToEnd();
+                    Debug.WriteLine("JSON read from file:");
+                    Debug.WriteLine(json);
+                    Product[] product = JsonConvert.DeserializeObject<Product[]>(json);
+                    return product;
+
+                }
+            } catch (Exception ex)
+            {
+                Debug.WriteLine("Error during deserialization: ");
+                Debug.WriteLine(ex.Message);
+                return null;
             }
         }
     }
