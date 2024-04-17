@@ -1,4 +1,45 @@
 ﻿@page
 @model ADHD_App.Pages.HomeModel
 @{
+    ViewData["Title"] = "Home page";
 }
+
+<div class="Home-box">
+    <img src="images/Home.png" style="height: 40px; width: 40px;" />
+    <h2>Home</h2>
+
+    <button type="button" style="height: 40px; width: 200px;" onclick="location.href='http://localhost:5049/Privacy';">
+        <span>
+            <img src="images/Book.png" style="height: 30px; width: 30px;" />
+            School werk
+        </span>
+    </button>
+
+    <button type="button" style="height: 40px; width: 200px;">
+        <span>
+            <img src="images/Book.png" style="height: 30px; width: 30px;" />
+            Agenda
+        </span>
+    </button>
+
+    <button type="button" style="height: 40px; width: 200px;">
+        <span>
+            <img src="images/Book.png" style="height: 30px; width: 30px;" />
+            Profiel
+        </span>
+    </button>
+
+    <button type="button" style="height: 40px; width: 200px;">
+        <span>
+            <img src="images/Book.png" style="height: 30px; width: 30px;" />
+            Pauze
+        </span>
+    </button>
+
+    <button type="button" style="height: 40px; width: 200px;">
+        <span>
+            <img src="images/Book.png" style="height: 30px; width: 30px;" />
+            Log uit
+        </span>
+    </button>
+</div>
