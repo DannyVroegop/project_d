@@ -71,3 +71,16 @@ html {
     height: 500px;
     padding: 20px;
 }
+
+.Home-box {
+    background-color: rgba(7, 39, 244, 0.7);
+    border-radius: 10px;
+    width: 450px;
+    height: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+.home-button{
+    color:rgba(114, 235, 21, 0.7)
+}
