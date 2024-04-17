@@ -94,3 +94,6 @@ D:\Dannyzard\Documents\Informatica\Jaar 2\Semester 2\Project D\ADHD_App\obj\Debu
 D:\Dannyzard\Documents\Informatica\Jaar 2\Semester 2\Project D\ADHD_App\obj\Debug\net7.0\ADHD_App.csproj.Up2Date
 D:\Dannyzard\Documents\Informatica\Jaar 2\Semester 2\Project D\ADHD_App\obj\Debug\net7.0\ADHD_App.genruntimeconfig.cache
 D:\Dannyzard\Documents\Informatica\Jaar 2\Semester 2\Project D\ADHD_App\obj\Debug\net7.0\ref\ADHD_App.dll
+C:\Users\danny\source\repos\project_d\ADHD_App\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\danny\source\repos\project_d\ADHD_App\obj\Debug\net7.0\ADHD_App.csproj.AssemblyReference.cache
+C:\Users\danny\source\repos\project_d\ADHD_App\obj\Debug\net7.0\ADHD_App.csproj.Up2Date

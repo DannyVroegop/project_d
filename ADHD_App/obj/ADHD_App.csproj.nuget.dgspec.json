@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\ADHD_App.csproj": {}
+    "C:\\Users\\danny\\source\\repos\\project_d\\ADHD_App\\ADHD_App.csproj": {}
   },
   "projects": {
-    "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\ADHD_App.csproj": {
+    "C:\\Users\\danny\\source\\repos\\project_d\\ADHD_App\\ADHD_App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\ADHD_App.csproj",
+        "projectUniqueName": "C:\\Users\\danny\\source\\repos\\project_d\\ADHD_App\\ADHD_App.csproj",
         "projectName": "ADHD_App",
-        "projectPath": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\ADHD_App.csproj",
-        "packagesPath": "C:\\Users\\Dannyzard\\.nuget\\packages\\",
-        "outputPath": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\obj\\",
+        "projectPath": "C:\\Users\\danny\\source\\repos\\project_d\\ADHD_App\\ADHD_App.csproj",
+        "packagesPath": "C:\\Users\\danny\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danny\\source\\repos\\project_d\\ADHD_App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dannyzard\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\danny\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
