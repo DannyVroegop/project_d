@@ -1,0 +1,18 @@
+﻿@page
+@model ADHD_App.Pages.AppointmentDetailsModel
+@{
+    ViewData["Title"] = "Afspraak";
+}
+
+<div><h2>Details</h2></div>
+
+<div class="calendar-box">
+    <table>
+        <tr>@Model.app.Name</tr>
+        <tr>@Model.app.Start.ToString("M")</tr>
+        <tr>starts at: @Model.app.Start.ToString("HH:mm")</tr>
+        <tr>ends at: @Model.app.End.ToString("HH:mm")</tr>
+        <tr>@Model.app.Description</tr>
+
+    </table>
+</div>

@@ -1,7 +1,7 @@
 ﻿@page
-@model ADHD_App.Models.Appointment
+@model CalendarModel
 @{
-    ViewData["Calendar"] = "Calendar";
+    ViewData["Title"] = "Calendar";
 }
 
 <div class="intro-text">
@@ -9,5 +9,25 @@
 </div>
 
 <div class="calendar-box">
-    <h3>@Model.Description</h3>
+    @{
+        CalendarModel c = new();
+        c.OnGet();
+    }
+
+        @{
+            foreach (var app in c.Appointments)
+            {
+            <tr style="border:1px solid; border-collapse:collapse; padding:100px">
+                <td><a href= "AppointmentDetails?ID=@app.ID">
+                        <div class="date">
+                            <p>@app.Start.ToString("HH:mm") - @app.End.ToString("HH:mm")</p>
+                            <p>@app.Start.ToString("ddd dd MMM yyyy")</p>
+                        </div>
+                        <p class="appointment-name">@app.Name</p>
+                </a></td>
+            </tr>
+          
+            }
+        }
+
 </div>

@@ -17,6 +17,8 @@ namespace ADHD_App.Models
         public string Email { get; set; }
         public string Phonenumber { get; set; }
 
+        public List<Appointment> Appointments { get; set; }
+
         public override string ToString()
         {
             return JsonSerializer.Serialize<Person>(this);
