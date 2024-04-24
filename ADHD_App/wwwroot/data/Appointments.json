@@ -3,9 +3,9 @@
     "ID": 0,
     "Start": "2024-04-18T15:32:21.5502574+02:00",
     "End": "2024-04-18T16:32:21.5502708+02:00",
-    "Name": "name 0",
-    "Type": "type",
-    "Description": "desc",
+    "Name": "*Naam van de afspraak*",
+    "Type": "*Type van de afspraak",
+    "Description": "*Omschrijving van de afspraak*",
     "EnergyCost": 0
   },
   {
@@ -27,10 +27,10 @@
     "EnergyCost": 0
   },
   {
-    "ID": 2,
-    "Start": "2024-04-18T17:32:21.5502822+02:00",
-    "End": "2024-04-18T18:32:21.5502828+02:00",
-    "Name": "name 2",
+    "ID": 3,
+    "Start": "2024-09-18T17:32:21.5502822+02:00",
+    "End": "2024-09-18T18:32:21.5502828+02:00",
+    "Name": "name 3",
     "Type": "type",
     "Description": "desc",
     "EnergyCost": 0

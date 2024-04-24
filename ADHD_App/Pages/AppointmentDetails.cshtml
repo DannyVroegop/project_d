@@ -4,15 +4,14 @@
     ViewData["Title"] = "Afspraak";
 }
 
-<div><h2>Details</h2></div>
 
-<div class="calendar-box">
+<div class=" Appointment-box">
     <table>
-        <tr>@Model.app.Name</tr>
-        <tr>@Model.app.Start.ToString("M")</tr>
-        <tr>starts at: @Model.app.Start.ToString("HH:mm")</tr>
-        <tr>ends at: @Model.app.End.ToString("HH:mm")</tr>
-        <tr>@Model.app.Description</tr>
-
+        <tr><td><h1>@Model.app.Name </h1></td></tr>
+        <tr><td><a>Date: @Model.app.Start.ToString("M")</a></d></tr>
+        <tr><td><a>starts at: @Model.app.Start.ToString("HH:mm") </a></td></tr>
+        <tr><td><a>ends at: @Model.app.End.ToString("HH:mm")</a></td></tr>
+        <tr><td><a>@Model.app.Description </a></td></tr>
+        <tr><td><button type="button" onclick="btnDelete_Click">Delete</button></td></tr>
     </table>
 </div>

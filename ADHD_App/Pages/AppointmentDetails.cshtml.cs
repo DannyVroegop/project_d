@@ -8,25 +8,45 @@ namespace ADHD_App.Pages
 {
     public class AppointmentDetailsModel : PageModel
     {
-
-        public Appointment app
+        public void RemoveApp()
         {
-            get
+            List<Appointment> apps = JsonAppointments.Loadappointments();
+            foreach (Appointment appointment in apps)
             {
-                List<Appointment> apps = JsonAppointments.Loadappointments();
-                foreach (Appointment app in apps)
+                if (appointment != null)
                 {
-                    if (app.ID == ID)
-                        return app;
+                    if (appointment.ID == app.ID)
+                        apps.Remove(appointment);
                 }
-                return default;
+            }
+            JsonAppointments.WriteAll(apps);
+        }
+        private void btnDelete_Click(object sender, System.EventArgs e)
+        {
+            RemoveApp();
+            Response.Redirect("/Calendar.cshtml/OnGet");
+        }
+
+        public Appointment app{ get; set; }
+
+        public void OnGet(string ID)
+        {
+            int id = Convert.ToInt32(ID);
+            List<Appointment> apps = JsonAppointments.Loadappointments();
+            foreach (Appointment a in apps)
+            {
+                if (a.ID == id)
+                    app = a;
             }
         }
-        public void OnGet()
+
+        [BindProperty(SupportsGet = true)]
+        int _ID { get; set; }
+
+        public void OnPost()
         {
 
+            RemoveApp();
         }
-        [BindProperty(SupportsGet = true)]
-        int ID { get; set; }
     }
 }
