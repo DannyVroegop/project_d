@@ -1,0 +1,14 @@
+[
+  {
+    "Id": "0000",
+    "Username": "Test",
+    "Password": "testwachtwoord",
+    "First_Name": "Terry",
+    "Last_Name": "Test",
+    "Gender": "Man",
+    "Date_of_Birth": "2012-04-23T18:25:43.511Z",
+    "Adress": "ABC 4455EZ",
+    "Email": "Email@hotmail.com",
+    "Phonenumber": "0677448844"
+  }
+]

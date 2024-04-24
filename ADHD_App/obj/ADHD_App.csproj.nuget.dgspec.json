@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Project\\project_d\\ADHD_App\\ADHD_App.csproj": {}
+    "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\ADHD_App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Project\\project_d\\ADHD_App\\ADHD_App.csproj": {
+    "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\ADHD_App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Project\\project_d\\ADHD_App\\ADHD_App.csproj",
+        "projectUniqueName": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\ADHD_App.csproj",
         "projectName": "ADHD_App",
-        "projectPath": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Project\\project_d\\ADHD_App\\ADHD_App.csproj",
-        "packagesPath": "C:\\Users\\soufi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Project\\project_d\\ADHD_App\\obj\\",
+        "projectPath": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\ADHD_App.csproj",
+        "packagesPath": "C:\\Users\\pvspi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\soufi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pvspi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
