@@ -1,5 +1,6 @@
 # Prerequisites
 *.d
+.vs
 
 # Object files
 *.o
@@ -53,3 +54,7 @@ dkms.conf
 /ADHD_App/.vs/ADHD_App/FileContentIndex/8b06309e-8ee8-4074-bab1-0527f85ce972.vsidx
 *.v2
 *.vsidx
+/ADHD_App/.vs/ADHD_App/DesignTimeBuild/.dtbcache.v2
+/ADHD_App/.vs/ADHD_App/v17/.suo
+/ADHD_App/.vs/ADHD_App/v17/DocumentLayout.json
+/ADHD_App/bin/Debug/net7.0/ADHD_App.staticwebassets.runtime.json

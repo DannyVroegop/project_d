@@ -55,19 +55,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\danny\\.nuget\\packages\\": {}
+    "C:\\Users\\Dannyzard\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danny\\source\\repos\\project_d\\ADHD_App\\ADHD_App.csproj",
+      "projectUniqueName": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\ADHD_App.csproj",
       "projectName": "ADHD_App",
-      "projectPath": "C:\\Users\\danny\\source\\repos\\project_d\\ADHD_App\\ADHD_App.csproj",
-      "packagesPath": "C:\\Users\\danny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danny\\source\\repos\\project_d\\ADHD_App\\obj\\",
+      "projectPath": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\ADHD_App.csproj",
+      "packagesPath": "C:\\Users\\Dannyzard\\.nuget\\packages\\",
+      "outputPath": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\danny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dannyzard\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
