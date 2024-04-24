@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DpGMhTWZEdsyFE1Iowpxr+KpVAFYQc/iZT0gDvLK8c0=",
+  "Hash": "QKT3TETwkU/eZuHLYiH4my3bmNadBBqemxPUd7vIRlg=",
   "Source": "ADHD_App",
   "BasePath": "_content/ADHD_App",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\danny\\source\\repos\\project_d\\ADHD_App\\wwwroot\\data\\extra_userinfo.json",
+      "SourceId": "ADHD_App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danny\\source\\repos\\project_d\\ADHD_App\\wwwroot\\",
+      "BasePath": "_content/ADHD_App",
+      "RelativePath": "data/extra_userinfo.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\extra_userinfo.json"
     },
     {
       "Identity": "C:\\Users\\danny\\source\\repos\\project_d\\ADHD_App\\wwwroot\\data\\people.json",

@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\danny\\source\\repos\\project_d\\ADHD_App\\wwwroot\\data\\extra_userinfo.json",
+      "PackagePath": "staticwebassets\\data\\extra_userinfo.json"
+    },
+    {
       "Id": "C:\\Users\\danny\\source\\repos\\project_d\\ADHD_App\\wwwroot\\data\\people.json",
       "PackagePath": "staticwebassets\\data\\people.json"
     },
