@@ -38,7 +38,7 @@ namespace ADHD_App.Services
                         if (user.Id == person.Id)
                         {
                             Debug.WriteLine("User has been found!");
-                            Debug.WriteLine(user);
+                            Debug.WriteLine(user.ProfilePicture);
                             return user;
                         }
                     }
