@@ -21,3 +21,119 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+
+/* Homepage */
+.intro-text {
+    font-family: Arial;
+    font-size: 15pt;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    padding-top: 5%;
+    margin-bottom: 5%;
+    text-shadow: -2px -2px 0 black
+}
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    width: 450px;
+    height: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+    .login-box form {
+        margin: 20% auto;
+    }
+
+    .login-box h2 {
+        text-align: center;
+    }
+
+    .login-box button {
+        background-color: greenyellow;
+        color: black;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 30%;
+        border: none;
+        border-radius: 20px;
+    }
+
+        .login-box button:hover {
+            background-color: green;
+        }
+
+    .login-box label {
+        display: block;
+        margin-top: 10px;
+    }
+
+/* Registreren */
+.register-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+}
+
+.calendar-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 1px;
+    width: 400px;
+    height: 100vh;
+    right: 0px;
+    top: 0;
+    overflow: auto;
+    padding: 20px;
+    text-align: left;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+    .calendar-box .date {
+    border-right: 1px solid #fff;
+    font-weight: 600;
+    max-width: 40%;
+    padding-right: 5px;
+    text-align: end;
+    width: 40%;
+}
+
+    .calendar-box .date p {
+        margin-bottom: 0;
+    }
+
+.calendar-box .appointment-name {
+    padding-left: 10px;
+    align-self: center;
+}
+
+.calendar-box a {
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    box-shadow: 0 3px 5px #0000000a;
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    width: 90%;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+
+.Appointment-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 1px;
+    width: 400px;
+    height: 600px;
+    padding: 20px;
+    text-align: left;
+    position: absolute;
+    margin: auto;
+}
