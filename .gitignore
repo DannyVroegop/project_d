@@ -50,3 +50,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+/ADHD_App/.vs/ADHD_App/FileContentIndex/8b06309e-8ee8-4074-bab1-0527f85ce972.vsidx
+*.v2
+*.vsidx
