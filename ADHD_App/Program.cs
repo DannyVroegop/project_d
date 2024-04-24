@@ -8,6 +8,7 @@ namespace ADHD_App
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddScoped<JsonFilePeopleService>();
 
             var app = builder.Build();
 

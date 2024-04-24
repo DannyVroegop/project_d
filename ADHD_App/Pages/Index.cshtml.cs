@@ -7,6 +7,7 @@ namespace ADHD_App.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
+
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
@@ -15,6 +16,11 @@ namespace ADHD_App.Pages
         public void OnGet()
         {
 
+        }
+
+        public void OnPost()
+        {
+            
         }
     }
 }
