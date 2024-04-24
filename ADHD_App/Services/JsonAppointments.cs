@@ -14,5 +14,11 @@ namespace ADHD_App.Services
         {
             return JsonSerializer.Serialize(app);
         }
+        public static void WriteAll(List<Appointment> apps)
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string json = JsonSerializer.Serialize(apps, options);
+            File.WriteAllText(path, json);
+        }
     }
 }
