@@ -1,1 +1,50 @@
-[{"Id":0,"Username":"nsnsn","Password":"jsjsj","First_Name":"aaa","Last_Name":"b","Gender":"male","Date_of_Birth":"0001-01-01T00:00:00","Adress":null,"Email":"ssss@gmail.com","Phonenumber":"999"}]
+[
+  {
+    "Id": 0,
+    "Username": "aaa",
+    "Password": "wachtwoord!",
+    "First_Name": "soufiane",
+    "Last_Name": "B",
+    "Gender": "male",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Adress": null,
+    "Email": "email@gmail.com",
+    "Phonenumber": "061111"
+  },
+  {
+    "Id": 0,
+    "Username": "bbb",
+    "Password": "aaa",
+    "First_Name": "a",
+    "Last_Name": "a",
+    "Gender": "male",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Adress": null,
+    "Email": "ssss@gmail.com",
+    "Phonenumber": "jjj"
+  },
+  {
+    "Id": 0,
+    "Username": "",
+    "Password": "",
+    "First_Name": "",
+    "Last_Name": "",
+    "Gender": null,
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Adress": null,
+    "Email": "",
+    "Phonenumber": ""
+  },
+  {
+    "Id": 0,
+    "Username": "abc123",
+    "Password": "wachtwoord",
+    "First_Name": "a",
+    "Last_Name": "a",
+    "Gender": "male",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Adress": null,
+    "Email": "aaaa@live.nl",
+    "Phonenumber": "08736"
+  }
+]

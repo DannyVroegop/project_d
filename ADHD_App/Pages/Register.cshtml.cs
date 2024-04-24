@@ -44,35 +44,3 @@ namespace ADHD_App.Pages
     }
 }
 }
-
-public class JsonFilePeopleService
-    {
-        public JsonFilePeopleService(IWebHostEnvironment webHostEnvironment)
-        {
-            WebHostEnvironment = webHostEnvironment;
-        }
-
-        public IWebHostEnvironment WebHostEnvironment { get; }
-
-        private string FileName => Path.Combine(WebHostEnvironment.WebRootPath, "data", "people.json");
-
-        public void AddPerson(Person person)
-        {
-            var people = GetAllPeople();
-            people.Add(person);
-            var jsonString = JsonSerializer.Serialize(people);
-            File.WriteAllText(FileName, jsonString);
-        }
-
-        private List<Person> GetAllPeople()
-        {
-            if (!File.Exists(FileName))
-            {
-                return new List<Person>();
-            }
-
-            var json = File.ReadAllText(FileName);
-            var people = JsonSerializer.Deserialize<List<Person>>(json);
-            return people;
-        }
-    }
