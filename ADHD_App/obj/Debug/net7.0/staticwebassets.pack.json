@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\images\\Agenda.png",
+      "PackagePath": "staticwebassets\\images\\Agenda.png"
+    },
+    {
       "Id": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\images\\Book.png",
       "PackagePath": "staticwebassets\\images\\Book.png"
     },
@@ -27,6 +31,18 @@
     {
       "Id": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\images\\background.jpg",
       "PackagePath": "staticwebassets\\images\\background.jpg"
+    },
+    {
+      "Id": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\images\\logOut.png",
+      "PackagePath": "staticwebassets\\images\\logOut.png"
+    },
+    {
+      "Id": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\images\\profile.png",
+      "PackagePath": "staticwebassets\\images\\profile.png"
+    },
+    {
+      "Id": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\images\\stickFigure.png",
+      "PackagePath": "staticwebassets\\images\\stickFigure.png"
     },
     {
       "Id": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\js\\site.js",
