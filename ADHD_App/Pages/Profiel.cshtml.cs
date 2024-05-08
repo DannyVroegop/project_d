@@ -1,9 +1,6 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ADHD_App.Models;
 using ADHD_App.Services;
-using System.Diagnostics;
-
 namespace ADHD_App.Pages
 {
 
