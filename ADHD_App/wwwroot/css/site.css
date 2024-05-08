@@ -132,3 +132,13 @@ html {
     margin-right: 20px; 
 }
 
+.taskbar {
+    width: 100%;
+    background-color: orange;
+}
+
+.container {
+    margin: 0; 
+    padding: 0; 
+    width: 100%;
+}
