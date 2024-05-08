@@ -1,38 +1,14 @@
 [
   {
-    "Id": 0,
-    "Username": "A",
-    "Password": "B",
-    "First_Name": "Soufiane",
-    "Last_Name": "B",
-    "Gender": "male",
-    "Date_of_Birth": "0001-01-01T00:00:00",
-    "Adress": null,
-    "Email": "abc@gmail.com",
-    "Phonenumber": "01"
-  },
-  {
-    "Id": 0,
-    "Username": "",
-    "Password": "",
-    "First_Name": "",
-    "Last_Name": "",
-    "Gender": null,
-    "Date_of_Birth": "0001-01-01T00:00:00",
-    "Adress": null,
-    "Email": "",
-    "Phonenumber": ""
-  },
-  {
-    "Id": 0,
-    "Username": "username01",
-    "Password": "password",
-    "First_Name": "naam",
-    "Last_Name": "achternaam",
-    "Gender": "male",
-    "Date_of_Birth": "0001-01-01T00:00:00",
-    "Adress": null,
-    "Email": "soufiane@gmail.com",
-    "Phonenumber": "12345678"
+    "Id": "1111",
+    "Username": "Test",
+    "Password": "testwachtwoord",
+    "First_Name": "Terry",
+    "Last_Name": "Test",
+    "Gender": "Man",
+    "Date_of_Birth": "2012-04-23T18:25:43.511Z",
+    "Adress": "ABC 4455EZ",
+    "Email": "Email@hotmail.com",
+    "Phonenumber": "0677448844"
   }
 ]

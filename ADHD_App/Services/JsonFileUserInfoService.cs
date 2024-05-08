@@ -6,12 +6,11 @@ using Microsoft.AspNetCore.Hosting;
 using Newtonsoft.Json;
 using System.IO;
 
-
 namespace ADHD_App.Services
 {
-    public class JsonFilePeopleService
+    public class JsonFileUserInfoService
     {
-        public JsonFilePeopleService(IWebHostEnvironment webHostEnvironment) 
+        public JsonFileUserInfoService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
@@ -20,10 +19,10 @@ namespace ADHD_App.Services
 
         private string JsonFileName
         {
-            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "people.json"); }
+            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "extra_userinfo.json"); }
         }
 
-        public Person[] GetProducts()
+        public Extra_userinfo LoadInfo(Person person)
         {
             try
             {
@@ -33,16 +32,27 @@ namespace ADHD_App.Services
                     string json = jsonFileReader.ReadToEnd();
                     Debug.WriteLine("JSON read from file:");
                     Debug.WriteLine(json);
-                    Person[] person = JsonConvert.DeserializeObject<Person[]>(json);
-                    return person;
+                    Extra_userinfo[] users = JsonConvert.DeserializeObject<Extra_userinfo[]>(json);
+                    foreach(var user in users)
+                    {
+                        if (user.Id == person.Id)
+                        {
+                            Debug.WriteLine("User has been found!");
+                            Debug.WriteLine(user.ProfilePicture);
+                            return user;
+                        }
+                    }
+                    return default;
 
                 }
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 Debug.WriteLine("Error during deserialization of Person: ");
                 Debug.WriteLine(ex.Message);
                 return null;
             }
         }
+
     }
 }

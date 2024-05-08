@@ -67,78 +67,76 @@ html {
 .register-box {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
-    width: 1000px;
-    height: 1000px;
-    margin: auto;
-    text-align: center;
-    padding:20px;
+    width: 500px;
+    height: 500px;
+    padding: 20px;
 }
 
-.register-text {
-    font-family: Arial;
-    font-size: 15pt;
-    text-align: center;
-    margin: 0 auto;
-    color: white;
-    padding-top: 5%;
-    margin-bottom: 5%;
-    text-shadow: -2px -2px 0 black
+.home-bar{
+    width: 50px;
+    height: 50px;
+    top: 20px;
 }
 
-.register-box label {
-    display: block;
-    margin-top: 10px;
+.Home-box {
+    width: 50%;
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between flex items */
+    background-color: rgba(7, 39, 244, 0.7);
+    border-radius: 10px;
+    width: 900px;
+    height: 600px;
+    /* margin-right: auto; */
+    padding: 30px;
 }
 
-
-.register-images {
-    text-align: center;
-}
-
-.register-images img {
-    display: inline-block;
-    width: 100px;
+.Home-box button {
     height: 100px;
-    border-radius: 50%; 
-    margin: 10px; 
+    width: 400px;
+    margin-top: 2%;
+    place-items: center;
+    border-radius: 10px;
+    background-color: rgb(246, 243, 243);
 }
 
-.teacher-box:hover {
-    transform: scale(1.2); 
+.Home-box .Home-box-Left,
+.Home-box .Home-box-Right {
+    display: flex;
+    flex-direction: column;
 }
 
-.child-box:hover {
-    transform: scale(1.2); 
+.Home-box .Home-box-Right {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
 }
 
-.teacher-box {
-    display: inline-block;
-    margin-right: 90px;
-}
 
-.child-box {
-    display: inline-block;
-    margin-right: 0px;
-}
 
-.form-item {
-    margin-bottom: 20px;
-
-}
-
-.form-item label {
+.Home-box button img{
+    height: 60px;
+    width: 80px;
+    margin-right: 10px;
     float: left;
-    width: 120px; 
-    margin-right: 20px; 
+    padding-left: 5%;
 }
 
-.taskbar {
-    width: 100%;
-    background-color: orange;
+<<<<<<< HEAD
+.home-button{
+    color:rgba(114, 235, 21, 0.7)
 }
 
-.container {
-    margin: 0; 
-    padding: 0; 
-    width: 100%;
+.stick-figure{
+    /* margin: 1%; */
+    top: 60px;
+    float: right;
+    display: inline-block;
 }
+
+.stick-figure img {
+    display: block; /* Ensure the image behaves as a block element */
+    max-width: 100%; /* Ensure the image does not exceed the width of its container */
+    height: auto; /* Maintain the aspect ratio of the image */
+}
+=======
+>>>>>>> parent of 572ad72 (8/5 login)

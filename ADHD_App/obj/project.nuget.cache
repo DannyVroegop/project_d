@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gs/83UGD1g5LRya8MNNHGUzA0cBWI8q6RbM9KEApt73UB/Y7G5rUM0NU80FBfKBnYVy83az302t5SzM4Y0uGsQ==",
+  "dgSpecHash": "kIz2zN7LMm3pquXj1OhFD4xPhb4J4l7JvaMVBXCI81xwUM0401OBPQMtcgGqAmlpI4u3MxXUw0x1bqWuzEW00Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Projecten Jaar 2\\project_d\\ADHD_App\\ADHD_App.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\soufi\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
