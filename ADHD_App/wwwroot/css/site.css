@@ -67,9 +67,11 @@ html {
 .register-box {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
-    width: 500px;
-    height: 500px;
-    padding: 20px;
+    width: 1000px;
+    height: 1000px;
+    margin: auto;
+    text-align: center;
+    padding:20px;
 }
 
 .home-bar{
@@ -136,4 +138,71 @@ html {
     display: block; /* Ensure the image behaves as a block element */
     max-width: 100%; /* Ensure the image does not exceed the width of its container */
     height: auto; /* Maintain the aspect ratio of the image */
+.register-text {
+    font-family: Arial;
+    font-size: 15pt;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    padding-top: 5%;
+    margin-bottom: 5%;
+    text-shadow: -2px -2px 0 black
+}
+
+.register-box label {
+    display: block;
+    margin-top: 10px;
+}
+
+
+.register-images {
+    text-align: center;
+}
+
+.register-images img {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    margin: 10px; 
+}
+
+.teacher-box:hover {
+    transform: scale(1.2); 
+}
+
+.child-box:hover {
+    transform: scale(1.2); 
+}
+
+.teacher-box {
+    display: inline-block;
+    margin-right: 90px;
+}
+
+.child-box {
+    display: inline-block;
+    margin-right: 0px;
+}
+
+.form-item {
+    margin-bottom: 20px;
+
+}
+
+.form-item label {
+    float: left;
+    width: 120px; 
+    margin-right: 20px; 
+}
+
+.taskbar {
+    width: 100%;
+    background-color: orange;
+}
+
+.container {
+    margin: 0; 
+    padding: 0; 
+    width: 100%;
 }

@@ -1,48 +1,56 @@
-﻿using System.Diagnostics;
-using System.Linq.Expressions;
+﻿using Microsoft.AspNetCore.Hosting;
+using System.IO;
 using System.Text.Json;
 using ADHD_App.Models;
-using Microsoft.AspNetCore.Hosting;
-using Newtonsoft.Json;
-using System.IO;
-
-
-namespace ADHD_App.Services
-{
-    public class JsonFilePeopleService
+public class JsonFilePeopleService
     {
-        public JsonFilePeopleService(IWebHostEnvironment webHostEnvironment) 
+        public JsonFilePeopleService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
 
         public IWebHostEnvironment WebHostEnvironment { get; }
 
-        private string JsonFileName
+        private string FileName => Path.Combine(WebHostEnvironment.WebRootPath, "data", "people.json");
+
+        public void AddPerson(Person person)
         {
-            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "people.json"); }
+            var people = GetAllPeople();
+            people.Add(person);
+            var jsonString = JsonSerializer.Serialize(people, new JsonSerializerOptions
+            {
+                WriteIndented = true
+            });
+            File.WriteAllText(FileName, jsonString);
         }
 
-        public Person[] GetProducts()
+        public List<Person> GetAllPeople()
         {
-            try
+            if (!File.Exists(FileName))
             {
-                using (var jsonFileReader = File.OpenText(JsonFileName))
-                {
+                return new List<Person>();
+            }
 
-                    string json = jsonFileReader.ReadToEnd();
-                    Debug.WriteLine("JSON read from file:");
-                    Debug.WriteLine(json);
-                    Person[] person = JsonConvert.DeserializeObject<Person[]>(json);
+            var json = File.ReadAllText(FileName);
+            var people = JsonSerializer.Deserialize<List<Person>>(json);
+            return people;
+        }
+
+        public Person GetPerson(string username, string password)
+        {
+            var people = GetAllPeople();
+            
+            foreach (Person person in people)
+            {
+                if (person.Username == username && person.Password == password)
+                {
                     return person;
 
                 }
-            } catch (Exception ex)
-            {
-                Debug.WriteLine("Error during deserialization of Person: ");
-                Debug.WriteLine(ex.Message);
-                return null;
             }
+            return null;
         }
+
+
+
     }
-}

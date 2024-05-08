@@ -4,5 +4,72 @@
 }
 
 <div class="register-box">
+    <br><h1> Meld je aan</h1>
+    
+    <form method="post" asp-page="Index">
+    <div class="register-images">
+    
+    <div class="role-box">
+    <div class="teacher-box">
+    <a href="?role=teacher">
+    <img src="images/docent.jpg" width="150px" height="150px" alt="Docent">
+    <h1>Docent</h1>
+    </a>
+    </div>
+    
 
+    
+    <a href="?role=chiild">
+    <div class="child-box">
+    <img src="images/kind_knop.jpg" width="150px" height="150px" alt="Leerling">
+    <h1>Leerling</h1>
+    </a>
+    </div>
+    </div>
+
+    <br>
+        
+         <div class="form-item">
+            <label for="FirstName">Voornaam:</label>
+            <input type="text" id="FirstName" name="FirstName" placeholder="Voornaam">
+        </div>
+
+        <div class="form-item">
+            <label for="LastName">Achternaam:</label>
+            <input type="text" id="LastName" name="LastName" placeholder="Achternaam">
+        </div>
+
+        <div class="form-item">
+            <label for="Gender">Geslacht:</label>
+            <select id="Gender" name="Gender">
+                <option value="" disabled selected hidden>Kies geslacht</option>
+                <option value="male">Jongen</option>
+                <option value="female">Meisje</option>
+                <option value="other">Anders</option>
+            </select>
+        </div>
+
+        <div class="form-item">
+            <label for="Email">Email-adres:</label>
+            <input type="email" id="Email" name="Email" placeholder="Email-adres">
+        </div>
+
+        <div class="form-item">
+            <label for="Phone">Telefoonnummer:</label>
+            <input type="text" id="Phone" name="Phone" placeholder="Telefoonnummer">
+        </div>
+
+        <div class="form-item">
+            <label for="Username">Gebruikersnaam:</label>
+            <input type="text" id="Username" name="Username" placeholder="Gebruikersnaam">
+        </div>
+
+        <div class="form-item">
+            <label for="Password">Wachtwoord:</label>
+            <input type="password" id="Password" name="Password" placeholder="Wachtwoord">
+        </div>
+
+        <a href="Home"><button type="submit">Registreren</button></a>
+    </form> 
 </div>
+
