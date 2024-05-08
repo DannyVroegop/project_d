@@ -7,7 +7,7 @@ namespace ADHD_App.Pages
 {
     public class RegisterModel : PageModel
     {
-        private readonly JsonFilePeopleService _json;
+        private JsonFilePeopleService _json;
 
         public RegisterModel(JsonFilePeopleService json)
         {
