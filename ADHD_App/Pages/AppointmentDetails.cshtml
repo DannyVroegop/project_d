@@ -8,10 +8,19 @@
 <div class=" Appointment-box">
     <table>
         <tr><td><h1>@Model.app.Name </h1></td></tr>
-        <tr><td><a>Date: @Model.app.Start.ToString("M")</a></d></tr>
-        <tr><td><a>starts at: @Model.app.Start.ToString("HH:mm") </a></td></tr>
-        <tr><td><a>ends at: @Model.app.End.ToString("HH:mm")</a></td></tr>
-        <tr><td><a>@Model.app.Description </a></td></tr>
-        <tr><td><button type="button" onclick="btnDelete_Click">Delete</button></td></tr>
+        <tr><td><h5>Datum: @Model.app.Start.ToString("M")</h5></d></tr>
+        <tr><td><h5>Start: @Model.app.Start.ToString("HH:mm") </h5></td></tr>
+        <tr><td><h5>Eind: @Model.app.End.ToString("HH:mm")</h5></td></tr>
+        <tr><td><h5>@Model.app.Description </h5></td></tr>
+        @{
+            string e = "";
+            if (Model.app.EnergyCost != 0)
+                for (int i = 0; i < Model.app.EnergyCost; i++)
+                    e += "🗲";
+            else
+                e = "0";
+        }
+            <tr><td><h5>Energycost: @e</h5></td></tr>
+        <tr><td><a href="AppointmentDetails?ID=@Model.app.ID &del=@true">Delete</a></td></tr>
     </table>
 </div>

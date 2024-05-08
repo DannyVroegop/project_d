@@ -7,27 +7,30 @@
 <div class="intro-text">
     <h2>Agenda</h2>
 </div>
+<div class="date-selecter">
+    <h4><b>Deze week</b></h4>
+</div>
 
 <div class="calendar-box">
-    @{
-        CalendarModel c = new();
-        c.OnGet();
-    }
-    <h2><b>Dit zijn je afspraken</b></h2>
+    @{DateTime Date = Model.SelectedDate();}
+    <h3><b>Dit zijn je afspraken van @Date.ToString("dddd dd MMM yyyy")</b></h3>
 
-        @{
-            foreach (var app in c.Appointments)
-            {
-            <tr>
-                <td><a href= "AppointmentDetails?ID=@app.ID">
+    @{
+        foreach (var app in Model.Appointments)
+        {
+            if (app.Start.Date == Date)
+        {
+                <tr>
+                    <td><a href= "AppointmentDetails?ID=@app.ID">
                         <div class="date">
                             <p>@app.Start.ToString("HH:mm") - @app.End.ToString("HH:mm")</p>
                             <p>@app.Start.ToString("ddd dd MMM yyyy")</p>
                         </div>
-                        <p class="appointment-name">@app.Name</p>
-                </a></td>
-            </tr>
-          
+                        <p class="date">@app.Name</p>
+                        <p class="energy">🗲: @app.EnergyCost</p>
+                    </a></td>
+                </tr>
+            }
             }
         }
 

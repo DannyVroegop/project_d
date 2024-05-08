@@ -8,6 +8,8 @@ namespace ADHD_App.Pages
 {
     public class AppointmentDetailsModel : PageModel
     {
+        public DateTime SelectedDate()
+        { return DateTime.Now; }
         public void RemoveApp()
         {
             List<Appointment> apps = JsonAppointments.Loadappointments();
@@ -16,20 +18,17 @@ namespace ADHD_App.Pages
                 if (appointment != null)
                 {
                     if (appointment.ID == app.ID)
+                    {
                         apps.Remove(appointment);
+                        break;
+                    }
                 }
             }
             JsonAppointments.WriteAll(apps);
         }
-        private void btnDelete_Click(object sender, System.EventArgs e)
-        {
-            RemoveApp();
-            Response.Redirect("/Calendar.cshtml/OnGet");
-        }
-
         public Appointment app{ get; set; }
 
-        public void OnGet(string ID)
+        public void OnGet(string ID, bool del = false)
         {
             int id = Convert.ToInt32(ID);
             List<Appointment> apps = JsonAppointments.Loadappointments();
@@ -37,6 +36,11 @@ namespace ADHD_App.Pages
             {
                 if (a.ID == id)
                     app = a;
+            }
+            if(del)
+            {
+                RemoveApp();
+                Response.Redirect("/Calendar");
             }
         }
 
@@ -46,7 +50,6 @@ namespace ADHD_App.Pages
         public void OnPost()
         {
 
-            RemoveApp();
         }
     }
 }

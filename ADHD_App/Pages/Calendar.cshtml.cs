@@ -16,7 +16,8 @@ namespace ADHD_App.Pages
         public CalendarModel()
         {
         }
-
+        public DateTime SelectedDate()
+        { return DateTime.Now.Date; }
         public void OnGet()
         {
             Appointments = JsonAppointments.Loadappointments();
