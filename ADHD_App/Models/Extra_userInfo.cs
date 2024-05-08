@@ -1,4 +1,6 @@
-﻿namespace ADHD_App.Models
+﻿using System.Collections;
+
+namespace ADHD_App.Models
 {
     public class Extra_userinfo
     {

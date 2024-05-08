@@ -59,6 +59,9 @@
         display: none;
         border-style: solid;
         border-color: #000000;
+        overflow-y: scroll;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
     }
 
     .GRIDBLOCK {
@@ -70,7 +73,7 @@
         margin-left: -250px;
         margin-top: -500px;
         background-color: #FFFFFF;
-        display: none;
+        display: block;
         border-style: solid;
         border-color: #000000;
     }
@@ -79,6 +82,7 @@
 </style>
 @{
     var person = Model.People[0];
+    var userinfo = Model.userinfo;
 }
 
 <div class="backbutton"><p><b><a href="Index"> Terug </a></b></p></div>
@@ -89,13 +93,12 @@
 
 <div class="background">
     <div class="ProfielFoto" id="ProfielFoto">
-        <img src="images/Book.png" alt="Huidige profiel foto van de gebruiker"/>
+        <img src="@userinfo.ProfilePicture" alt="Huidige profiel foto van de gebruiker"/>
     </div>
     <div class="ProfielFotoGRID" id="PROFIELGRID">
 
     </div>
 </div>
-
 
 
 <script>
@@ -106,7 +109,30 @@
             profielgrid.style.display = 'none'
         }
         else { 
-            profielgrid.style.display = 'block'
+            profielgrid.style.display = 'grid'
         }
     })
 </script>
+<script>
+    window.onload = function loadimages() {
+        var test = @Html.Raw(Json.Serialize(Model.userinfo.unlockedImages))
+        for (const pic of test) { 
+            var item = document.createElement("GRIDBLOCK");
+            var parent = document.getElementById("PROFIELGRID");
+            parent.appendChild(item);
+            var newimg = document.createElement("img")
+            newimg.src = pic;
+            newimg.alt = "Een potentieel profielfoto"
+            item.appendChild(newimg)
+            item.addEventListener("click", function () {
+                profielgrid = document.getElementById("PROFIELGRID")
+                profielgrid.style.display = 'none';
+                console.log(item.children[0]);
+                console.log("OTHER_TEST");
+                console.log(document.getElementById("ProfielFoto").children[0].src)
+                var profielfoto = document.getElementById("ProfielFoto").children[0].src = item.children[0].src;
+            })
+        }
+    }
+</script>
+
