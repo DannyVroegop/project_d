@@ -8,20 +8,28 @@ namespace ADHD_App.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         public JsonFilePeopleService PeopleService;
-        public Person[] Products { get; private set; }
+        public JsonFileUserInfoService UserInfoService;
+        public Person[] People { get; private set; }
+        public Extra_userinfo userinfo { get; private set; }
 
         public Profiel(ILogger<IndexModel> logger,
-            JsonFilePeopleService productService)
+            JsonFilePeopleService productService,
+            JsonFileUserInfoService userinfoservice)
         {
             _logger = logger;
             PeopleService = productService;
+            UserInfoService = userinfoservice;
         }
 
         public void OnGet()
         {
             if (PeopleService.GetProducts() != null)
             {
-                Products = PeopleService.GetProducts();
+                People = PeopleService.GetProducts();
+            }
+            if (UserInfoService.LoadInfo(People[0]) != null)
+            {
+                userinfo = UserInfoService.LoadInfo(People[0]);
             }
         }
     }

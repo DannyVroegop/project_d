@@ -13,6 +13,7 @@ namespace ADHD_App
             builder.Services.AddRazorPages();
 
             builder.Services.AddTransient<JsonFilePeopleService>();
+            builder.Services.AddTransient<JsonFileUserInfoService>();
 
             var app = builder.Build();
 
