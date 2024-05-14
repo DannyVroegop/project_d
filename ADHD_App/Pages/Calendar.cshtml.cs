@@ -16,11 +16,13 @@ namespace ADHD_App.Pages
         public CalendarModel()
         {
         }
-        public DateTime SelectedDate()
-        { return DateTime.Now.Date; }
-        public void OnGet()
+        public DateTime SelectedDate {  get; set; }
+        public int I {  get; set; }
+        public void OnGet(int i = 0)
         {
+            I = i;
             Appointments = JsonAppointments.Loadappointments();
+            SelectedDate = DateTime.Now.AddDays(i);
         }
         public string ToJson(Appointment app)
         {
