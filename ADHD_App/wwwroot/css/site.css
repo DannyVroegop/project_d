@@ -9,7 +9,11 @@ html {
     }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
@@ -36,32 +40,32 @@ html {
     padding: 20px;
 }
 
-    .login-box form {
-        margin: 20% auto;
-    }
+.login-box form {
+    margin: 20% auto;
+}
 
-    .login-box h2 {
-        text-align: center;
-    }
+.login-box h2 {
+    text-align: center;
+}
 
-    .login-box button {
-        background-color: greenyellow;
-        color: black;
-        cursor: pointer;
-        width: 100%;
-        margin-top: 30%;
-        border: none;
-        border-radius: 20px;
-    }
+.login-box button {
+    background-color: greenyellow;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 30%;
+    border: none;
+    border-radius: 20px;
+}
 
-        .login-box button:hover {
-            background-color: green;
-        }
+.login-box button:hover {
+    background-color: green;
+}
 
-    .login-box label {
-        display: block;
-        margin-top: 10px;
-    }
+.login-box label {
+    display: block;
+    margin-top: 10px;
+}
 
 /* Registreren */
 .register-box {
@@ -81,6 +85,68 @@ html {
     padding: 20px;
 }
 
-.home-button{
-    color:rgba(114, 235, 21, 0.7)
+.home-button {
+    color: rgba(114, 235, 21, 0.7)
+}
+
+.EnergiePopUp {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    position: absolute;
+    width: 40%;
+    height: 45%;
+    padding: 20px;
+    right: 30%;
+}
+
+.EnergiePopUp button {
+    background-color: #4274F0;
+    color: black;
+    cursor: pointer;
+    width: 70%;
+    margin-top: 30%;
+    border: none;
+    position: absolute;
+    border-radius: 20px;
+    top: 20%;
+    right: 15%;
+}
+
+.EnergiePopUp button:hover {
+    background-color: #72cdf7;
+}
+
+
+.EnergiePopUp h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.EnergiePopUp form {
+    margin: 20% auto;
+}
+
+.EnergiePopUp input {
+    width: 14%;
+    margin-top: 10px;
+    position: absolute;
+    right: 43%;
+    text-align: center;
+    bottom: 45%;
+}
+
+.EnergiePopUp h3 {
+    text-decoration: none;
+    position: absolute;
+    font-size: 15px;
+    right: 35%;
+    bottom: 55%;
+}
+
+.EnergiePopUp h4 {
+    text-decoration: none;
+    position: absolute;
+    font-size: 12px;
+    right: 35%;
+    bottom: 35%;
 }

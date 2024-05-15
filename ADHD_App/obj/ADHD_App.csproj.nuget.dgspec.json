@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\ADHD_App.csproj": {}
+    "C:\\Users\\sunmi\\OneDrive\\Bureaublad\\school bs\\jaar 2\\project D\\project_d\\ADHD_App\\ADHD_App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\ADHD_App.csproj": {
+    "C:\\Users\\sunmi\\OneDrive\\Bureaublad\\school bs\\jaar 2\\project D\\project_d\\ADHD_App\\ADHD_App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\ADHD_App.csproj",
+        "projectUniqueName": "C:\\Users\\sunmi\\OneDrive\\Bureaublad\\school bs\\jaar 2\\project D\\project_d\\ADHD_App\\ADHD_App.csproj",
         "projectName": "ADHD_App",
-        "projectPath": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\ADHD_App.csproj",
-        "packagesPath": "C:\\Users\\pvspi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\obj\\",
+        "projectPath": "C:\\Users\\sunmi\\OneDrive\\Bureaublad\\school bs\\jaar 2\\project D\\project_d\\ADHD_App\\ADHD_App.csproj",
+        "packagesPath": "C:\\Users\\sunmi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sunmi\\OneDrive\\Bureaublad\\school bs\\jaar 2\\project D\\project_d\\ADHD_App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pvspi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\sunmi\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -64,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }
