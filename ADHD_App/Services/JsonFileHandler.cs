@@ -19,6 +19,7 @@ namespace ADHD_App.Services
         public void AddPerson(Person person)
         {
             var people = GetAllPeople();
+            person.Id = people.Count;
             people.Add(person);
             var jsonString = JsonSerializer.Serialize(people, new JsonSerializerOptions
             {

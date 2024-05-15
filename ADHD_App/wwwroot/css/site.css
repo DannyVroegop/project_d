@@ -90,17 +90,19 @@ body {
     top: 20px;
 }
 
+.main-page {
+    float: left;
+}
 .Home-box {
-    width: 50%;
     display: flex;
     justify-content: space-between;
-    /* Adjust spacing between flex items */
     background-color: rgb(192,192,192);
     border-radius: 10px;
     width: 900px;
     height: 600px;
     /* margin-right: auto; */
     padding: 30px;
+    float: left;
 }
 
 .Home-box button {
@@ -200,20 +202,20 @@ body {
     bottom: 35%;
 }
 .stick-figure {
+
     /* margin: 1%; */
-    top: 60px;
-    float: right;
-    display: inline-block;
+    padding-top: 30px;
+    float: left;
+    width: 300px;
+    height: 500px;
+    
 }
 
 .stick-figure img {
-    display: block;
-    /* Ensure the image behaves as a block element */
-    max-width: 100%;
-    /* Ensure the image does not exceed the width of its container */
-    height: auto;
-    /* Maintain the aspect ratio of the image */
+    width: 100%;
+    height: 100%;
 }
+
 
 
 
