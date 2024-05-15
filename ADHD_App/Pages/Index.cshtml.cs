@@ -2,28 +2,41 @@
 using ADHD_App.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Http;
+using System.Web;
 using System.Diagnostics;
 
 namespace ADHD_App.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-        public JsonFilePeopleService PeopleService;
-        public Person[] Products { get; private set; }
+        public JsonFileHandler _json;
 
-        public IndexModel(ILogger<IndexModel> logger,
-            JsonFilePeopleService productService)
+        public IndexModel(JsonFileHandler json)
         {
-            _logger = logger;
-            PeopleService = productService;
+            _json = json;
         }
 
-        public void OnGet()
+    
+
+        public IActionResult OnPost()
         {
-            if (PeopleService.GetProducts() != null)
+            string username = Request.Form["username"];
+            string password = Request.Form["password"];
+            Person user =  _json.GetPerson(username, password);
+            if (user == null)
             {
-                Products = PeopleService.GetProducts();
+                ViewData["Error"] = "Gebruikersnaam en/of wachtwoord is onjuist.";
+                return Page();
+            }
+            else
+            {
+                CookieOptions option = new CookieOptions();
+
+                option.Expires = DateTime.Now.AddDays(1);
+                string id = $"{user.Id}";
+                Response.Cookies.Append("id", id, option);
+                return RedirectToPage("/Home", user);
             }
         }
     }

@@ -1,14 +1,54 @@
 [
   {
-    "Id": "1111",
-    "Username": "Test",
-    "Password": "testwachtwoord",
-    "First_Name": "Terry",
-    "Last_Name": "Test",
-    "Gender": "Man",
-    "Date_of_Birth": "2012-04-23T18:25:43.511Z",
-    "Adress": "ABC 4455EZ",
-    "Email": "Email@hotmail.com",
-    "Phonenumber": "0677448844"
+    "Id": 0,
+    "Username": "123",
+    "Password": "321",
+    "First_Name": "A",
+    "Last_Name": "B",
+    "Gender": "male",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Adress": null,
+    "Email": "abc@gmail.com",
+    "Phonenumber": "061234",
+    "Appointments": null
+  },
+  {
+    "Id": 0,
+    "Username": "wjej",
+    "Password": "ab",
+    "First_Name": "aa",
+    "Last_Name": "aaa",
+    "Gender": null,
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Adress": null,
+    "Email": "a@gmail.com",
+    "Phonenumber": "06123",
+    "Appointments": null
+  },
+  {
+    "Id": 0,
+    "Username": "wjej",
+    "Password": "",
+    "First_Name": "aa",
+    "Last_Name": "aaa",
+    "Gender": null,
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Adress": null,
+    "Email": "a@gmail.com",
+    "Phonenumber": "06123",
+    "Appointments": null
+  },
+  {
+    "Id": 0,
+    "Username": "Tim",
+    "Password": "Tim",
+    "First_Name": "Tim",
+    "Last_Name": "Tim",
+    "Gender": "male",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Adress": null,
+    "Email": "email@mail.nl",
+    "Phonenumber": "0612345789",
+    "Appointments": null
   }
 ]

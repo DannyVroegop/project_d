@@ -21,16 +21,17 @@ namespace ADHD_App.Pages
             UserInfoService = userinfoservice;
         }
 
-        public void OnGet(Person user)
+        public void OnGet()
         {
-            if (PeopleService.GetProducts() != null)
-            {
-                People = user;
-            }
+            int id = int.Parse(Request.Cookies["id"]);
+            if (PeopleService.getUserById(id) != null)
+                People = PeopleService.getUserById(id);
             if (UserInfoService.LoadInfo(People) != null)
             {
-                userinfo = UserInfoService.LoadInfo(People.Id);
+                userinfo = UserInfoService.LoadInfo(People);
             }
         }
+
+
     }
 }
