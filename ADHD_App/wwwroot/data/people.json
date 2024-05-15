@@ -10,7 +10,9 @@
     "Adress": null,
     "Email": "abc@gmail.com",
     "Phonenumber": "061234",
-    "Appointments": null
+    "Appointments": null,
+    "ProfilePicture": "images/Book.png",
+    "unlockedImages": [ "images/Book.png", "images/Book.png", "images/Book.png", "images/Book.png" ]
   },
   {
     "Id": 0,
@@ -23,7 +25,9 @@
     "Adress": null,
     "Email": "a@gmail.com",
     "Phonenumber": "06123",
-    "Appointments": null
+    "Appointments": null,
+    "ProfilePicture": "images/Book.png",
+    "unlockedImages": [ "images/Book.png", "images/Book.png", "images/Book.png", "images/Book.png" ]
   },
   {
     "Id": 0,
@@ -36,7 +40,9 @@
     "Adress": null,
     "Email": "a@gmail.com",
     "Phonenumber": "06123",
-    "Appointments": null
+    "Appointments": null,
+    "ProfilePicture": "images/Book.png",
+    "unlockedImages": [ "images/Book.png", "images/Book.png", "images/Book.png", "images/Book.png" ]
   },
   {
     "Id": 0,
@@ -49,6 +55,8 @@
     "Adress": null,
     "Email": "email@mail.nl",
     "Phonenumber": "0612345789",
-    "Appointments": null
+    "Appointments": null,
+    "ProfilePicture": "images/Book.png",
+    "unlockedImages": [ "images/Book.png", "images/Book.png", "images/Book.png", "images/Book.png" ]
   }
 ]
