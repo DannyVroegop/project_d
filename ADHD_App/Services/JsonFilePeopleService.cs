@@ -44,5 +44,31 @@ namespace ADHD_App.Services
                 return null;
             }
         }
+        public Person? getUserById(int id)
+        {
+            try
+            {
+                using (var jsonFileReader = File.OpenText(JsonFileName))
+                {
+
+                    string json = jsonFileReader.ReadToEnd();
+                    Debug.WriteLine("JSON read from file:");
+                    Debug.WriteLine(json);
+                    Person[] person = JsonConvert.DeserializeObject<Person[]>(json);
+                    foreach(Person p in person)
+                    {
+                        if (p.Id == id)
+                           return p;
+                    }
+                    return default;
+
+                }
+            } catch (Exception ex)
+            {
+                Debug.WriteLine("Error during deserialization of Person: ");
+                Debug.WriteLine(ex.Message);
+                return null;
+            }
+        }
     }
 }
