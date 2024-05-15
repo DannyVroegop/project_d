@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ADHD_App",
+    "\\ADHD_App\\Services",
+    "\\ADHD_App\\wwwroot",
+    "\\ADHD_App\\wwwroot\\css",
+    "\\ADHD_App\\wwwroot\\data",
+    "\\ADHD_App\\wwwroot\\images"
   ],
-  "SelectedNode": "\\ADHD_App.sln",
   "PreviewInSolutionExplorer": false
 }

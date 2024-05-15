@@ -9,7 +9,7 @@ namespace ADHD_App.Pages
         private readonly ILogger<IndexModel> _logger;
         public JsonFilePeopleService PeopleService;
         public JsonFileUserInfoService UserInfoService;
-        public Person[] People { get; private set; }
+        public Person People { get; private set; }
         public Extra_userinfo userinfo { get; private set; }
 
         public Profiel(ILogger<IndexModel> logger,
@@ -21,15 +21,15 @@ namespace ADHD_App.Pages
             UserInfoService = userinfoservice;
         }
 
-        public void OnGet()
+        public void OnGet(Person user)
         {
             if (PeopleService.GetProducts() != null)
             {
-                People = PeopleService.GetProducts();
+                People = user;
             }
-            if (UserInfoService.LoadInfo(People[0]) != null)
+            if (UserInfoService.LoadInfo(People) != null)
             {
-                userinfo = UserInfoService.LoadInfo(People[0]);
+                userinfo = UserInfoService.LoadInfo(People.Id);
             }
         }
     }
