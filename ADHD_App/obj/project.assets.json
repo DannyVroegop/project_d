@@ -561,26 +561,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\soufi\\.nuget\\packages\\": {}
+    "C:\\Users\\sunmi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Informatica\\Jaar 2\\Project D\\project d 2024\\project_d\\ADHD_App\\ADHD_App.csproj",
+      "projectUniqueName": "C:\\Users\\sunmi\\OneDrive\\Bureaublad\\school bs\\jaar 2\\project D\\project_d\\ADHD_App\\ADHD_App.csproj",
       "projectName": "ADHD_App",
-      "projectPath": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Informatica\\Jaar 2\\Project D\\project d 2024\\project_d\\ADHD_App\\ADHD_App.csproj",
-      "packagesPath": "C:\\Users\\soufi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Informatica\\Jaar 2\\Project D\\project d 2024\\project_d\\ADHD_App\\obj\\",
+      "projectPath": "C:\\Users\\sunmi\\OneDrive\\Bureaublad\\school bs\\jaar 2\\project D\\project_d\\ADHD_App\\ADHD_App.csproj",
+      "packagesPath": "C:\\Users\\sunmi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sunmi\\OneDrive\\Bureaublad\\school bs\\jaar 2\\project D\\project_d\\ADHD_App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\soufi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\sunmi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -627,7 +625,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.409\\RuntimeIdentifierGraph.json"
       }
     }
   }

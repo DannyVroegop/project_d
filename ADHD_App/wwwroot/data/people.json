@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "Id": 0,
+    "Username": "t",
+    "Password": "t",
+    "First_Name": "t",
+    "Last_Name": "t",
+    "Gender": "male",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Adress": null,
+    "Email": "",
+    "Phonenumber": "",
+    "EnergyOfTheDay": [],
+    "Appointments": null
+  },
+  {
+    "Id": 1,
+    "Username": "f",
+    "Password": "f",
+    "First_Name": "f",
+    "Last_Name": "f",
+    "Gender": "male",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Adress": null,
+    "Email": "f@dfgjfhr.nl",
+    "Phonenumber": "12345678",
+    "EnergyOfTheDay": [
+      23
+    ],
+    "Appointments": null
+  }
+]

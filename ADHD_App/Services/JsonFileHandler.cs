@@ -2,6 +2,7 @@
 using System.IO;
 using System.Text.Json;
 using ADHD_App.Models;
+// using Newtonsoft.Json;
 
 namespace ADHD_App.Services
 {
@@ -53,6 +54,33 @@ namespace ADHD_App.Services
                 }
             }
             return null;  
+        }
+
+        public void UpdatePerson(Person updatedPerson)
+        {
+            var people = GetAllPeople();
+            var personToUpdate = people.FirstOrDefault(p => p.Id == updatedPerson.Id);
+            if (personToUpdate != null)
+            {
+                personToUpdate.EnergyOfTheDay = updatedPerson.EnergyOfTheDay;
+                personToUpdate.Last_Name = updatedPerson.Last_Name;
+                personToUpdate.First_Name = updatedPerson.First_Name;
+                personToUpdate.Username = updatedPerson.Username;
+                personToUpdate.Password = updatedPerson.Password;
+                personToUpdate.Email = updatedPerson.Email;
+                personToUpdate.Phonenumber = updatedPerson.Phonenumber;
+
+                SavePeople(people);
+            }
+        }
+
+        private void SavePeople(List<Person> people)
+        {
+            var jsonString = JsonSerializer.Serialize(people, new JsonSerializerOptions
+            {
+                WriteIndented = true
+            });
+            File.WriteAllText(FileName, jsonString);
         }
     }
 }
