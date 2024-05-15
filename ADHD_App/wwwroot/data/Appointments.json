@@ -6,7 +6,8 @@
     "Name": "name 2",
     "Type": "type",
     "Description": "desc",
-    "EnergyCost": 0
+    "EnergyCost": 0,
+    "UID": 0
   },
   {
     "ID": 2,
@@ -15,7 +16,8 @@
     "Name": "name 2",
     "Type": "type",
     "Description": "desc",
-    "EnergyCost": 0
+    "EnergyCost": 0,
+    "UID": 0
   },
   {
     "ID": 1,
@@ -24,7 +26,8 @@
     "Name": "name 1",
     "Type": "type",
     "Description": "desc",
-    "EnergyCost": 4
+    "EnergyCost": 4,
+    "UID": 0
   },
   {
     "ID": 4,
@@ -33,7 +36,8 @@
     "Name": "name 1",
     "Type": "type",
     "Description": "desc",
-    "EnergyCost": 4
+    "EnergyCost": 4,
+    "UID": 0
   },
   {
     "ID": 5,
@@ -42,7 +46,8 @@
     "Name": "name 5",
     "Type": "type",
     "Description": "desc",
-    "EnergyCost": 4
+    "EnergyCost": 4,
+    "UID": 0
   },
   {
     "ID": 6,
@@ -51,6 +56,7 @@
     "Name": "name 6",
     "Type": "type",
     "Description": "desc",
-    "EnergyCost": 4
+    "EnergyCost": 4,
+    "UID": 0
   }
 ]
