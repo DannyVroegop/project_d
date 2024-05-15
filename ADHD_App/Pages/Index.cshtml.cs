@@ -2,6 +2,8 @@
 using ADHD_App.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Http;
+using System.Web;
 using System.Diagnostics;
 
 namespace ADHD_App.Pages
@@ -29,7 +31,12 @@ namespace ADHD_App.Pages
             }
             else
             {
-                return RedirectToPage("/EnergiePopUp", user);
+                CookieOptions option = new CookieOptions();
+
+                option.Expires = DateTime.Now.AddDays(1);
+                string id = $"{user.Id}";
+                Response.Cookies.Append("id", id, option);
+                return RedirectToPage("/Home", user);
             }
         }
     }
