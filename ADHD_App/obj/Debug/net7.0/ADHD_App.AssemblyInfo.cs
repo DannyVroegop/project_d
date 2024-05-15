@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ADHD_App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0304a70f776c22e967f0127499eb5e4a2cffab09")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3e34d4189c71ba40b27016dc83b9a429b480ebd")]
 [assembly: System.Reflection.AssemblyProductAttribute("ADHD_App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ADHD_App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
