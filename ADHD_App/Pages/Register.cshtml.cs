@@ -2,14 +2,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ADHD_App.Models;
 using System.Text.Json;
+using ADHD_App.Services;
 
 namespace ADHD_App.Pages
 {
     public class RegisterModel : PageModel
     {
-        private JsonFilePeopleService _json;
+        private JsonFileHandler _json;
 
-        public RegisterModel(JsonFilePeopleService json)
+        public RegisterModel(JsonFileHandler json)
         {
             _json = json;
         }
@@ -18,7 +19,7 @@ namespace ADHD_App.Pages
             string role = Request.Query["role"];
         }
 
-        public void OnPost()
+        public IActionResult OnPost()
         {
             
             string firstName = Request.Form["FirstName"];
@@ -40,6 +41,7 @@ namespace ADHD_App.Pages
                 Password = password
             };
             _json.AddPerson(newperson);
+            return RedirectToPage("/Index");
             
     }
 }
