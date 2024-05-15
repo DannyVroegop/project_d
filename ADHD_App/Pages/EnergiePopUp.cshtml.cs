@@ -26,14 +26,17 @@ namespace ADHD_App.Pages
             _logger = logger;
         }
 
-        public void OnGet(Person user)
+        public void OnGet()
         {
-            User = user;
+            int id = int.Parse(Request.Cookies["id"]);
+            if (PeopleService.getUserById(id) != null)
+                User = PeopleService.getUserById(id);
         }
 
 
         public IActionResult OnPost(int energyOfTheDay)
         {
+            System.Console.WriteLine(User.Last_Name);
             // Get the energy of the day from the submitted form data
             // var energyFormData = Request.Form["energyOfTheDay"];
             User.EnergyOfTheDay.Add(energyOfTheDay);
