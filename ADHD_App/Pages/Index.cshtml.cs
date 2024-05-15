@@ -29,7 +29,7 @@ namespace ADHD_App.Pages
             }
             else
             {
-                return RedirectToPage("/Home", user);
+                return RedirectToPage("/EnergiePopUp", user);
             }
         }
     }

@@ -55,26 +55,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\danny\\.nuget\\packages\\": {}
+    "C:\\Users\\sunmi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\ADHD_App.csproj",
+      "projectUniqueName": "C:\\Users\\sunmi\\OneDrive\\Bureaublad\\school bs\\jaar 2\\project D\\project_d\\ADHD_App\\ADHD_App.csproj",
       "projectName": "ADHD_App",
-      "projectPath": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\ADHD_App.csproj",
-      "packagesPath": "C:\\Users\\danny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\obj\\",
+      "projectPath": "C:\\Users\\sunmi\\OneDrive\\Bureaublad\\school bs\\jaar 2\\project D\\project_d\\ADHD_App\\ADHD_App.csproj",
+      "packagesPath": "C:\\Users\\sunmi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sunmi\\OneDrive\\Bureaublad\\school bs\\jaar 2\\project D\\project_d\\ADHD_App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\danny\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\sunmi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -87,11 +85,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -122,7 +115,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.408\\RuntimeIdentifierGraph.json"
       }
     }
   }
