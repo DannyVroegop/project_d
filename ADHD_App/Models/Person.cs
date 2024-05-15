@@ -1,4 +1,4 @@
-﻿using System.Text.Json;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 namespace ADHD_App.Models
 {
@@ -18,6 +18,8 @@ namespace ADHD_App.Models
         public string Email { get; set; }
         public string Phonenumber { get; set; }
         public List<int> EnergyOfTheDay { get; set; }
+
+        public List<Appointment> Appointments { get; set; }
 
         public override string ToString()
         {
