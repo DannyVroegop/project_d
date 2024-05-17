@@ -28,5 +28,21 @@
       23
     ],
     "Appointments": null
+  },
+  {
+    "Id": 2,
+    "Username": "123",
+    "Password": "321",
+    "First_Name": "",
+    "Last_Name": "",
+    "Gender": null,
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Adress": null,
+    "Email": "",
+    "Phonenumber": "",
+    "EnergyOfTheDay": [
+      12
+    ],
+    "Appointments": null
   }
 ]

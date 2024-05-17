@@ -1,82 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\",
+  "WorkspaceRootPath": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\services\\jsonfilepeopleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:services\\jsonfilepeopleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\pages\\profiel.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:pages\\profiel.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\pages\\profiel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:pages\\profiel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\pages\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:pages\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|d:\\dannyzard\\documents\\informatica\\jaar 2\\semester 2\\project d\\adhd_app\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\pages\\home.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:pages\\home.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|d:\\dannyzard\\documents\\informatica\\jaar 2\\semester 2\\project d\\adhd_app\\services\\jsonfilepeopleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:services\\jsonfilepeopleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\pages\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|d:\\dannyzard\\documents\\informatica\\jaar 2\\semester 2\\project d\\adhd_app\\pages\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:pages\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|d:\\dannyzard\\documents\\informatica\\jaar 2\\semester 2\\project d\\adhd_app\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\models\\extra_userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:models\\extra_userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|d:\\dannyzard\\documents\\informatica\\jaar 2\\semester 2\\project d\\adhd_app\\pages\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:pages\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\wwwroot\\data\\people.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:wwwroot\\data\\people.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|d:\\dannyzard\\documents\\informatica\\jaar 2\\semester 2\\project d\\adhd_app\\pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\pages\\energiepopup.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:pages\\energiepopup.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|d:\\dannyzard\\documents\\informatica\\jaar 2\\semester 2\\project d\\adhd_app\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\pages\\schooltasks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:pages\\schooltasks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\services\\jsonfileuserinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:services\\jsonfileuserinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\wwwroot\\data\\extra_userinfo.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:wwwroot\\data\\extra_userinfo.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|d:\\dannyzard\\documents\\informatica\\jaar 2\\semester 2\\project d\\adhd_app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\adhd_app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:adhd_app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|c:\\users\\danny\\source\\repos\\dannyvroegop\\project_d\\adhd_app\\models\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:models\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -89,262 +45,113 @@
           "SelectedChildIndex": 8,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Privacy.cshtml",
+              "ToolTip": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Privacy.cshtml",
+              "RelativeToolTip": "Pages\\Privacy.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-18T10:25:06.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Register.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Register.cshtml",
+              "ToolTip": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Register.cshtml",
+              "RelativeToolTip": "Pages\\Register.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-18T10:24:59.864Z"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Home.cshtml",
+              "DocumentMoniker": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Home.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Home.cshtml",
+              "ToolTip": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Home.cshtml",
+              "RelativeToolTip": "Pages\\Home.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-18T09:14:42.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\Index.cshtml.cs",
+              "DocumentMoniker": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\Index.cshtml.cs",
+              "ToolTip": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Index.cshtml.cs",
               "RelativeToolTip": "Pages\\Index.cshtml.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAAACEAAAA7AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T10:44:36.015Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-04-16T13:26:10.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T13:17:49.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Person.cs",
+              "DocumentMoniker": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Models\\Person.cs",
+              "RelativeDocumentMoniker": "Models\\Person.cs",
+              "ToolTip": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Models\\Person.cs",
+              "RelativeToolTip": "Models\\Person.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T13:08:24.827Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Profiel.cshtml",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\Profiel.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Profiel.cshtml",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\Profiel.cshtml",
-              "RelativeToolTip": "Pages\\Profiel.cshtml",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAAAFUAAAABAAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
+              "ToolTip": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-17T09:52:22.077Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T09:47:10.577Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Profiel.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\Profiel.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Profiel.cshtml.cs",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\Profiel.cshtml.cs",
-              "RelativeToolTip": "Pages\\Profiel.cshtml.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAmwBoAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T06:58:25.684Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Register.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\Register.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Register.cshtml.cs",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\Register.cshtml.cs",
-              "RelativeToolTip": "Pages\\Register.cshtml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T08:30:03.448Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Home.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\Home.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Home.cshtml.cs",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\Home.cshtml.cs",
-              "RelativeToolTip": "Pages\\Home.cshtml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T08:29:58.893Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Person.cs",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Models\\Person.cs",
-              "RelativeDocumentMoniker": "Models\\Person.cs",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Models\\Person.cs",
-              "RelativeToolTip": "Models\\Person.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T08:29:34.053Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "JsonFilePeopleService.cs",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Services\\JsonFilePeopleService.cs",
+              "DocumentMoniker": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Services\\JsonFilePeopleService.cs",
               "RelativeDocumentMoniker": "Services\\JsonFilePeopleService.cs",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Services\\JsonFilePeopleService.cs*",
-              "RelativeToolTip": "Services\\JsonFilePeopleService.cs*",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAWwD0AAAAVAAAA",
+              "ToolTip": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Services\\JsonFilePeopleService.cs",
+              "RelativeToolTip": "Services\\JsonFilePeopleService.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAAA0AAABnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T09:45:32.647Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "people.json",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\wwwroot\\data\\people.json",
-              "RelativeDocumentMoniker": "wwwroot\\data\\people.json",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\wwwroot\\data\\people.json",
-              "RelativeToolTip": "wwwroot\\data\\people.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-24T09:43:18.977Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Extra_userinfo.cs",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Models\\Extra_userinfo.cs",
-              "RelativeDocumentMoniker": "Models\\Extra_userinfo.cs",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Models\\Extra_userinfo.cs",
-              "RelativeToolTip": "Models\\Extra_userinfo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T08:55:39.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Home.cshtml",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\Home.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Home.cshtml",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\Home.cshtml",
-              "RelativeToolTip": "Pages\\Home.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAA4AAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-17T09:57:11.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\Index.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\Index.cshtml",
-              "RelativeToolTip": "Pages\\Index.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABkAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-27T09:58:56.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "EnergiePopUp.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\EnergiePopUp.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\EnergiePopUp.cshtml.cs",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\EnergiePopUp.cshtml.cs",
-              "RelativeToolTip": "Pages\\EnergiePopUp.cshtml.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAWwCYAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T08:08:42.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "JsonFileUserInfoService.cs",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Services\\JsonFileUserInfoService.cs",
-              "RelativeDocumentMoniker": "Services\\JsonFileUserInfoService.cs",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Services\\JsonFileUserInfoService.cs",
-              "RelativeToolTip": "Services\\JsonFileUserInfoService.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAWwBgAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T09:01:22.382Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "login.css",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\wwwroot\\css\\login.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\login.css",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\wwwroot\\css\\login.css",
-              "RelativeToolTip": "wwwroot\\css\\login.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-15T08:17:50.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "extra_userinfo.json",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\wwwroot\\data\\extra_userinfo.json",
-              "RelativeDocumentMoniker": "wwwroot\\data\\extra_userinfo.json",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\wwwroot\\data\\extra_userinfo.json",
-              "RelativeToolTip": "wwwroot\\data\\extra_userinfo.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-24T08:57:31.162Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SchoolTasks.cshtml",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\SchoolTasks.cshtml",
-              "RelativeDocumentMoniker": "Pages\\SchoolTasks.cshtml",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\SchoolTasks.cshtml",
-              "RelativeToolTip": "Pages\\SchoolTasks.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-15T07:51:01.198Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwA8AAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T09:40:00.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Teacher.cs",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Models\\Teacher.cs",
-              "RelativeDocumentMoniker": "Models\\Teacher.cs",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Models\\Teacher.cs",
-              "RelativeToolTip": "Models\\Teacher.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T08:37:18.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ADHD_App.csproj",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\ADHD_App.csproj",
-              "RelativeDocumentMoniker": "ADHD_App.csproj",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\ADHD_App.csproj",
-              "RelativeToolTip": "ADHD_App.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-27T10:07:23.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T09:01:55.568Z"
             }
           ]
         }
