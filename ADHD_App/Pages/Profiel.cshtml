@@ -50,11 +50,12 @@
     .ProfielFotoGRID {
         height: 300px;
         width: 400px;
-        position: relative;
-        top: 700px;
-        right: 100px;
+        position: absolute;
+        top: 80%;
+        left: 0;
+        /*right: 700px;
         margin-left: -250px;
-        margin-top: -500px;
+        margin-top: -500px;*/
         background-color: #FFFFFF;
         display: none;
         border-style: solid;
@@ -62,6 +63,7 @@
         overflow-y: scroll;
         grid-template-columns: repeat(2, 1fr);
         gap: 5px;
+        z-index: 10;
     }
 
     .GRIDBLOCK {
@@ -93,11 +95,13 @@
 <div class="background">
     <div class="ProfielFoto" id="ProfielFoto">
         <img src="@person.ProfilePicture" alt="Huidige profiel foto van de gebruiker"/>
+        <div class="ProfielFotoGRID" id="PROFIELGRID">
+        </div>
     </div>
-    <div class="ProfielFotoGRID" id="PROFIELGRID">
-
+   
+    <div class="intro" style="background-color: #555555; position:absolute; height: 5%; width: 10%;">
+        <p><b>Voornaam: @person.First_Name</b></p>
     </div>
-    <
 </div>
 
 
@@ -117,7 +121,7 @@
     window.onload = function loadimages() {
         var test = @Html.Raw(Json.Serialize(Model.People.unlockedImages))
         for (const pic of test) { 
-            var item = document.createElement("GRIDBLOCK");
+            let item = document.createElement("GRIDBLOCK");
             var parent = document.getElementById("PROFIELGRID");
             parent.appendChild(item);
             var newimg = document.createElement("img")
@@ -130,7 +134,8 @@
                 console.log(item.children[0]);
                 console.log("OTHER_TEST");
                 console.log(document.getElementById("ProfielFoto").children[0].src)
-                var profielfoto = document.getElementById("ProfielFoto").children[0].src = item.children[0].src;
+                var profielfoto = document.getElementById("ProfielFoto").children[0];
+                profielfoto.src = item.children[0].src;
             })
         }
     }

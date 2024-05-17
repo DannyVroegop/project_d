@@ -9,71 +9,71 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ADHD_App
 build_property.RootNamespace = ADHD_App
-build_property.ProjectDir = C:\Users\danny\source\repos\DannyVroegop\project_d\ADHD_App\
+build_property.ProjectDir = D:\Dannyzard\Documents\Informatica\Jaar 2\Semester 2\Project D\ADHD_App\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\danny\source\repos\DannyVroegop\project_d\ADHD_App
+build_property.MSBuildProjectDirectory = D:\Dannyzard\Documents\Informatica\Jaar 2\Semester 2\Project D\ADHD_App
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/danny/source/repos/DannyVroegop/project_d/ADHD_App/Pages/AppointmentDetails.cshtml]
+[D:/Dannyzard/Documents/Informatica/Jaar 2/Semester 2/Project D/ADHD_App/Pages/AppointmentDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwb2ludG1lbnREZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danny/source/repos/DannyVroegop/project_d/ADHD_App/Pages/Calendar.cshtml]
+[D:/Dannyzard/Documents/Informatica/Jaar 2/Semester 2/Project D/ADHD_App/Pages/Calendar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FsZW5kYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danny/source/repos/DannyVroegop/project_d/ADHD_App/Pages/EnergiePopUp.cshtml]
+[D:/Dannyzard/Documents/Informatica/Jaar 2/Semester 2/Project D/ADHD_App/Pages/EnergiePopUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5lcmdpZVBvcFVwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danny/source/repos/DannyVroegop/project_d/ADHD_App/Pages/Error.cshtml]
+[D:/Dannyzard/Documents/Informatica/Jaar 2/Semester 2/Project D/ADHD_App/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danny/source/repos/DannyVroegop/project_d/ADHD_App/Pages/Home.cshtml]
+[D:/Dannyzard/Documents/Informatica/Jaar 2/Semester 2/Project D/ADHD_App/Pages/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danny/source/repos/DannyVroegop/project_d/ADHD_App/Pages/Index.cshtml]
+[D:/Dannyzard/Documents/Informatica/Jaar 2/Semester 2/Project D/ADHD_App/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danny/source/repos/DannyVroegop/project_d/ADHD_App/Pages/Privacy.cshtml]
+[D:/Dannyzard/Documents/Informatica/Jaar 2/Semester 2/Project D/ADHD_App/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danny/source/repos/DannyVroegop/project_d/ADHD_App/Pages/Profiel.cshtml]
+[D:/Dannyzard/Documents/Informatica/Jaar 2/Semester 2/Project D/ADHD_App/Pages/Profiel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmllbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danny/source/repos/DannyVroegop/project_d/ADHD_App/Pages/Register.cshtml]
+[D:/Dannyzard/Documents/Informatica/Jaar 2/Semester 2/Project D/ADHD_App/Pages/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danny/source/repos/DannyVroegop/project_d/ADHD_App/Pages/SchoolTasks.cshtml]
+[D:/Dannyzard/Documents/Informatica/Jaar 2/Semester 2/Project D/ADHD_App/Pages/SchoolTasks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Nob29sVGFza3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danny/source/repos/DannyVroegop/project_d/ADHD_App/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Dannyzard/Documents/Informatica/Jaar 2/Semester 2/Project D/ADHD_App/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danny/source/repos/DannyVroegop/project_d/ADHD_App/Pages/taskbar.cshtml]
+[D:/Dannyzard/Documents/Informatica/Jaar 2/Semester 2/Project D/ADHD_App/Pages/taskbar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdGFza2Jhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danny/source/repos/DannyVroegop/project_d/ADHD_App/Pages/_ViewImports.cshtml]
+[D:/Dannyzard/Documents/Informatica/Jaar 2/Semester 2/Project D/ADHD_App/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danny/source/repos/DannyVroegop/project_d/ADHD_App/Pages/_ViewStart.cshtml]
+[D:/Dannyzard/Documents/Informatica/Jaar 2/Semester 2/Project D/ADHD_App/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/danny/source/repos/DannyVroegop/project_d/ADHD_App/Pages/Shared/_Layout.cshtml]
+[D:/Dannyzard/Documents/Informatica/Jaar 2/Semester 2/Project D/ADHD_App/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-leghs2l55m

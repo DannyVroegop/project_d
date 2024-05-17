@@ -38,7 +38,9 @@ namespace ADHD_App.Pages
                 Email = email,
                 Phonenumber = phone,
                 Username = username,
-                Password = password
+                Password = password,
+                ProfilePicture = "images/stickFigure.png",
+                unlockedImages = new string[] { "images/stickFigure.png", "images/kind.jpg" }
             };
             _json.AddPerson(newperson);
             return RedirectToPage("/Index");
