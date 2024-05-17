@@ -1,0 +1,47 @@
+﻿@page
+@model CalendarModel
+@{
+    ViewData["Title"] = "Calendar";
+}
+
+@{
+    DateTime Date = Model.SelectedDate;
+    int I = Model.I;
+}
+<div class="Agenda">
+    <h2>Agenda</h2>
+</div>
+
+<div class="date-selecter">
+    <h5><b>De week van @(Date.ToString("dddd dd MMM yyyy"))</b></h5>
+    @{for(int i = 0; i<7; i++)
+    {
+            <a href="Calendar?i=@(I+i)">@((Date.AddDays(i)).ToString("dddd dd MMM yyyy"))</a>
+    }}
+    <a style="background-color:#72CDF7" href="Calendar?i=@(I+7)">Volgende Week</a>
+    <a style="background-color:#72CDF7" href="Calendar?i=@(I-7)">Vorige Week</a>
+</div>
+
+<div class="calendar-box">
+    <h3><b>Dit zijn je afspraken van @Date.ToString("dddd dd MMM yyyy")</b></h3>
+
+    @{
+        foreach (var app in Model.Appointments)
+        {
+            if (app.Start.Date == Date.Date)
+        {
+                <tr>
+                    <td><a href= "AppointmentDetails?ID=@app.ID">
+                        <div class="date">
+                            <p>@app.Start.ToString("HH:mm") - @app.End.ToString("HH:mm")</p>
+                            <p>@app.Start.ToString("ddd dd MMM yyyy")</p>
+                        </div>
+                        <p class="date">@app.Name</p>
+                        <p class="energy">🗲: @app.EnergyCost</p>
+                    </a></td>
+                </tr>
+            }
+            }
+        }
+
+</div>

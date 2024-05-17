@@ -1,3 +1,6 @@
+using ADHD_App.Services;
+using System.Security.Cryptography.X509Certificates;
+
 namespace ADHD_App
 {
     public class Program
@@ -8,6 +11,10 @@ namespace ADHD_App
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddSingleton<JsonFileHandler>();
+
+            builder.Services.AddTransient<JsonFilePeopleService>();
+            builder.Services.AddTransient<JsonFileUserInfoService>();
 
             var app = builder.Build();
 

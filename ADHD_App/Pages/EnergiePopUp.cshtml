@@ -1,0 +1,24 @@
+@page
+@model ADHD_App.Pages.EnergiePopUp
+@{
+    ViewData["Title"] = "EnergiePopUp";
+}
+
+@* <h1>@ViewData["Title"]</h1> *@
+<div class="intro-text">
+    <h2><b>Welkom! Hoeveel energie heb je?</b></h2>
+</div>
+<div class="EnergiePopUp">
+    <h2>Energie Check</h2>
+    <form method="post">
+        <h3>Kies een getal tussen 1 en 100</h3>
+        <label for="energyOfTheDay"></label>
+        <input type="number" id="energyOfTheDay" name="energyOfTheDay" placeholder="......" max="100" min="0" autofocus
+            required>
+        <button type="submit">Geef Door!</button>
+    </form>
+    @if (ViewData["Message"] != null)
+    {
+        <h4>@ViewData["Message"]</h4>
+    }
+</div>

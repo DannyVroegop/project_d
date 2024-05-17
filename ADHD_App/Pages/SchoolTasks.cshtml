@@ -1,0 +1,63 @@
+@page
+@model ADHD_App.Pages.HomeModel
+@{
+    ViewData["Title"] = "schoolwerk";
+}
+
+<partial name="Taskbar" />
+<div class="schoolvakken">
+
+    <div class="schoolvak">
+        <div class="vak">
+            <a href="Privacy">
+                <button type="button">
+                    <span>
+                        <img src="images/Book.png" />
+                        <h4>Engels</h4>
+                    </span>
+                </button>
+            </a>
+        </div>
+
+        <div class="progressbar">
+            <div class="skill html">10%</div>
+        </div>
+        <div class="empty"></div>
+    </div>
+
+    <div class="schoolvak">
+        <div class="vak">
+
+            <a href="Privacy">
+                <button type="button">
+                    <span>
+                        <img src="images/Book.png" />
+                        <h4>Rekenen</h4>
+                    </span>
+                </button>
+            </a>
+        </div>
+        <div class="progressbar">
+            <div class="skill php">60%</div>
+        </div>
+        <div class="empty"></div>
+    </div>
+
+    <div class="schoolvak">
+        <div class="vak">
+
+            <a href="Privacy">
+                <button type="button">
+                    <span>
+                        <img src="images/Book.png" />
+                        <h4>Verkeer</h4>
+                    </span>
+                </button>
+            </a>
+        </div>
+        <div class="progressbar">
+            <div class="skill react">30%</div>
+        </div>
+        <div class="empty"></div>
+    </div>
+</div>
