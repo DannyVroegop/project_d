@@ -82,7 +82,6 @@
 </style>
 @{
     var person = Model.People;
-    var userinfo = Model.userinfo;
 }
 
 <partial name="Taskbar" />
@@ -93,7 +92,7 @@
 
 <div class="background">
     <div class="ProfielFoto" id="ProfielFoto">
-        <img src="@userinfo.ProfilePicture" alt="Huidige profiel foto van de gebruiker"/>
+        <img src="@person.ProfilePicture" alt="Huidige profiel foto van de gebruiker"/>
     </div>
     <div class="ProfielFotoGRID" id="PROFIELGRID">
 
@@ -116,7 +115,7 @@
 </script>
 <script>
     window.onload = function loadimages() {
-        var test = @Html.Raw(Json.Serialize(Model.userinfo.unlockedImages))
+        var test = @Html.Raw(Json.Serialize(Model.People.unlockedImages))
         for (const pic of test) { 
             var item = document.createElement("GRIDBLOCK");
             var parent = document.getElementById("PROFIELGRID");
