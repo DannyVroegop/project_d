@@ -28,5 +28,9 @@ namespace ADHD_App.Models
         {
             return JsonSerializer.Serialize<Person>(this);
         }
+        public Person()
+        {
+            EnergyOfTheDay = new List<int>();
+        }
     }
 }

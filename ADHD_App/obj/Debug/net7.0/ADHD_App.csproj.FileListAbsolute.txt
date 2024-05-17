@@ -230,3 +230,36 @@ C:\Users\soufi\OneDrive - Hogeschool Rotterdam\Informatica\Jaar 2\Project D\proj
 C:\Users\soufi\OneDrive - Hogeschool Rotterdam\Informatica\Jaar 2\Project D\project d 2024\project_d\ADHD_App\obj\Debug\net7.0\ADHD_App.pdb
 C:\Users\soufi\OneDrive - Hogeschool Rotterdam\Informatica\Jaar 2\Project D\project d 2024\project_d\ADHD_App\obj\Debug\net7.0\ADHD_App.genruntimeconfig.cache
 C:\Users\soufi\OneDrive - Hogeschool Rotterdam\Informatica\Jaar 2\Project D\project d 2024\project_d\ADHD_App\obj\Debug\net7.0\ref\ADHD_App.dll
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\bin\Debug\net7.0\appsettings.json
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\bin\Debug\net7.0\ADHD_App.staticwebassets.runtime.json
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\bin\Debug\net7.0\ADHD_App.exe
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\bin\Debug\net7.0\ADHD_App.deps.json
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\bin\Debug\net7.0\ADHD_App.runtimeconfig.json
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\bin\Debug\net7.0\ADHD_App.dll
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\bin\Debug\net7.0\ADHD_App.pdb
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\ADHD_App.csproj.AssemblyReference.cache
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\ADHD_App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\ADHD_App.AssemblyInfoInputs.cache
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\ADHD_App.AssemblyInfo.cs
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\ADHD_App.csproj.CoreCompileInputs.cache
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\ADHD_App.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\ADHD_App.RazorAssemblyInfo.cache
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\ADHD_App.RazorAssemblyInfo.cs
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\staticwebassets\msbuild.ADHD_App.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\staticwebassets\msbuild.build.ADHD_App.props
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.ADHD_App.props
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.ADHD_App.props
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\scopedcss\bundle\ADHD_App.styles.css
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\scopedcss\projectbundle\ADHD_App.bundle.scp.css
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\ADHD_App.csproj.CopyComplete
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\ADHD_App.dll
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\refint\ADHD_App.dll
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\ADHD_App.pdb
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\ADHD_App.genruntimeconfig.cache
+C:\Users\sunmi\OneDrive\Bureaublad\school bs\jaar 2\project D\project_d\ADHD_App\obj\Debug\net7.0\ref\ADHD_App.dll
