@@ -7,8 +7,8 @@
       "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:pages\\profiel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|d:\\dannyzard\\documents\\informatica\\jaar 2\\semester 2\\project d\\adhd_app\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|d:\\dannyzard\\documents\\informatica\\jaar 2\\semester 2\\project d\\adhd_app\\pages\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:pages\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|d:\\dannyzard\\documents\\informatica\\jaar 2\\semester 2\\project d\\adhd_app\\pages\\profiel.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|d:\\dannyzard\\documents\\informatica\\jaar 2\\semester 2\\project d\\adhd_app\\wwwroot\\data\\people.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:wwwroot\\data\\people.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|d:\\dannyzard\\documents\\informatica\\jaar 2\\semester 2\\project d\\adhd_app\\pages\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|solutionrelative:pages\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D839E678-FF7C-46D3-8FEF-FADAC672E785}|ADHD_App.csproj|d:\\dannyzard\\documents\\informatica\\jaar 2\\semester 2\\project d\\adhd_app\\pages\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -70,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Register.cshtml.cs",
               "DocumentMoniker": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Register.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Register.cshtml.cs",
@@ -100,9 +96,9 @@
               "Title": "Profiel.cshtml",
               "DocumentMoniker": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Profiel.cshtml",
               "RelativeDocumentMoniker": "Pages\\Profiel.cshtml",
-              "ToolTip": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Profiel.cshtml*",
-              "RelativeToolTip": "Pages\\Profiel.cshtml*",
-              "ViewState": "AQIAACgAAAAAAAAAAAAkwDUAAAAQAAAA",
+              "ToolTip": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Profiel.cshtml",
+              "RelativeToolTip": "Pages\\Profiel.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAADYAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-17T08:53:40.943Z",
               "EditorCaption": ""
@@ -115,14 +111,14 @@
               "RelativeDocumentMoniker": "wwwroot\\data\\people.json",
               "ToolTip": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\wwwroot\\data\\people.json",
               "RelativeToolTip": "wwwroot\\data\\people.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-05-17T08:53:09.376Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Register.cshtml",
               "DocumentMoniker": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Register.cshtml",
               "RelativeDocumentMoniker": "Pages\\Register.cshtml",
@@ -130,12 +126,11 @@
               "RelativeToolTip": "Pages\\Register.cshtml",
               "ViewState": "AQIAAB4AAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T10:24:59.864Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-18T10:24:59.864Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Home.cshtml",
               "DocumentMoniker": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Home.cshtml",
               "RelativeDocumentMoniker": "Pages\\Home.cshtml",
@@ -147,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
@@ -159,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -171,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml",
@@ -183,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "JsonFilePeopleService.cs",
               "DocumentMoniker": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Services\\JsonFilePeopleService.cs",
               "RelativeDocumentMoniker": "Services\\JsonFilePeopleService.cs",
@@ -191,27 +186,7 @@
               "RelativeToolTip": "Services\\JsonFilePeopleService.cs",
               "ViewState": "AQIAACgAAAAAAAAAAAAAAA0AAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T09:01:55.568Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Person.cs",
-              "DocumentMoniker": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Models\\Person.cs",
-              "RelativeDocumentMoniker": "Models\\Person.cs",
-              "ToolTip": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\Models\\Person.cs",
-              "RelativeToolTip": "Models\\Person.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T13:08:24.827Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T09:01:55.568Z"
             }
           ]
         }

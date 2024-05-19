@@ -51,11 +51,11 @@
         height: 300px;
         width: 400px;
         position: absolute;
-        top: 80%;
-        left: 0;
-        /*right: 700px;
+        top: 85%;
+        left: 30%;
+        /right: 700px;
         margin-left: -250px;
-        margin-top: -500px;*/
+        margin-top: -500px;
         background-color: #FFFFFF;
         display: none;
         border-style: solid;
@@ -70,14 +70,40 @@
         height: 300px;
         width: 400px;
         position: relative;
-        top: 700px;
-        right: 100px;
+        /*top: 700px;
+        right: 100px;*/
         margin-left: -250px;
         margin-top: -500px;
         background-color: #FFFFFF;
         display: block;
         border-style: solid;
         border-color: #000000;
+    }
+
+    .info-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        background-color: #FFFFFF;
+        padding: 0px;
+        width: 90%;
+        gap: 3px;
+        margin: 10% auto 0;
+    }
+
+    .info {
+        background-color: #7FE4E3;
+        border-radius: 25px;
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 100%;
+        white-space: nowrap;
+        box-sizing: border-box;
+        flex-basis: 50%;
+    }
+    .intro p {
+        margin: 0;
     }
     
 
@@ -95,12 +121,28 @@
 <div class="background">
     <div class="ProfielFoto" id="ProfielFoto">
         <img src="@person.ProfilePicture" alt="Huidige profiel foto van de gebruiker"/>
-        <div class="ProfielFotoGRID" id="PROFIELGRID">
-        </div>
     </div>
-   
-    <div class="intro" style="background-color: #555555; position:absolute; height: 5%; width: 10%;">
-        <p><b>Voornaam: @person.First_Name</b></p>
+    <div class="ProfielFotoGRID" id="PROFIELGRID">
+    </div>
+    <div class="info-container">
+        <div class="info">
+            <p><b>Voornaam: @person.First_Name</b></p>
+        </div>
+        <div class="info">
+            <p><b>Achternaam: @person.Last_Name</b></p>
+        </div>
+        <div class="info">
+            <p><b>Leeftijd: </b></p>
+        </div>
+        <div class="info">
+            <p><b>Geboortedatum: <span id="birthdate">@person.Date_of_Birth</span></b></p>
+        </div>
+        <div class="info">
+            <p><b>Geslacht: @person.Gender</b></p>
+        </div>
+        <div class="info">
+            <p><b>Email: @person.Email</b></p>
+        </div>
     </div>
 </div>
 
@@ -139,5 +181,33 @@
             })
         }
     }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get the birthdate from the HTML
+        const birthdateElement = document.getElementById("birthdate");
+        const birthdateStr = birthdateElement.textContent.trim();
+
+        // Parse the birthdate string to a Date object
+        const birthdate = new Date(birthdateStr);
+
+        // Function to calculate age
+        function calculateAge(birthdate) {
+            const today = new Date();
+            let age = today.getFullYear() - birthdate.getFullYear();
+            const monthDifference = today.getMonth() - birthdate.getMonth();
+            if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthdate.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
+        // Calculate age
+        const age = calculateAge(birthdate);
+
+        // Update the age element with the calculated age
+        const ageElement = document.getElementById("age");
+        ageElement.innerHTML = `<b>Leeftijd: ${age}</b>`;
+    });
 </script>
 
