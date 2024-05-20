@@ -41,7 +41,7 @@ namespace ADHD_App.Pages
                 Password = password
             };
             _json.AddPerson(newperson);
-            return RedirectToPage("/Index");
+            return RedirectToPage("/Calendar");
             
     }
 }

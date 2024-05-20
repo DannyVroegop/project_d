@@ -1,0 +1,48 @@
+﻿@page
+@model ADHD_App.Pages.AddAppointmentModel
+@{
+}
+<partial name="Taskbar" />
+<div class="AddAppointment"><a href="calendar">Return to Calendar</a></div>
+<link rel="stylesheet" href="css/register.css">
+
+<div class="register-box">
+    <br><h1> Voeg een afspraak toe</h1>
+
+    <form method="post">
+        <br>
+        <div class="form-item">
+            <label for="Start">Start:</label>
+            <input type="datetime-local" id="Start" name="Start" placeholder="Start"
+                   min="@DateTime.Now.Date.ToString("yyyy-MM-ddTHH:mm")"
+                   max="@DateTime.Now.AddDays(365).ToString("yyyy-MM-ddTHH:mm")">
+        </div>
+
+        <div class="form-item">
+            <label for="Duration">Duration:</label>
+            <input type="number" id="Duration" name="Duration" placeholder="Duration" min="0">
+        </div>
+
+        <div class="form-item">
+            <label for="Name">Name:</label>
+            <input type="text" id="Name" name="Name" placeholder="Name">
+        </div>
+
+        <div class="form-item">
+            <label for="Type">Type:</label>
+            <input type="text" id="Type" name="Type" placeholder="Type">
+        </div>
+
+        <div class="form-item">
+            <label for="Description">Description:</label>
+            <input type="text" id="Description" name="Description" placeholder="Description">
+        </div>
+
+        <div class="form-item">
+            <label for="EnergyCost">EnergyCost:</label>
+            <input type="number" id="EnergyCost" name="EnergyCost" placeholder="EnergyCost" min="0" max="100">
+        </div>
+
+        <button type="submit">Registreren</button>
+    </form>
+</div>
