@@ -3,6 +3,7 @@
     "Id": 0,
     "Username": "123",
     "Password": "321",
+<<<<<<< HEAD
     "First_Name": "Kaas",
     "Last_Name": "Haas",
     "Gender": "male",
@@ -10,6 +11,15 @@
     "Adress": null,
     "Email": "abc@def.com",
     "Phonenumber": "062548741",
+=======
+    "First_Name": "",
+    "Last_Name": "",
+    "Gender": null,
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Adress": null,
+    "Email": "",
+    "Phonenumber": "",
+>>>>>>> main
     "EnergyOfTheDay": [
       12,
       23,
@@ -32,11 +42,15 @@
       2,
       2
     ],
+<<<<<<< HEAD
     "Appointments": null,
     "ProfilePicture": "images/stickFigure.png",
     "unlockedImages": [
       "images/stickFigure.png",
       "images/kind.jpg"
     ]
+=======
+    "Appointments": null
+>>>>>>> main
   }
 ]

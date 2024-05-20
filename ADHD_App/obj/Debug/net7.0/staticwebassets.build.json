@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "W1+Pt2hpjL/s18/Uyy9aq/VsiasRm8OC9/ZMEO9fihE=",
+=======
+  "Hash": "iR20+glFRWQgRQ1x12AUr7W6/AQ6WSU9nGBR5LOxVjI=",
+>>>>>>> main
   "Source": "ADHD_App",
   "BasePath": "_content/ADHD_App",
   "Mode": "Default",
@@ -131,6 +135,28 @@
       "OriginalItemSpec": "wwwroot\\data\\Appointments.json"
     },
     {
+<<<<<<< HEAD
+=======
+      "Identity": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\wwwroot\\data\\extra_userinfo.json",
+      "SourceId": "ADHD_App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\wwwroot\\",
+      "BasePath": "_content/ADHD_App",
+      "RelativePath": "data/extra_userinfo.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\extra_userinfo.json"
+    },
+    {
+>>>>>>> main
       "Identity": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\wwwroot\\data\\people.json",
       "SourceId": "ADHD_App",
       "SourceType": "Discovered",

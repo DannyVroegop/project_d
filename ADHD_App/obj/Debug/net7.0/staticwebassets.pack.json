@@ -21,6 +21,13 @@
       "PackagePath": "staticwebassets\\data\\Appointments.json"
     },
     {
+<<<<<<< HEAD
+=======
+      "Id": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\wwwroot\\data\\extra_userinfo.json",
+      "PackagePath": "staticwebassets\\data\\extra_userinfo.json"
+    },
+    {
+>>>>>>> main
       "Id": "D:\\Dannyzard\\Documents\\Informatica\\Jaar 2\\Semester 2\\Project D\\ADHD_App\\wwwroot\\data\\people.json",
       "PackagePath": "staticwebassets\\data\\people.json"
     },
