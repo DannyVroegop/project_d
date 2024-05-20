@@ -10,8 +10,25 @@
     "Adress": null,
     "Email": "",
     "Phonenumber": "",
-    "EnergyOfTheDay": [],
-    "Appointments": null
+    "EnergyOfTheDay": [
+      23,
+      34,
+      34,
+      25,
+      23,
+      67,
+      56,
+      45,
+      17,
+      81,
+      11,
+      100,
+      0,
+      100
+    ],
+    "Appointments": null,
+    "ProfilePicture": null,
+    "unlockedImages": null
   },
   {
     "Id": 1,
@@ -27,7 +44,9 @@
     "EnergyOfTheDay": [
       23
     ],
-    "Appointments": null
+    "Appointments": null,
+    "ProfilePicture": null,
+    "unlockedImages": null
   },
   {
     "Id": 2,
@@ -43,6 +62,8 @@
     "EnergyOfTheDay": [
       12
     ],
-    "Appointments": null
+    "Appointments": null,
+    "ProfilePicture": null,
+    "unlockedImages": null
   }
 ]

@@ -1,0 +1,66 @@
+@page
+@model ADHD_App.Pages.EnergieHistory
+@{
+    ViewData["Title"] = "EnergieHistory";
+}
+
+<h1 style="color: white;">@ViewData["Title"]</h1>
+
+<div>
+    <canvas id="energyChart" width="400" height="200"></canvas>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var energyData = @Html.Raw(Json.Serialize(Model.User.EnergyOfTheDay));
+
+        var ctx = document.getElementById('energyChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: energyData.map((_, index) => index + 1),
+                datasets: [{
+                    label: 'Energy Level',
+                    data: energyData,
+                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                    borderColor: 'rgba(255, 255, 255, 1)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            min: 0,
+                            max: 100,
+                            fontColor: 'white',
+                            fontWeight: 'bold'
+                        },
+                        gridLines: {
+                            color: 'rgba(255, 255, 255, 1)',
+                            lineWidth: 2
+                        }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            fontColor: 'white'
+                        },
+                        gridLines: {
+                            color: 'rgba(255, 255, 255, 1)',
+                            lineWidth: 2
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgba(255, 255, 255, 1)',
+                        fontSize: 16,
+                        fontWeight: 'bold'
+                    }
+                }
+            }
+        });
+    </script>
+}
