@@ -32,17 +32,19 @@
         
          <div class="form-item">
             <label for="FirstName">Voornaam:</label>
-            <input type="text" id="FirstName" name="FirstName" placeholder="Voornaam">
+            <input type="text" id="FirstName" asp-for="person.First_Name" placeholder="Voornaam">
+            <span asp-validation-for="person.First_Name" class="text-danger"></span>
         </div>
 
         <div class="form-item">
             <label for="LastName">Achternaam:</label>
-            <input type="text" id="LastName" name="LastName" placeholder="Achternaam">
+            <input type="text" id="LastName" asp-for="person.Last_Name" placeholder="Achternaam">
+            <span asp-validation-for="person.Last_Name" class="text-danger"></span>
         </div>
 
         <div class="form-item">
             <label for="Gender">Geslacht:</label>
-            <select id="Gender" name="Gender">
+            <select id="Gender" asp-for="person.Gender">
                 <option value="" disabled selected hidden>Kies geslacht</option>
                 <option value="male">Jongen</option>
                 <option value="female">Meisje</option>
@@ -51,23 +53,39 @@
         </div>
 
         <div class="form-item">
+        <label for="Birthdate">Geboortedatum:</label>
+        <input type="date" id="Birthdate" asp-for="person.Date_of_Birth">
+        <span asp-validation-for="person.Date_of_Birth" class="text-danger"></span>
+        </div>
+
+        <div class="form-item">
+        <label for="Group">Groep:</label>
+        <input type="text" id="Group" asp-for="person.Group" placeholder="Groep">
+        <span asp-validation-for="person.Group" class="text-danger"></span>
+        </div>
+
+        <div class="form-item">
             <label for="Email">Email-adres:</label>
-            <input type="email" id="Email" name="Email" placeholder="Email-adres">
+            <input type="email" id="Email" asp-for="person.Email" placeholder="Email-adres">
+            <span asp-validation-for="person.Email" class="text-danger"></span>
         </div>
 
         <div class="form-item">
             <label for="Phone">Telefoonnummer:</label>
-            <input type="text" id="Phone" name="Phone" placeholder="Telefoonnummer">
+            <input type="text" id="Phone" asp-for="person.Phonenumber" placeholder="Telefoonnummer">
+            <span asp-validation-for="person.Phonenumber" class="text-danger"></span>
         </div>
 
         <div class="form-item">
             <label for="Username">Gebruikersnaam:</label>
-            <input type="text" id="Username" name="Username" placeholder="Gebruikersnaam">
+            <input type="text" id="Username" asp-for="person.Username" placeholder="Gebruikersnaam">
+            <span asp-validation-for="person.Username" class="text-danger"></span>
         </div>
 
         <div class="form-item">
             <label for="Password">Wachtwoord:</label>
-            <input type="password" id="Password" name="Password" placeholder="Wachtwoord">
+            <input type="password" id="Password" asp-for="person.Password" placeholder="Wachtwoord">
+            <span asp-validation-for="person.Password" class="text-danger"></span>
         </div>
 
         <a href="Home"><button type="submit">Registreren</button></a>
