@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ADHD_App.Models;
 using System.Text.Json;
+using System.Linq;
 using ADHD_App.Services;
 
 namespace ADHD_App.Pages
@@ -10,9 +11,12 @@ namespace ADHD_App.Pages
     {
         private JsonFileHandler _json;
 
+        [BindProperty]
+        public Person person {get; set;}
         public RegisterModel(JsonFileHandler json)
         {
             _json = json;
+            person = new Person();
         }
         public void OnGet()
         {
@@ -22,29 +26,32 @@ namespace ADHD_App.Pages
         public IActionResult OnPost()
         {
             
-            string firstName = Request.Form["FirstName"];
-            string lastName = Request.Form["LastName"];
-            string gender = Request.Form["Gender"];
-            string email = Request.Form["Email"];
-            string phone = Request.Form["Phone"];
-            string username = Request.Form["Username"];
-            string password = Request.Form["Password"];
-            
-            Person newperson = new Person
+            if (!ModelState.IsValid)
             {
-                First_Name = firstName,
-                Last_Name = lastName,
-                Gender = gender,
-                Email = email,
-                Phonenumber = phone,
-                Username = username,
-                Password = password,
-                ProfilePicture = "images/stickFigure.png",
-                unlockedImages = new string[] { "images/stickFigure.png", "images/kind.jpg" }
-            };
-            _json.AddPerson(newperson);
-            return RedirectToPage("/Calendar");
+                return Page();
+            }
+
             
-    }
+            if (ExistingUsername(person.Username) == true)
+            {
+                ModelState.AddModelError("person.Username", "Gebruikersnaam bestaat al");
+                return Page();
+            }
+
+                
+            _json.AddPerson(person);
+            return RedirectToPage("/Index");
+            
+        }
+
+        public bool ExistingUsername(string username)
+        {
+            var usernames = _json.GetAllPeople().Select(x => x.Username);
+            if (usernames.Contains(username))
+            {
+                return true;
+            }
+            return false;
+        }
 }
 }

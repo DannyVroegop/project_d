@@ -69,6 +69,8 @@ namespace ADHD_App.Services
                 personToUpdate.Password = updatedPerson.Password;
                 personToUpdate.Email = updatedPerson.Email;
                 personToUpdate.Phonenumber = updatedPerson.Phonenumber;
+                personToUpdate.Date_of_Birth = updatedPerson.Date_of_Birth;
+                personToUpdate.Group = updatedPerson.Group;
 
                 SavePeople(people);
             }

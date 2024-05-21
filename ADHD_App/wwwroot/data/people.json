@@ -1,43 +1,36 @@
 [
   {
     "Id": 0,
-    "Username": "123",
-    "Password": "321",
-    "First_Name": "Kaas",
-    "Last_Name": "Haas",
+    "First_Name": "a",
+    "Last_Name": "a",
+    "Gender": "female",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Group": "aa",
+    "Email": "jnsn@gmail.com",
+    "Phonenumber": "123",
+    "Username": "snaa",
+    "Password": "abc123!!",
+    "EnergyOfTheDay": [],
+    "Appointments": null,
+    "ProfilePicture": null,
+    "unlockedImages": null
+  },
+  {
+    "Id": 1,
+    "First_Name": "a",
+    "Last_Name": "b",
     "Gender": "male",
     "Date_of_Birth": "0001-01-01T00:00:00",
-    "Adress": null,
-    "Email": "abc@def.com",
-    "Phonenumber": "062548741",
+    "Group": "1",
+    "Email": "1@gmail.com",
+    "Phonenumber": "134565432",
+    "Username": "12345678",
+    "Password": "abc123!!",
     "EnergyOfTheDay": [
-      12,
-      23,
-      23,
-      23,
-      12,
-      23,
-      12,
-      2,
-      4,
-      2,
-      55,
-      2,
-      22,
-      2,
-      2,
-      2,
-      3,
-      33,
-      2,
-      2,
-      80
+      40
     ],
     "Appointments": null,
-    "ProfilePicture": "images/stickFigure.png",
-    "unlockedImages": [
-      "images/stickFigure.png",
-      "images/kind.jpg"
-    ]
+    "ProfilePicture": null,
+    "unlockedImages": null
   }
 ]
