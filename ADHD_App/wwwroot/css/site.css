@@ -474,7 +474,9 @@ img {
 
     .returntocalendar a:hover {
         background-color: cornflowerblue;
-    }.EnergieHistory h2 {
+    }
+
+.EnergieHistory h2 {
     text-align: center;
     font-size: 100px;
 }
