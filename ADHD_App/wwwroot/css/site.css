@@ -75,14 +75,6 @@ body {
     margin-top: 10px;
 }
 
-/* Registreren */
-.register-box {
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-    width: 500px;
-    height: 500px;
-    padding: 20px;
-}
 
 .home-bar {
     width: 50px;

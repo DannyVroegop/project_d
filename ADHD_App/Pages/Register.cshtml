@@ -4,47 +4,46 @@
 }
 <link rel="stylesheet" href="css/register.css">
 
-<div class="register-box">
+<div class="register-box" style="background-color: rgba(255, 255, 255, 0.7); border-radius: 10px; width: 1000px; margin: auto; text-align: center; padding: 20px;">
     <br><h1> Meld je aan</h1>
     
     <form method="post" asp-page="Register">
-    <div class="register-images">
-    
-    <div class="role-box">
-    <div class="teacher-box">
-    <a href="?role=teacher">
-    <img src="images/docent.jpg" width="150px" height="150px" alt="Docent">
-    <h1>Docent</h1>
-    </a>
-    </div>
-    
+    <!-- <div asp-validation-summary="All" class="text-danger"></div> -->
+        <div class="register-images" style="text-align: center;">
+            <div class="role-box">
+                <div class="teacher-box" style="display: inline-block; margin-right: 90px;">
+                    <a href="?role=teacher">
+                        <img src="images/docent.jpg" width="150px" height="150px" alt="Docent" style="display: inline-block; width: 100px; height: 100px; border-radius: 50%; margin: 10px;">
+                        <h1>Docent</h1>
+                    </a>
+                </div>
 
-    
-    <a href="?role=chiild">
-    <div class="child-box">
-    <img src="images/kind.jpg" width="150px" height="150px" alt="Leerling">
-    <h1>Leerling</h1>
-    </a>
-    </div>
-    </div>
+                <div class="child-box" style="display: inline-block; margin-right: 0px;">
+                    <a href="?role=child">
+                        <img src="images/kind.jpg" width="150px" height="150px" alt="Leerling" style="display: inline-block; width: 100px; height: 100px; border-radius: 50%; margin: 10px;">
+                        <h1>Leerling</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
 
-    <br>
-        
-         <div class="form-item">
-            <label for="FirstName">Voornaam:</label>
-            <input type="text" id="FirstName" asp-for="person.First_Name" placeholder="Voornaam">
+        <br>
+
+        <div class="form-item" style="margin-bottom: 20px; text-align: left;">
+            <label for="FirstName" style="width: 120px; display: inline-block; text-align: left;">Voornaam:</label>
+            <input type="text" id="FirstName" asp-for="person.First_Name" placeholder="Voornaam" style="width: 300px;">
             <span asp-validation-for="person.First_Name" class="text-danger"></span>
         </div>
 
-        <div class="form-item">
-            <label for="LastName">Achternaam:</label>
-            <input type="text" id="LastName" asp-for="person.Last_Name" placeholder="Achternaam">
+        <div class="form-item" style="margin-bottom: 20px; text-align: left;">
+            <label for="LastName" style="width: 120px; display: inline-block; text-align: left;">Achternaam:</label>
+            <input type="text" id="LastName" asp-for="person.Last_Name" placeholder="Achternaam" style="width: 300px;">
             <span asp-validation-for="person.Last_Name" class="text-danger"></span>
         </div>
 
-        <div class="form-item">
-            <label for="Gender">Geslacht:</label>
-            <select id="Gender" asp-for="person.Gender">
+        <div class="form-item" style="margin-bottom: 20px; text-align: left;">
+            <label for="Gender" style="width: 120px; display: inline-block; text-align: left;">Geslacht:</label>
+            <select id="Gender" asp-for="person.Gender" style="width: 300px;">
                 <option value="" disabled selected hidden>Kies geslacht</option>
                 <option value="male">Jongen</option>
                 <option value="female">Meisje</option>
@@ -52,43 +51,43 @@
             </select>
         </div>
 
-        <div class="form-item">
-        <label for="Birthdate">Geboortedatum:</label>
-        <input type="date" id="Birthdate" asp-for="person.Date_of_Birth">
-        <span asp-validation-for="person.Date_of_Birth" class="text-danger"></span>
+        <div class="form-item" style="margin-bottom: 20px; text-align: left;">
+            <label for="Birthdate" style="width: 120px; display: inline-block; text-align: left;">Geboortedatum:</label>
+            <input type="date" id="Birthdate" asp-for="person.Date_of_Birth" style="width: 300px;">
+            <span asp-validation-for="person.Date_of_Birth" class="text-danger"></span>
         </div>
 
-        <div class="form-item">
-        <label for="Group">Groep:</label>
-        <input type="text" id="Group" asp-for="person.Group" placeholder="Groep">
-        <span asp-validation-for="person.Group" class="text-danger"></span>
+        <div class="form-item" style="margin-bottom: 20px; text-align: left;">
+            <label for="Group" style="width: 120px; display: inline-block; text-align: left;">Groep:</label>
+            <input type="text" id="Group" asp-for="person.Group" placeholder="Groep" style="width: 300px;">
+            <span asp-validation-for="person.Group" class="text-danger"></span>
         </div>
 
-        <div class="form-item">
-            <label for="Email">Email-adres:</label>
-            <input type="email" id="Email" asp-for="person.Email" placeholder="Email-adres">
+        <div class="form-item" style="margin-bottom: 20px; text-align: left;">
+            <label for="Email" style="width: 120px; display: inline-block; text-align: left;">Email-adres:</label>
+            <input type="email" id="Email" asp-for="person.Email" placeholder="Email-adres" style="width: 300px;">
             <span asp-validation-for="person.Email" class="text-danger"></span>
         </div>
 
-        <div class="form-item">
-            <label for="Phone">Telefoonnummer:</label>
-            <input type="text" id="Phone" asp-for="person.Phonenumber" placeholder="Telefoonnummer">
+        <div class="form-item" style="margin-bottom: 20px; text-align: left;">
+            <label for="Phone" style="width: 120px; display: inline-block; text-align: left;">Telefoonnummer:</label>
+            <input type="text" id="Phone" asp-for="person.Phonenumber" placeholder="Telefoonnummer" style="width: 300px;">
             <span asp-validation-for="person.Phonenumber" class="text-danger"></span>
         </div>
 
-        <div class="form-item">
-            <label for="Username">Gebruikersnaam:</label>
-            <input type="text" id="Username" asp-for="person.Username" placeholder="Gebruikersnaam">
+        <div class="form-item" style="margin-bottom: 20px; text-align: left;">
+            <label for="Username" style="width: 120px; display: inline-block; text-align: left;">Gebruikersnaam:</label>
+            <input type="text" id="Username" asp-for="person.Username" placeholder="Gebruikersnaam" style="width: 300px;">
             <span asp-validation-for="person.Username" class="text-danger"></span>
         </div>
 
-        <div class="form-item">
-            <label for="Password">Wachtwoord:</label>
-            <input type="password" id="Password" asp-for="person.Password" placeholder="Wachtwoord">
+        <div class="form-item" style="margin-bottom: 20px; text-align: left;">
+            <label for="Password" style="width: 120px; display: inline-block; text-align: left;">Wachtwoord:</label>
+            <input type="password" id="Password" asp-for="person.Password" autocomplete="new-password" placeholder="Wachtwoord" style="width: 300px;">
             <span asp-validation-for="person.Password" class="text-danger"></span>
         </div>
 
-        <a href="Home"><button type="submit">Registreren</button></a>
+
+        <a href="/Index"><button type="submit">Registreren</button></a>
     </form> 
 </div>
-

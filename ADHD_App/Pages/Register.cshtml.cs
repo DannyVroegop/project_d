@@ -31,13 +31,14 @@ namespace ADHD_App.Pages
                 return Page();
             }
 
+            
             if (ExistingUsername(person.Username) == true)
             {
                 ModelState.AddModelError("person.Username", "Gebruikersnaam bestaat al");
                 return Page();
             }
-            
-            
+
+                
             _json.AddPerson(person);
             return RedirectToPage("/Index");
             

@@ -2,10 +2,9 @@
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     width: 1000px;
-    height: 1000px;
     margin: auto;
     text-align: center;
-    padding:20px;
+    padding: 20px;
 }
 
 .register-text {
@@ -16,15 +15,13 @@
     color: white;
     padding-top: 5%;
     margin-bottom: 5%;
-    text-shadow: -2px -2px 0 black
+    text-shadow: -2px -2px 0 black;
 }
 
 .register-box label {
-    display: block;
-    margin-top: 10px;
     text-align: left;
+    width: 120px; /* Breder label voor correcte uitlijning */
 }
-
 
 .register-images {
     text-align: center;
@@ -57,14 +54,23 @@
 }
 
 .form-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-bottom: 20px;
-    align-content: first baseline;
-
+    justify-content: flex-start;
 }
 
 .form-item label {
-    float: left;
-    width: 120px; 
-    margin-right: 20px; 
-    
+    display: inline-block; /* Zorg ervoor dat het label en de invoervelden naast elkaar staan */
+    width: 200px; /* Breng het label op de gewenste breedte */
+    text-align: left; /* Tekst links uitlijnen */
+    margin-right: 20px; /* Ruimte tussen het label en het invoerveld */
+    vertical-align: top; /* Uitlijnen aan de bovenkant om ervoor te zorgen dat de invoervelden correct zijn uitgelijnd */
 }
+
+.form-item label p {
+    text-align: left;
+    margin: 0;
+}
+

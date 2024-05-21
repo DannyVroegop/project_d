@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\data\\Appointments.json"
     },
     {
+      "Id": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Informatica\\Jaar 2\\Project D\\project d 2024\\project_d\\ADHD_App\\wwwroot\\data\\extra_userinfo.json",
+      "PackagePath": "staticwebassets\\data\\extra_userinfo.json"
+    },
+    {
       "Id": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Informatica\\Jaar 2\\Project D\\project d 2024\\project_d\\ADHD_App\\wwwroot\\data\\people.json",
       "PackagePath": "staticwebassets\\data\\people.json"
     },
@@ -71,6 +75,10 @@
     {
       "Id": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Informatica\\Jaar 2\\Project D\\project d 2024\\project_d\\ADHD_App\\wwwroot\\images\\profile.png",
       "PackagePath": "staticwebassets\\images\\profile.png"
+    },
+    {
+      "Id": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Informatica\\Jaar 2\\Project D\\project d 2024\\project_d\\ADHD_App\\wwwroot\\images\\slot.png",
+      "PackagePath": "staticwebassets\\images\\slot.png"
     },
     {
       "Id": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Informatica\\Jaar 2\\Project D\\project d 2024\\project_d\\ADHD_App\\wwwroot\\images\\stickFigure.png",
