@@ -1,58 +1,69 @@
 [
   {
     "Id": 0,
+    "Username": "t",
+    "Password": "t",
+    "First_Name": "t",
+    "Last_Name": "t",
+    "Gender": "male",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Adress": null,
+    "Email": "",
+    "Phonenumber": "",
+    "EnergyOfTheDay": [
+      23,
+      34,
+      34,
+      25,
+      23,
+      67,
+      56,
+      45,
+      17,
+      81,
+      11,
+      100,
+      0,
+      100
+    ],
+    "Appointments": null,
+    "ProfilePicture": null,
+    "unlockedImages": null
+  },
+  {
+    "Id": 1,
+    "Username": "f",
+    "Password": "f",
+    "First_Name": "f",
+    "Last_Name": "f",
+    "Gender": "male",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Adress": null,
+    "Email": "f@dfgjfhr.nl",
+    "Phonenumber": "12345678",
+    "EnergyOfTheDay": [
+      23
+    ],
+    "Appointments": null,
+    "ProfilePicture": null,
+    "unlockedImages": null
+  },
+  {
+    "Id": 2,
     "Username": "123",
     "Password": "321",
-    "First_Name": "A",
-    "Last_Name": "B",
-    "Gender": "male",
-    "Date_of_Birth": "0001-01-01T00:00:00",
-    "Adress": null,
-    "Email": "abc@gmail.com",
-    "Phonenumber": "061234",
-    "EnergyOfTheDay": null,
-    "Appointments": null
-  },
-  {
-    "Id": 0,
-    "Username": "wjej",
-    "Password": "ab",
-    "First_Name": "aa",
-    "Last_Name": "aaa",
+    "First_Name": "",
+    "Last_Name": "",
     "Gender": null,
     "Date_of_Birth": "0001-01-01T00:00:00",
     "Adress": null,
-    "Email": "a@gmail.com",
-    "Phonenumber": "06123",
-    "EnergyOfTheDay": null,
-    "Appointments": null
-  },
-  {
-    "Id": 0,
-    "Username": "wjej",
-    "Password": "",
-    "First_Name": "aa",
-    "Last_Name": "aaa",
-    "Gender": null,
-    "Date_of_Birth": "0001-01-01T00:00:00",
-    "Adress": null,
-    "Email": "a@gmail.com",
-    "Phonenumber": "06123",
-    "EnergyOfTheDay": null,
-    "Appointments": null
-  },
-  {
-    "Id": 0,
-    "Username": "Tim",
-    "Password": "Tim",
-    "First_Name": "Tim",
-    "Last_Name": "Tim",
-    "Gender": "male",
-    "Date_of_Birth": "0001-01-01T00:00:00",
-    "Adress": null,
-    "Email": "email@mail.nl",
-    "Phonenumber": "0612345789",
-    "EnergyOfTheDay": null,
-    "Appointments": null
+    "Email": "",
+    "Phonenumber": "",
+    "EnergyOfTheDay": [
+      12
+    ],
+    "Appointments": null,
+    "ProfilePicture": null,
+    "unlockedImages": null
   }
 ]

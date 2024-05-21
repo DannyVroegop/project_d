@@ -21,9 +21,16 @@ namespace ADHD_App.Models
 
         public List<Appointment> Appointments { get; set; }
 
+        public string ProfilePicture { get; set; }
+        public string[] unlockedImages { get; set; }
+
         public override string ToString()
         {
             return JsonSerializer.Serialize<Person>(this);
+        }
+        public Person()
+        {
+            EnergyOfTheDay = new List<int>();
         }
     }
 }

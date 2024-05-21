@@ -14,7 +14,6 @@ namespace ADHD_App
             builder.Services.AddSingleton<JsonFileHandler>();
 
             builder.Services.AddTransient<JsonFilePeopleService>();
-            builder.Services.AddTransient<JsonFileUserInfoService>();
 
             var app = builder.Build();
 
