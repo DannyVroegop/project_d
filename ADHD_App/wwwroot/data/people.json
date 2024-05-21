@@ -1,57 +1,17 @@
 [
   {
     "Id": 0,
-    "Username": "t",
-    "Password": "t",
-    "First_Name": "t",
-    "Last_Name": "t",
-    "Gender": "male",
-    "Date_of_Birth": "0001-01-01T00:00:00",
-    "Adress": null,
-    "Email": "",
-    "Phonenumber": "",
-    "EnergyOfTheDay": [
-      23,
-      34,
-      34,
-      25,
-      23,
-      67,
-      56,
-      45,
-      17,
-      81,
-      11,
-      100,
-      0,
-      100
-    ],
-    "Appointments": null,
-    "ProfilePicture": null,
-    "unlockedImages": null
-  },
-  {
-    "Id": 1,
-    "Username": "f",
-    "Password": "f",
-    "First_Name": "f",
-    "Last_Name": "f",
-    "Gender": "male",
-    "Date_of_Birth": "0001-01-01T00:00:00",
-    "Adress": null,
-    "Email": "f@dfgjfhr.nl",
-    "Phonenumber": "12345678",
-    "EnergyOfTheDay": [
-      23
-    ],
-    "Appointments": null,
-    "ProfilePicture": null,
-    "unlockedImages": null
-  },
-  {
-    "Id": 2,
     "Username": "123",
     "Password": "321",
+<<<<<<< HEAD
+    "First_Name": "Kaas",
+    "Last_Name": "Haas",
+    "Gender": "male",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Adress": null,
+    "Email": "abc@def.com",
+    "Phonenumber": "062548741",
+=======
     "First_Name": "",
     "Last_Name": "",
     "Gender": null,
@@ -59,11 +19,38 @@
     "Adress": null,
     "Email": "",
     "Phonenumber": "",
+>>>>>>> main
     "EnergyOfTheDay": [
-      12
+      12,
+      23,
+      23,
+      23,
+      12,
+      23,
+      12,
+      2,
+      4,
+      2,
+      55,
+      2,
+      22,
+      2,
+      2,
+      2,
+      3,
+      33,
+      2,
+      2
     ],
+<<<<<<< HEAD
     "Appointments": null,
-    "ProfilePicture": null,
-    "unlockedImages": null
+    "ProfilePicture": "images/stickFigure.png",
+    "unlockedImages": [
+      "images/stickFigure.png",
+      "images/kind.jpg"
+    ]
+=======
+    "Appointments": null
+>>>>>>> main
   }
 ]
