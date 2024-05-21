@@ -10,6 +10,7 @@
     "Adress": null,
     "Email": "abc@gmail.com",
     "Phonenumber": "061234",
+    "EnergyOfTheDay": null,
     "Appointments": null
   },
   {
@@ -23,6 +24,7 @@
     "Adress": null,
     "Email": "a@gmail.com",
     "Phonenumber": "06123",
+    "EnergyOfTheDay": null,
     "Appointments": null
   },
   {
@@ -36,6 +38,7 @@
     "Adress": null,
     "Email": "a@gmail.com",
     "Phonenumber": "06123",
+    "EnergyOfTheDay": null,
     "Appointments": null
   },
   {
@@ -49,6 +52,21 @@
     "Adress": null,
     "Email": "email@mail.nl",
     "Phonenumber": "0612345789",
+    "EnergyOfTheDay": null,
+    "Appointments": null
+  },
+  {
+    "Id": 0,
+    "Username": "Pieterbaas4",
+    "Password": "123",
+    "First_Name": "",
+    "Last_Name": "",
+    "Gender": null,
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Adress": null,
+    "Email": "",
+    "Phonenumber": "",
+    "EnergyOfTheDay": null,
     "Appointments": null
   }
 ]
