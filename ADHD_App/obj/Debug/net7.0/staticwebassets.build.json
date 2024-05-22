@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7/++7dhdzPOu3aJAnc9N4LOa1rOBe/Cfmkze2iQQpD4=",
+  "Hash": "00LH5H7iTHofIi+72lhXScO/4FjRKgx+XNZkVBSk+P4=",
   "Source": "ADHD_App",
   "BasePath": "_content/ADHD_App",
   "Mode": "Default",
@@ -253,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\EnergiePic.png"
+    },
+    {
+      "Identity": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Informatica\\Jaar 2\\Project D\\project d 2024_2025\\project_d\\ADHD_App\\wwwroot\\images\\geschiedenis.png",
+      "SourceId": "ADHD_App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Informatica\\Jaar 2\\Project D\\project d 2024_2025\\project_d\\ADHD_App\\wwwroot\\",
+      "BasePath": "_content/ADHD_App",
+      "RelativePath": "images/geschiedenis.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\geschiedenis.png"
     },
     {
       "Identity": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Informatica\\Jaar 2\\Project D\\project d 2024_2025\\project_d\\ADHD_App\\wwwroot\\images\\Home.png",

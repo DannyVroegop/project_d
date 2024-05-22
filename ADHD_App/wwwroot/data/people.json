@@ -10,7 +10,9 @@
     "Phonenumber": "123",
     "Username": "snaa",
     "Password": "abc123!!",
-    "EnergyOfTheDay": [],
+    "EnergyOfTheDay": [
+      50
+    ],
     "Appointments": null,
     "ProfilePicture": null,
     "unlockedImages": null
