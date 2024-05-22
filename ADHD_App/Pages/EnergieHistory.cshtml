@@ -1,10 +1,81 @@
+@* @page
+@model ADHD_App.Pages.EnergieHistory
+@{
+ViewData["Title"] = "EnergieHistory";
+}
+<partial name="Taskbar" />
+<div class="geschiedenis">
+<h1 style="color: rgb(255, 255, 255);">@ViewData["Title"]</h1>
+
+<div>
+<canvas id="energyChart" width="400" height="200"></canvas>
+</div>
+
+@section Scripts {
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+var energyData = @Html.Raw(Json.Serialize(Model.User.EnergyOfTheDay));
+
+var ctx = document.getElementById('energyChart').getContext('2d');
+var chart = new Chart(ctx, {
+type: 'line',
+data: {
+labels: energyData.map((_, index) => index + 1),
+datasets: [{
+label: 'Energy Level',
+data: energyData,
+backgroundColor: 'rgba(255, 255, 255, 0.2)',
+borderColor: 'rgba(255, 255, 255, 1)',
+borderWidth: 2
+}]
+},
+options: {
+scales: {
+yAxes: [{
+ticks: {
+beginAtZero: true,
+min: 0,
+max: 100,
+fontColor: 'white',
+fontWeight: 'bold',
+callback: function (value, index, values) {
+return '<span style="color: white; font-weight: bold;">' + value + '</span>';
+}
+},
+gridLines: {
+color: 'rgba(255, 255, 255, 1)',
+lineWidth: 2
+}
+}],
+xAxes: [{
+ticks: {
+fontColor: 'white'
+},
+gridLines: {
+color: 'rgba(255, 255, 255, 1)',
+lineWidth: 2
+}
+}]
+},
+legend: {
+labels: {
+fontColor: 'rgba(255, 255, 255, 1)',
+fontSize: 16,
+fontWeight: 'bold'
+}
+}
+}
+});
+</script>
+}
+</div> *@
 @page
 @model ADHD_App.Pages.EnergieHistory
 @{
     ViewData["Title"] = "EnergieHistory";
 }
 <partial name="Taskbar" />
-<div class="geschiedenis">
+<div class="geschiedenis container">
     <h1 style="color: rgb(255, 255, 255);">@ViewData["Title"]</h1>
 
     <div>
@@ -15,19 +86,31 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
             var energyData = @Html.Raw(Json.Serialize(Model.User.EnergyOfTheDay));
+            var averageEnergy = energyData.reduce((a, b) => a + b, 0) / energyData.length;
+            var averageLineData = Array(energyData.length).fill(averageEnergy);
 
             var ctx = document.getElementById('energyChart').getContext('2d');
             var chart = new Chart(ctx, {
                 type: 'line',
                 data: {
                     labels: energyData.map((_, index) => index + 1),
-                    datasets: [{
-                        label: 'Energy Level',
-                        data: energyData,
-                        backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                        borderColor: 'rgba(255, 255, 255, 1)',
-                        borderWidth: 2
-                    }]
+                    datasets: [
+                        {
+                            label: 'Energie Level',
+                            data: energyData,
+                            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                            borderColor: 'rgba(255, 255, 255, 1)',
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Gemiddelde Energie',
+                            data: averageLineData,
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 2,
+                            borderDash: [10, 5],
+                            fill: false
+                        }
+                    ]
                 },
                 options: {
                     scales: {
