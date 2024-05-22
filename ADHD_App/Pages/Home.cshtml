@@ -4,7 +4,9 @@
     ViewData["Title"] = "Home page";
 }
 <partial name="Taskbar" />
-
+@{
+var person = Model.People;
+}
 <div class="main-page">
 <div class="Home-box">
 <div class="Home-box-Left">
@@ -39,15 +41,44 @@
     </a>
 </div>
 <div class="Home-box-Right">
-
-    <a href="Privacy">
-        <button type="button">
-            <span>
-                <img src="images/Book.png"/>
-                <h4>Pauze</h4>
                 
-            </span>
-        </button>
+                @if (person.EnergyOfTheDay != null && person.EnergyOfTheDay.Count > 0)
+                {
+                    var currentEnergy = person.EnergyOfTheDay[person.EnergyOfTheDay.Count - 1];
+                    if (currentEnergy > 50)
+                    {
+                        <button type="button">
+                        <span>
+                            <img src="images/slot.png" alt="Slotje"/>
+                            <h4>Pauze</h4>
+                        </span>
+                        </button>
+                    }
+                    else
+                    {
+                        <a href="Privacy">
+                        <button type="button">
+                        <span>
+                            <img src="images/Book.png" alt="Book"/>
+                            <h4>Pauze</h4>
+                        </span>
+                        </button>
+                        </a>
+                    }
+                }
+                else
+                {
+                    <a href="Privacy">
+                        <button type="button">
+                        <span>
+                            <img src="images/Book.png" alt="Book"/>
+                            <h4>Pauze</h4>
+                        </span>
+                        </button>
+                    </a>
+                }
+
+                
 
     <a href="/">
     <a href="EnergieHistory">
