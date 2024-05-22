@@ -1,0 +1,198 @@
+@page
+@model ADHD_App.Pages.VragenModel
+@{
+    ViewData["Title"] = "vraag";
+}
+<div id="screen"></div>
+<div id="titel">
+    <h2 style="color: #172118; text-align:center">Verbind de vraag met het goede antwoord</h2>
+</div>
+<form method="post">
+    <div id="container" style="width: 100%; height: 100%; top:0; left:0; position:absolute;">
+ 
+        <div id="vraag1" onclick="recordButtonPress(1)">3+4</div>
+        <div id="vraag2" onclick="recordButtonPress(2)">7+4</div>
+        <div id="vraag3" onclick="recordButtonPress(3)">3+5</div>
+ 
+        <div id="antwoord1" onclick="recordButtonPress(4)">11</div>
+        <div id="antwoord2" onclick="recordButtonPress(5)">7</div>
+        <div id="antwoord3" onclick="recordButtonPress(6)">8</div>
+        <svg id="svg-container" width="1500" height="800"></svg>
+ 
+ 
+        <!-- Add a button to submit the order of clicks to the backend -->
+        <button type="submit" id="homeknop">Home</button>
+    </div>
+</form>
+ 
+ 
+ 
+<script>
+    let vraag = 0;
+    let antwoord = 0;
+    let lijnen = [];
+    let topOfScreen = 100;
+    let leftOfScreen = 500;
+ 
+    function recordButtonPress(buttonId) {
+        if (buttonId < 4) {
+            vraag = buttonId;
+        } else {
+            antwoord = buttonId;
+        }
+ 
+        if (vraag > 0 && antwoord > 0) {
+            lijnen.push([vraag, antwoord])
+ 
+            var svg = document.getElementById("svg-container");
+            var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            line.setAttribute("x1", leftOfScreen + 50)
+            line.setAttribute("y1", (vraag - 1) * 150 + 50 + topOfScreen)
+            line.setAttribute("x2", leftOfScreen + 350)
+            line.setAttribute("y2", (antwoord - 4) * 150 + 50 + topOfScreen)
+            line.setAttribute("stroke", "black")
+            svg.appendChild(line);
+ 
+            vraag = 0
+            antwoord = 0
+        }
+ 
+ 
+        console.log(lijnen); // For debugging, to see the order in the console
+    }
+ 
+ 
+    function submitOrder() {
+        fetch('/ConnectQTOA/SubmitOrder', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ lijnen })
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                // Clear the button order after submission if needed
+                buttonOrder = [];
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }
+</script>
+ 
+ 
+<style>
+    #screen {
+        width: 800px;
+        height: 700px;
+        top: 10px;
+        left: 300px;
+        background: #a2aaa3;
+        position: absolute;
+        border-radius: 15px;
+        align-content: center;
+        text-align: center;
+        z-index: 0;
+    }
+ 
+    #titel {
+ 
+        top: 10px;
+        left: 300px;
+        width: 800px;
+        background: #96e4a2;
+        position: absolute;
+        border-start-end-radius: 15px;
+        border-start-start-radius: 15px;
+        align-content: center;
+        text-align: center;
+        color: #3a7941;
+    }
+ 
+    #vraag1 {
+        width: 200px;
+        height: 100px;
+        top: 100px;
+        left: 400px;
+        background: #96e4a2;
+        position: absolute;
+        border-radius: 15px;
+        align-content: center;
+        text-align: center;
+        color: #3a7941;
+    }
+ 
+    #vraag2 {
+        width: 200px;
+        height: 100px;
+        top: 250px;
+        left: 400px;
+        background: #8bc667;
+        position: absolute;
+        border-radius: 15px;
+        align-content: center;
+        text-align: center;
+    }
+ 
+    #vraag3 {
+        width: 200px;
+        height: 100px;
+        top: 400px;
+        left: 400px;
+        background: #3a7941;
+        position: absolute;
+        border-radius: 15px;
+        align-content: center;
+        text-align: center;
+    }
+ 
+    #antwoord1 {
+        width: 200px;
+        height: 100px;
+        top: 100px;
+        left: 800px;
+        background: #6d2121;
+        position: absolute;
+        border-radius: 15px;
+        align-content: center;
+        text-align: center;
+    }
+ 
+    #antwoord2 {
+        width: 200px;
+        height: 100px;
+        top: 250px;
+        left: 800px;
+        background: #703b3b;
+        position: absolute;
+        border-radius: 15px;
+        align-content: center;
+        text-align: center;
+    }
+ 
+    #antwoord3 {
+        width: 200px;
+        height: 100px;
+        top: 400px;
+        left: 800px;
+        background: #ad4b4b;
+        position: absolute;
+        border-radius: 15px;
+        align-content: center;
+        text-align: center;
+    }
+ 
+    #homeknop {
+        width: 200px;
+        height: 100px;
+        top: 600px;
+        left: 600px;
+        background: #e3e571;
+        position: absolute;
+        border-radius: 15px;
+        align-content: center;
+        text-align: center;
+    }
+</style>
