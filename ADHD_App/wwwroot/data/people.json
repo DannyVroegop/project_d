@@ -29,7 +29,8 @@
     "Username": "12345678",
     "Password": "abc123!!",
     "EnergyOfTheDay": [
-      40
+      40,
+      80
     ],
     "Appointments": null,
     "ProfilePicture": null,

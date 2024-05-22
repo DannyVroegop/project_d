@@ -19,7 +19,7 @@ namespace ADHD_App.Pages
         {
             Appointments = JsonAppointments.Loadappointments();
             string start = Request.Form["Start"];
-            string duration = Request.Form["Duration"];
+            string duration = Request.Form["Duratie"];
             string name = Request.Form["Name"];
             string type = Request.Form["Type"];
             string description = Request.Form["Description"];
