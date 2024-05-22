@@ -1,14 +1,35 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
+using ADHD_App.Models;
+using ADHD_App.Services;
 namespace ADHD_App.Pages
 {
+
     public class HomeModel : PageModel
     {
-        // public Person User { get; private set; } //Deze plakken
+        private readonly ILogger<IndexModel> _logger;
+        public JsonFilePeopleService PeopleService;
+        //public JsonFileUserInfoService UserInfoService;
+        public Person People { get; private set; }
+
+        public HomeModel(ILogger<IndexModel> logger,
+            JsonFilePeopleService productService)
+        {
+            _logger = logger;
+            PeopleService = productService;
+            //UserInfoService = userinfoservice;
+        }
+
         public void OnGet()
         {
-            // User = user; // Deze plakken 
+            int id = int.Parse(Request.Cookies["id"]);
+            if (PeopleService.getUserById(id) != null)
+                People = PeopleService.getUserById(id);
+            //if (UserInfoService.LoadInfo(People) != null)
+            //{
+                //userinfo = UserInfoService.LoadInfo(People);
+            //}
         }
+
+
     }
 }

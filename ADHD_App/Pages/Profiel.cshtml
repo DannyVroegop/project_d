@@ -132,10 +132,10 @@
             <p><b>Achternaam: @person.Last_Name</b></p>
         </div>
         <div class="info">
-            <p><b>Leeftijd: </b></p>
+            <p><b>Leeftijd: <span id="age"></span></b></p>
         </div>
         <div class="info">
-            <p><b>Geboortedatum: <span id="birthdate">@person.Date_of_Birth</span></b></p>
+            <p><b>Geboortedatum: <span id="birthdate">@person.Date_of_Birth.ToLongDateString()</span></b></p>
         </div>
         <div class="info">
             <p><b>Geslacht: @person.Gender</b></p>
@@ -159,31 +159,9 @@
         }
     })
 </script>
+
 <script>
-    window.onload = function loadimages() {
-        var test = @Html.Raw(Json.Serialize(Model.People.unlockedImages))
-        for (const pic of test) { 
-            let item = document.createElement("GRIDBLOCK");
-            var parent = document.getElementById("PROFIELGRID");
-            parent.appendChild(item);
-            var newimg = document.createElement("img")
-            newimg.src = pic;
-            newimg.alt = "Een potentieel profielfoto"
-            item.appendChild(newimg)
-            item.addEventListener("click", function () {
-                profielgrid = document.getElementById("PROFIELGRID")
-                profielgrid.style.display = 'none';
-                console.log(item.children[0]);
-                console.log("OTHER_TEST");
-                console.log(document.getElementById("ProfielFoto").children[0].src)
-                var profielfoto = document.getElementById("ProfielFoto").children[0];
-                profielfoto.src = item.children[0].src;
-            })
-        }
-    }
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
+    window.onload = function loadage() {
         // Get the birthdate from the HTML
         const birthdateElement = document.getElementById("birthdate");
         const birthdateStr = birthdateElement.textContent.trim();
@@ -207,7 +185,27 @@
 
         // Update the age element with the calculated age
         const ageElement = document.getElementById("age");
-        ageElement.innerHTML = `<b>Leeftijd: ${age}</b>`;
-    });
+        ageElement.innerHTML = `<b>${age}</b>`;
+        // Load images
+        var test = @Html.Raw(Json.Serialize(Model.People.unlockedImages))
+            for (const pic of test) {
+            let item = document.createElement("GRIDBLOCK");
+            var parent = document.getElementById("PROFIELGRID");
+            parent.appendChild(item);
+            var newimg = document.createElement("img")
+            newimg.src = pic;
+            newimg.alt = "Een potentieel profielfoto"
+            item.appendChild(newimg)
+            item.addEventListener("click", function () {
+                profielgrid = document.getElementById("PROFIELGRID")
+                profielgrid.style.display = 'none';
+                console.log(item.children[0]);
+                console.log("OTHER_TEST");
+                console.log(document.getElementById("ProfielFoto").children[0].src)
+                var profielfoto = document.getElementById("ProfielFoto").children[0];
+                profielfoto.src = item.children[0].src;
+            })
+        }
+    };
 </script>
 
