@@ -36,7 +36,7 @@ namespace ADHD_App.Pages
                 option.Expires = DateTime.Now.AddDays(1);
                 string id = $"{user.Id}";
                 Response.Cookies.Append("id", id, option);
-                return RedirectToPage("/Home", user);
+                return RedirectToPage("/EnergiePopUp", user);
             }
         }
     }

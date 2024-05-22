@@ -50,9 +50,10 @@
     .ProfielFotoGRID {
         height: 300px;
         width: 400px;
-        position: relative;
-        top: 700px;
-        right: 100px;
+        position: absolute;
+        top: 85%;
+        left: 30%;
+        /right: 700px;
         margin-left: -250px;
         margin-top: -500px;
         background-color: #FFFFFF;
@@ -62,14 +63,15 @@
         overflow-y: scroll;
         grid-template-columns: repeat(2, 1fr);
         gap: 5px;
+        z-index: 10;
     }
 
     .GRIDBLOCK {
         height: 300px;
         width: 400px;
         position: relative;
-        top: 700px;
-        right: 100px;
+        /*top: 700px;
+        right: 100px;*/
         margin-left: -250px;
         margin-top: -500px;
         background-color: #FFFFFF;
@@ -77,12 +79,37 @@
         border-style: solid;
         border-color: #000000;
     }
+
+    .info-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        background-color: #FFFFFF;
+        padding: 0px;
+        width: 90%;
+        gap: 3px;
+        margin: 10% auto 0;
+    }
+
+    .info {
+        background-color: #7FE4E3;
+        border-radius: 25px;
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 100%;
+        white-space: nowrap;
+        box-sizing: border-box;
+        flex-basis: 50%;
+    }
+    .intro p {
+        margin: 0;
+    }
     
 
 </style>
 @{
     var person = Model.People;
-    var userinfo = Model.userinfo;
 }
 
 <partial name="Taskbar" />
@@ -93,12 +120,30 @@
 
 <div class="background">
     <div class="ProfielFoto" id="ProfielFoto">
-        <img src="@userinfo.ProfilePicture" alt="Huidige profiel foto van de gebruiker"/>
+        <img src="@person.ProfilePicture" alt="Huidige profiel foto van de gebruiker"/>
     </div>
     <div class="ProfielFotoGRID" id="PROFIELGRID">
-
     </div>
-    <
+    <div class="info-container">
+        <div class="info">
+            <p><b>Voornaam: @person.First_Name</b></p>
+        </div>
+        <div class="info">
+            <p><b>Achternaam: @person.Last_Name</b></p>
+        </div>
+        <div class="info">
+            <p><b>Leeftijd: </b></p>
+        </div>
+        <div class="info">
+            <p><b>Geboortedatum: <span id="birthdate">@person.Date_of_Birth</span></b></p>
+        </div>
+        <div class="info">
+            <p><b>Geslacht: @person.Gender</b></p>
+        </div>
+        <div class="info">
+            <p><b>Email: @person.Email</b></p>
+        </div>
+    </div>
 </div>
 
 
@@ -116,9 +161,9 @@
 </script>
 <script>
     window.onload = function loadimages() {
-        var test = @Html.Raw(Json.Serialize(Model.userinfo.unlockedImages))
+        var test = @Html.Raw(Json.Serialize(Model.People.unlockedImages))
         for (const pic of test) { 
-            var item = document.createElement("GRIDBLOCK");
+            let item = document.createElement("GRIDBLOCK");
             var parent = document.getElementById("PROFIELGRID");
             parent.appendChild(item);
             var newimg = document.createElement("img")
@@ -131,9 +176,38 @@
                 console.log(item.children[0]);
                 console.log("OTHER_TEST");
                 console.log(document.getElementById("ProfielFoto").children[0].src)
-                var profielfoto = document.getElementById("ProfielFoto").children[0].src = item.children[0].src;
+                var profielfoto = document.getElementById("ProfielFoto").children[0];
+                profielfoto.src = item.children[0].src;
             })
         }
     }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get the birthdate from the HTML
+        const birthdateElement = document.getElementById("birthdate");
+        const birthdateStr = birthdateElement.textContent.trim();
+
+        // Parse the birthdate string to a Date object
+        const birthdate = new Date(birthdateStr);
+
+        // Function to calculate age
+        function calculateAge(birthdate) {
+            const today = new Date();
+            let age = today.getFullYear() - birthdate.getFullYear();
+            const monthDifference = today.getMonth() - birthdate.getMonth();
+            if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthdate.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
+        // Calculate age
+        const age = calculateAge(birthdate);
+
+        // Update the age element with the calculated age
+        const ageElement = document.getElementById("age");
+        ageElement.innerHTML = `<b>Leeftijd: ${age}</b>`;
+    });
 </script>
 

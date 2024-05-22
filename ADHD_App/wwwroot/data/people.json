@@ -1,72 +1,39 @@
 [
   {
     "Id": 0,
-    "Username": "123",
-    "Password": "321",
-    "First_Name": "A",
-    "Last_Name": "B",
+    "First_Name": "a",
+    "Last_Name": "a",
+    "Gender": "female",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Group": "aa",
+    "Email": "jnsn@gmail.com",
+    "Phonenumber": "123",
+    "Username": "snaa",
+    "Password": "abc123!!",
+    "EnergyOfTheDay": [
+      50
+    ],
+    "Appointments": null,
+    "ProfilePicture": null,
+    "unlockedImages": null
+  },
+  {
+    "Id": 1,
+    "First_Name": "a",
+    "Last_Name": "b",
     "Gender": "male",
     "Date_of_Birth": "0001-01-01T00:00:00",
-    "Adress": null,
-    "Email": "abc@gmail.com",
-    "Phonenumber": "061234",
-    "EnergyOfTheDay": null,
-    "Appointments": null
-  },
-  {
-    "Id": 0,
-    "Username": "wjej",
-    "Password": "ab",
-    "First_Name": "aa",
-    "Last_Name": "aaa",
-    "Gender": null,
-    "Date_of_Birth": "0001-01-01T00:00:00",
-    "Adress": null,
-    "Email": "a@gmail.com",
-    "Phonenumber": "06123",
-    "EnergyOfTheDay": null,
-    "Appointments": null
-  },
-  {
-    "Id": 0,
-    "Username": "wjej",
-    "Password": "",
-    "First_Name": "aa",
-    "Last_Name": "aaa",
-    "Gender": null,
-    "Date_of_Birth": "0001-01-01T00:00:00",
-    "Adress": null,
-    "Email": "a@gmail.com",
-    "Phonenumber": "06123",
-    "EnergyOfTheDay": null,
-    "Appointments": null
-  },
-  {
-    "Id": 0,
-    "Username": "Tim",
-    "Password": "Tim",
-    "First_Name": "Tim",
-    "Last_Name": "Tim",
-    "Gender": "male",
-    "Date_of_Birth": "0001-01-01T00:00:00",
-    "Adress": null,
-    "Email": "email@mail.nl",
-    "Phonenumber": "0612345789",
-    "EnergyOfTheDay": null,
-    "Appointments": null
-  },
-  {
-    "Id": 0,
-    "Username": "Pieterbaas4",
-    "Password": "123",
-    "First_Name": "",
-    "Last_Name": "",
-    "Gender": null,
-    "Date_of_Birth": "0001-01-01T00:00:00",
-    "Adress": null,
-    "Email": "",
-    "Phonenumber": "",
-    "EnergyOfTheDay": null,
-    "Appointments": null
+    "Group": "1",
+    "Email": "1@gmail.com",
+    "Phonenumber": "134565432",
+    "Username": "12345678",
+    "Password": "abc123!!",
+    "EnergyOfTheDay": [
+      40,
+      80
+    ],
+    "Appointments": null,
+    "ProfilePicture": null,
+    "unlockedImages": null
   }
 ]

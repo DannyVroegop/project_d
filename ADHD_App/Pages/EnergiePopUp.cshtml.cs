@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using ADHD_App.Services;
 using ADHD_App.Models;
+using System.Collections.ObjectModel;
 
 namespace ADHD_App.Pages
 {
@@ -19,30 +20,39 @@ namespace ADHD_App.Pages
         public JsonFilePeopleService PeopleService;
         public string Message { get; set; }
         public Person User { get; set; }
+        private JsonFileHandler _json;
 
-        public EnergiePopUp(ILogger<EnergiePopUp> logger, JsonFilePeopleService productService)
+        public EnergiePopUp(ILogger<EnergiePopUp> logger, JsonFilePeopleService productService, JsonFileHandler json)
         {
             PeopleService = productService;
             _logger = logger;
+            _json = json;
         }
 
-        public void OnGet(Person user)
+        public void OnGet()
         {
-            User = user;
+            int id = int.Parse(Request.Cookies["id"]);
+            if (PeopleService.getUserById(id) != null)
+                User = PeopleService.getUserById(id);
         }
 
 
         public IActionResult OnPost(int energyOfTheDay)
         {
+            int id = int.Parse(Request.Cookies["id"]);
+            if (PeopleService.getUserById(id) != null)
+                User = PeopleService.getUserById(id);
+            System.Console.WriteLine(User.Last_Name);
             // Get the energy of the day from the submitted form data
             // var energyFormData = Request.Form["energyOfTheDay"];
             User.EnergyOfTheDay.Add(energyOfTheDay);
+            _json.UpdatePerson(User);
             // Update the message
             Message = "Bedankt voor het updaten van de energie van de dag!";
             ViewData["Message"] = Message;
             // Redirect to another page after 3 seconds
             // System.Threading.Thread.Sleep(3000);
-            return Page();
+            return RedirectToPage("/Home");
         }
 
     }

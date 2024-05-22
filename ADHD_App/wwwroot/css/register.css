@@ -2,10 +2,9 @@
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     width: 1000px;
-    height: 1000px;
     margin: auto;
     text-align: center;
-    padding:20px;
+    padding: 20px;
 }
 
 .register-text {
@@ -16,14 +15,13 @@
     color: white;
     padding-top: 5%;
     margin-bottom: 5%;
-    text-shadow: -2px -2px 0 black
+    text-shadow: -2px -2px 0 black;
 }
 
 .register-box label {
-    display: block;
-    margin-top: 10px;
+    text-align: left;
+    width: 120px; 
 }
-
 
 .register-images {
     text-align: center;
@@ -56,12 +54,22 @@
 }
 
 .form-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-bottom: 20px;
-
+    justify-content: flex-start;
 }
 
 .form-item label {
-    float: left;
-    width: 120px; 
-    margin-right: 20px; 
+    display: inline-block; 
+    width: 200px; 
+    text-align: left; 
+    margin-right: 20px;
+    vertical-align: top; 
+}
+
+.form-item label p {
+    text-align: left;
+    margin: 0;
 }

@@ -3,13 +3,17 @@
 @{
     ViewData["Title"] = "Calendar";
 }
-
+<partial name="ctaskbar" />
 @{
     DateTime Date = Model.SelectedDate;
     int I = Model.I;
+    int UID = int.Parse(Request.Cookies["id"]);
 }
 <div class="Agenda">
-    <h2>Agenda</h2>
+    <td>
+        <h2 style="width: 300px"></h2> 
+        <h2>Agenda</h2> 
+    </tr>
 </div>
 
 <div class="date-selecter">
@@ -28,8 +32,8 @@
     @{
         foreach (var app in Model.Appointments)
         {
-            if (app.Start.Date == Date.Date)
-        {
+            if (app.Start.Date == Date.Date && app.UID == UID)
+            {
                 <tr>
                     <td><a href= "AppointmentDetails?ID=@app.ID">
                         <div class="date">
@@ -41,7 +45,12 @@
                     </a></td>
                 </tr>
             }
-            }
+        }
+        <tr>
+            <td>
+                <a href="AddAppointment" style="background-color:; text-align"><p style="width:20vh"></p>Voeg een afspraak toe</a>
+            </td>
+        </tr>
         }
 
 </div>

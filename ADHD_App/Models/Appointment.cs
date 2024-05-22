@@ -11,8 +11,9 @@ namespace ADHD_App.Models
         public string Type { get; set; }
         public string Description { get; set; }
         public int EnergyCost { get; set; }
+        public int UID { get; set; }
 
-        public Appointment(int id, DateTime start, DateTime end,string name, string type, string description, int energyCost = 0)
+        public Appointment(int id, DateTime start, DateTime end,string name, string type, string description, int energyCost = 0, int uid = 0)
         {
             ID = id;
             Start = start;
@@ -21,6 +22,7 @@ namespace ADHD_App.Models
             Type = type;
             Description = description;
             EnergyCost = energyCost;
+            UID = uid;
         }
         public override string ToString()
         {
