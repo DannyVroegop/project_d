@@ -21,6 +21,8 @@ namespace ADHD_App.Services
         {
             var people = GetAllPeople();
             person.Id = people.Count;
+            person.unlockedImages = new string[] {"images/Book.png", "kind.jpg"};
+            person.ProfilePicture = "images/Book.png";
             people.Add(person);
             var jsonString = JsonSerializer.Serialize(people, new JsonSerializerOptions
             {

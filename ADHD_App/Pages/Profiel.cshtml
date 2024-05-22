@@ -132,10 +132,10 @@
             <p><b>Achternaam: @person.Last_Name</b></p>
         </div>
         <div class="info">
-            <p><b>Leeftijd: </b></p>
+            <p><b>Leeftijd: <span id="age"></span></b></p>
         </div>
         <div class="info">
-            <p><b>Geboortedatum: <span id="birthdate">@person.Date_of_Birth</span></b></p>
+            <p><b>Geboortedatum: <span id="birthdate">@person.Date_of_Birth.Date</span></b></p>
         </div>
         <div class="info">
             <p><b>Geslacht: @person.Gender</b></p>
@@ -183,7 +183,7 @@
     }
 </script>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    window.onload = function loadage() {
         // Get the birthdate from the HTML
         const birthdateElement = document.getElementById("birthdate");
         const birthdateStr = birthdateElement.textContent.trim();
@@ -207,7 +207,7 @@
 
         // Update the age element with the calculated age
         const ageElement = document.getElementById("age");
-        ageElement.innerHTML = `<b>Leeftijd: ${age}</b>`;
-    });
+        ageElement.innerHTML = `<b>${age}</b>`;
+    };
 </script>
 
