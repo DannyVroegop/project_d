@@ -24,6 +24,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwb2ludG1lbnREZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/soufi/OneDrive - Hogeschool Rotterdam/Informatica/Jaar 2/Project D/project d 2024_2025/project_d/ADHD_App/Pages/Break.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnJlYWsuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/soufi/OneDrive - Hogeschool Rotterdam/Informatica/Jaar 2/Project D/project d 2024_2025/project_d/ADHD_App/Pages/Calendar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FsZW5kYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,10 +50,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/soufi/OneDrive - Hogeschool Rotterdam/Informatica/Jaar 2/Project D/project d 2024_2025/project_d/ADHD_App/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/soufi/OneDrive - Hogeschool Rotterdam/Informatica/Jaar 2/Project D/project d 2024_2025/project_d/ADHD_App/Pages/Game1.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2FtZTEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/soufi/OneDrive - Hogeschool Rotterdam/Informatica/Jaar 2/Project D/project d 2024_2025/project_d/ADHD_App/Pages/Home.cshtml]

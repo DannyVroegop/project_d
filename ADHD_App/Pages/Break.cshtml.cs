@@ -8,11 +8,11 @@ using Microsoft.Extensions.Logging;
 
 namespace ADHD_App.Pages
 {
-    public class Game1 : PageModel
+    public class Break : PageModel
     {
-        private readonly ILogger<Game1> _logger;
+        private readonly ILogger<Break> _logger;
 
-        public Game1(ILogger<Game1> logger)
+        public Break(ILogger<Break> logger)
         {
             _logger = logger;
         }
