@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oRYZUxdMq4DBb3rR2YJRrLFaExHHwOYWR+nMQLeQ4Bo=",
+  "Hash": "DmuUdnoRPqsVCMemRodL72RgRSlMl2Wk0/hXdG6WGfY=",
   "Source": "ADHD_App",
   "BasePath": "_content/ADHD_App",
   "Mode": "Default",
@@ -406,6 +406,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\slot.png"
+    },
+    {
+      "Identity": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Informatica\\Jaar 2\\Project D\\project d 2024_2025\\project_d\\ADHD_App\\wwwroot\\images\\snakegame.jpg",
+      "SourceId": "ADHD_App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Informatica\\Jaar 2\\Project D\\project d 2024_2025\\project_d\\ADHD_App\\wwwroot\\",
+      "BasePath": "_content/ADHD_App",
+      "RelativePath": "images/snakegame.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\snakegame.jpg"
     },
     {
       "Identity": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Informatica\\Jaar 2\\Project D\\project d 2024_2025\\project_d\\ADHD_App\\wwwroot\\images\\stickFigure.png",
