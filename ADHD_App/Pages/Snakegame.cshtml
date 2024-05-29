@@ -13,10 +13,19 @@
         color: white;
         margin-top: 40px;
     }
+    .back-button {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 200px;
+            height: 50px;
+        }
+
     
 </style>
+<button class="back-button" onclick="window.location.href = '/Break';">Terug naar pauze menu</button>
 
-<partial name="Taskbar" />
+
 <div class="snake-box">
     <h2>Snake</h2>
     <canvas id= "box"></canvas>

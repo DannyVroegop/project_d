@@ -8,12 +8,15 @@
     "Group": "5",
     "Email": "dr@gmail.com",
     "Phonenumber": "958694859",
-    "Username": "abcd",
-    "Password": "123r567!",
+    "Username": "1",
+    "Password": "1",
     "EnergyOfTheDay": [
       5,
       50,
-      50
+      50,
+      23,
+      23,
+      34
     ],
     "Appointments": null,
     "ProfilePicture": "images/Book.png",

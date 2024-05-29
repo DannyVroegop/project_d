@@ -42,7 +42,6 @@ namespace ADHD_App.Pages
             int id = int.Parse(Request.Cookies["id"]);
             if (PeopleService.getUserById(id) != null)
                 User = PeopleService.getUserById(id);
-            System.Console.WriteLine(User.Last_Name);
             // Get the energy of the day from the submitted form data
             // var energyFormData = Request.Form["energyOfTheDay"];
             User.EnergyOfTheDay.Add(energyOfTheDay);
