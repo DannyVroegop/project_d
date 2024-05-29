@@ -11,7 +11,9 @@
     "Username": "abcd",
     "Password": "123r567!",
     "EnergyOfTheDay": [
-      5
+      5,
+      50,
+      50
     ],
     "Appointments": null,
     "ProfilePicture": "images/Book.png",
