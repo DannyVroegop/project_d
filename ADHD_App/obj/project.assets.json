@@ -561,19 +561,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\danny\\.nuget\\packages\\": {}
+    "C:\\Users\\pvspi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\ADHD_App.csproj",
+      "projectUniqueName": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\ADHD_App.csproj",
       "projectName": "ADHD_App",
-      "projectPath": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\ADHD_App.csproj",
-      "packagesPath": "C:\\Users\\danny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\obj\\",
+      "projectPath": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\ADHD_App.csproj",
+      "packagesPath": "C:\\Users\\pvspi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\danny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pvspi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -593,11 +593,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -632,7 +627,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
