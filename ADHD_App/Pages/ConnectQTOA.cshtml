@@ -9,59 +9,110 @@
 </div>
 <form method="post">
     <div id="container" style="width: 100%; height: 100%; top:0; left:0; position:absolute;">
- 
-        <div id="vraag1" onclick="recordButtonPress(1)">3+4</div>
-        <div id="vraag2" onclick="recordButtonPress(2)">7+4</div>
-        <div id="vraag3" onclick="recordButtonPress(3)">3+5</div>
- 
-        <div id="antwoord1" onclick="recordButtonPress(4)">11</div>
-        <div id="antwoord2" onclick="recordButtonPress(5)">7</div>
-        <div id="antwoord3" onclick="recordButtonPress(6)">8</div>
+
+        <div id="vraag1" onclick="recordButtonPress(1)"></div>
+        <div id="vraag2" onclick="recordButtonPress(2)"></div>
+        <div id="vraag3" onclick="recordButtonPress(3)"></div>
+
+        <div id="antwoord1" onclick="recordButtonPress(4)"></div>
+        <div id="antwoord2" onclick="recordButtonPress(5)"></div>
+        <div id="antwoord3" onclick="recordButtonPress(6)"></div>
         <svg id="svg-container" width="1500" height="800"></svg>
- 
- 
+
+
         <!-- Add a button to submit the order of clicks to the backend -->
         <button type="submit" id="homeknop">Home</button>
     </div>
 </form>
- 
- 
- 
+
+
+
 <script>
     let vraag = 0;
     let antwoord = 0;
     let lijnen = [];
     let topOfScreen = 100;
     let leftOfScreen = 500;
- 
+
+    const vragen = [
+        {
+            vraag: "3+6",
+            antwoord: "5"
+        },
+        {
+            vraag: "5+11",
+            antwoord: "9"
+        },
+        {
+            vraag: "3+2",
+            antwoord: "16"
+        }
+    ]
+
+    vragen.map((vraag, index) => {
+        const vraagDiv = document.getElementById('vraag' + (index + 1));
+        vraagDiv.textContent = vraag.vraag;
+        const antwoordDiv = document.getElementById('antwoord' + (index + 1));
+        antwoordDiv.textContent = vraag.antwoord;
+    })
+
     function recordButtonPress(buttonId) {
         if (buttonId < 4) {
+            var vraagDivOld = document.getElementById("vraag" + vraag);
+            if (vraagDivOld) { vraagDivOld.style.border = 'none'; }
             vraag = buttonId;
+            var vraagDivNew = document.getElementById("vraag" + buttonId);
+            vraagDivNew.style.border = 'solid';
         } else {
+            var antwoordDivOld = document.getElementById("antwoord" + (antwoord - 3));
+            if (antwoordDivOld) { antwoordDivOld.style.border = 'none'; }
             antwoord = buttonId;
+            var antwoordDivNew = document.getElementById("antwoord" + (buttonId - 3));
+            antwoordDivNew.style.border = 'solid';
         }
- 
+
         if (vraag > 0 && antwoord > 0) {
-            lijnen.push([vraag, antwoord])
- 
+
             var svg = document.getElementById("svg-container");
+
+            lijnen = lijnen.map((lijn) => {
+                if (lijn[0] === vraag || lijn[1] === antwoord) {
+                    var line = document.getElementById("line" + lijn[0] + lijn[1]);
+                    svg.removeChild(line)
+                    return []
+                }
+                return lijn
+
+            }).filter((lijn) => lijn.length > 0)
+
+            lijnen.push([vraag, antwoord])
+
+
             var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            line.setAttribute("id", "line" + vraag + antwoord)
             line.setAttribute("x1", leftOfScreen + 50)
             line.setAttribute("y1", (vraag - 1) * 150 + 50 + topOfScreen)
             line.setAttribute("x2", leftOfScreen + 350)
             line.setAttribute("y2", (antwoord - 4) * 150 + 50 + topOfScreen)
             line.setAttribute("stroke", "black")
             svg.appendChild(line);
- 
+
+
+            var vraagDivOld = document.getElementById("vraag" + vraag);
+            if (vraagDivOld) { vraagDivOld.style.border = 'none'; }
+
+            var antwoordDivOld = document.getElementById("antwoord" + (antwoord - 3));
+            if (antwoordDivOld) { antwoordDivOld.style.border = 'none'; }
+
             vraag = 0
             antwoord = 0
         }
- 
- 
+
+
         console.log(lijnen); // For debugging, to see the order in the console
     }
- 
- 
+
+
     function submitOrder() {
         fetch('/ConnectQTOA/SubmitOrder', {
             method: 'POST',
@@ -81,8 +132,8 @@
             });
     }
 </script>
- 
- 
+
+
 <style>
     #screen {
         width: 800px;
@@ -96,9 +147,9 @@
         text-align: center;
         z-index: 0;
     }
- 
+
     #titel {
- 
+
         top: 10px;
         left: 300px;
         width: 800px;
@@ -110,7 +161,7 @@
         text-align: center;
         color: #3a7941;
     }
- 
+
     #vraag1 {
         width: 200px;
         height: 100px;
@@ -122,8 +173,9 @@
         align-content: center;
         text-align: center;
         color: #3a7941;
+
     }
- 
+
     #vraag2 {
         width: 200px;
         height: 100px;
@@ -135,7 +187,7 @@
         align-content: center;
         text-align: center;
     }
- 
+
     #vraag3 {
         width: 200px;
         height: 100px;
@@ -147,7 +199,7 @@
         align-content: center;
         text-align: center;
     }
- 
+
     #antwoord1 {
         width: 200px;
         height: 100px;
@@ -159,7 +211,7 @@
         align-content: center;
         text-align: center;
     }
- 
+
     #antwoord2 {
         width: 200px;
         height: 100px;
@@ -171,7 +223,7 @@
         align-content: center;
         text-align: center;
     }
- 
+
     #antwoord3 {
         width: 200px;
         height: 100px;
@@ -183,7 +235,7 @@
         align-content: center;
         text-align: center;
     }
- 
+
     #homeknop {
         width: 200px;
         height: 100px;

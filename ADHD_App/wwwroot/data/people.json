@@ -44,5 +44,35 @@
       "images/stickFigure.png",
       "images/kind.jpg"
     ]
+  },
+  {
+    "Id": 2,
+    "First_Name": "Pieter ",
+    "Last_Name": "van Spijk",
+    "Gender": "male",
+    "Date_of_Birth": "2004-06-25T00:00:00",
+    "Group": "5",
+    "Email": "hoi@gmail.com",
+    "Phonenumber": "\u002B31638020177",
+    "Username": "Pieterbaas4",
+    "Password": "1234567!",
+    "EnergyOfTheDay": [
+      1,
+      99,
+      60,
+      9,
+      1,
+      60,
+      99,
+      12,
+      1,
+      1
+    ],
+    "Appointments": null,
+    "ProfilePicture": "images/kind.jpg",
+    "unlockedImages": [
+      "images/stickFigure.png",
+      "images/kind.jpg"
+    ]
   }
 ]
