@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DkdStz3QVRbJ5Sb0J01VluY/Fsqo6/IQ0QnuUWpxX9I=",
+  "Hash": "C9ozFbwHjADazFHTDs3rhzlqhNZ5lj4h8jgn+gHQ8zE=",
   "Source": "ADHD_App",
   "BasePath": "_content/ADHD_App",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\data\\Appointments.json"
+    },
+    {
+      "Identity": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\wwwroot\\data\\Cards.json",
+      "SourceId": "ADHD_App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\wwwroot\\",
+      "BasePath": "_content/ADHD_App",
+      "RelativePath": "data/Cards.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\Cards.json"
     },
     {
       "Identity": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\wwwroot\\data\\people.json",
