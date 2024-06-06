@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\data\\Appointments.json"
     },
     {
+      "Id": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\data\\exercises.json",
+      "PackagePath": "staticwebassets\\data\\exercises.json"
+    },
+    {
       "Id": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\data\\people.json",
       "PackagePath": "staticwebassets\\data\\people.json"
     },
@@ -47,6 +51,10 @@
     {
       "Id": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\images\\Home.png",
       "PackagePath": "staticwebassets\\images\\Home.png"
+    },
+    {
+      "Id": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\images\\astronaut.png",
+      "PackagePath": "staticwebassets\\images\\astronaut.png"
     },
     {
       "Id": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\images\\background.jpg",

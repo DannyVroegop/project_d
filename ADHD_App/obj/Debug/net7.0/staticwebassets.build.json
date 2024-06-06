@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "89Pfx42rmEYzWq40AiDqk1Ul67a258WYkD1k6zx23mk=",
+  "Hash": "aFO51K7jlmgzGRFVNO8AH8A9iYWafHJng9T77HrWWoE=",
   "Source": "ADHD_App",
   "BasePath": "_content/ADHD_App",
   "Mode": "Default",
@@ -119,6 +119,23 @@
       "OriginalItemSpec": "wwwroot\\data\\Appointments.json"
     },
     {
+      "Identity": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\data\\exercises.json",
+      "SourceId": "ADHD_App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\",
+      "BasePath": "_content/ADHD_App",
+      "RelativePath": "data/exercises.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\exercises.json"
+    },
+    {
       "Identity": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\data\\people.json",
       "SourceId": "ADHD_App",
       "SourceType": "Discovered",
@@ -185,6 +202,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Agenda.png"
+    },
+    {
+      "Identity": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\images\\astronaut.png",
+      "SourceId": "ADHD_App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\",
+      "BasePath": "_content/ADHD_App",
+      "RelativePath": "images/astronaut.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\astronaut.png"
     },
     {
       "Identity": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\images\\background.jpg",
