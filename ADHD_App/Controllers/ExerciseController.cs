@@ -26,16 +26,16 @@ namespace ADHD_App.Controllers
             listOfQuestionAndAwnsers = listOfQuestionAndAwnsers.FindAll(x => x.Subject == vak && x.Progresslevel == progress);
             // Console.WriteLine(vak);
             // Console.WriteLine(progress);
-            foreach (var qa in listOfQuestionAndAwnsers)
-            {
-                Console.WriteLine("hi");
-                Console.WriteLine(listOfQuestionAndAwnsers[0].QuestionsAndAnswers[2].Question);
+            // foreach (var qa in listOfQuestionAndAwnsers)
+            // {
+            //     Console.WriteLine("hi");
+            //     Console.WriteLine(listOfQuestionAndAwnsers[0].QuestionsAndAnswers[2].Question);
 
-                foreach (var questionAndAnswer in qa.QuestionsAndAnswers)
-                {
-                    Console.WriteLine($"Question: {questionAndAnswer.Question}, Answer: {questionAndAnswer.Answer}");
-                }
-            }
+            //     foreach (var questionAndAnswer in qa.QuestionsAndAnswers)
+            //     {
+            //         Console.WriteLine($"Question: {questionAndAnswer.Question}, Answer: {questionAndAnswer.Answer}");
+            //     }
+            // }
 
 
             QuestionAnswerPair a1 = new QuestionAnswerPair(listOfQuestionAndAwnsers[0].QuestionsAndAnswers[0].Question, listOfQuestionAndAwnsers[0].QuestionsAndAnswers[0].Answer);

@@ -20,6 +20,21 @@ namespace ADHD_App.Controllers
         public IEnumerable<List<SubjectProgress>> Get()
         {
             var subjectprogress = _json.GetAllPeople().Where(x => x.Id == int.Parse(Request.Cookies["id"])).Select(x => x.SubjectProgress);
+            foreach (var item in subjectprogress)
+            {
+                foreach (var item2 in item)
+                {
+                    Console.WriteLine(item2.Subject);
+                    Console.WriteLine(item2.Progresslevel);
+                }
+            }
+            var listOfQuestionAndAwnsers = _json.GetAllExercises();
+            listOfQuestionAndAwnsers = listOfQuestionAndAwnsers.FindAll(x => x.Subject == "Rekenen" && x.Progresslevel == 2);
+            string type = listOfQuestionAndAwnsers[0].Type;
+
+
+
+
             return subjectprogress;
             // List<SubjectProgress> questionsAndAnswers = new List<SubjectProgress>();
             

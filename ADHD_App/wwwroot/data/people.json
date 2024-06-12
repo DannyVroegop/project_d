@@ -145,6 +145,7 @@
       1,
       1,
       1,
+      1,
       1
     ],
     "Appointments": null,
@@ -165,6 +166,37 @@
       {
         "Subject": "verkeer",
         "Progresslevel": 6
+      }
+    ]
+  },
+  {
+    "Id": 4,
+    "First_Name": "hallo",
+    "Last_Name": "123",
+    "Gender": "male",
+    "Date_of_Birth": "2005-03-12T00:00:00",
+    "Group": "5",
+    "Email": "jank@gmail.com",
+    "Phonenumber": "\u002B31638020177",
+    "Username": "jan",
+    "Password": "hallo!2345",
+    "EnergyOfTheDay": [
+      1
+    ],
+    "Appointments": null,
+    "ProfilePicture": "images/kind.jpg",
+    "unlockedImages": [
+      "images/stickFigure.png",
+      "images/kind.jpg"
+    ],
+    "SubjectProgress": [
+      {
+        "Subject": "Rekenen",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Taal",
+        "Progresslevel": 1
       }
     ]
   }

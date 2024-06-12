@@ -4,6 +4,7 @@ using ADHD_App.Models;
 using Microsoft.VisualBasic;
 using System.Collections.Generic;
 using System.Text.Json;
+using Newtonsoft.Json.Linq;
 
 namespace ADHD_App.Controllers
 {
@@ -14,11 +15,15 @@ namespace ADHD_App.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] JsonElement jsonPayload)
         {
+            QuestionAnswerPair [] arr = new QuestionAnswerPair [2];
             for(int i = 0; i < jsonPayload.GetArrayLength(); i++)
             {
-                // QuestionAnswerPair  = new QuestionAnswerPair(jsonPayload[i].GetProperty("Question").GetString(), jsonPayload[i].GetProperty("Answer").GetString());
-                Console.WriteLine(jsonPayload[i]);
+                JObject json = JObject.Parse(jsonPayload[i].ToString());
+
+                QuestionAnswerPair pair = new QuestionAnswerPair((string)json["question"], (string)json["answer"]);
+                arr[i] = pair;
             }
+            
 
 
             // // Deserialize the JSON payload into a list of MyTuple objects
