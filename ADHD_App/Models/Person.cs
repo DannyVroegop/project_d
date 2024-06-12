@@ -46,7 +46,7 @@ namespace ADHD_App.Models
         public string? ProfilePicture { get; set; }
         public string[]? unlockedImages { get; set; }
 
-        public List<SubjectProgress> SubjectProgress { get; set; }
+        public Dictionary<DateTime, DateTime> Breaks { get; set; }
 
         public override string ToString()
         {
@@ -55,18 +55,7 @@ namespace ADHD_App.Models
         public Person()
         {
             EnergyOfTheDay = new List<int>();
-            SubjectProgress = new List<SubjectProgress>(){
-                new SubjectProgress(){
-                    Subject = "Rekenen",
-                    Progresslevel = 1
-                },
-                new SubjectProgress(){
-                    Subject = "Taal",
-                    Progresslevel = 1
-                }
-            
-            };
-            
+            Breaks = new Dictionary<DateTime, DateTime>();
         }
     }
 }

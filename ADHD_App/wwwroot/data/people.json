@@ -3,7 +3,7 @@
     "Id": 0,
     "First_Name": "Danny",
     "Last_Name": "ririr",
-    "Gender": "a",
+    "Gender": "female",
     "Date_of_Birth": "2000-05-05T00:00:00",
     "Group": "5",
     "Email": "dr@gmail.com",
@@ -53,16 +53,10 @@
       "images/Book.png",
       "kind.jpg"
     ],
-    "SubjectProgress": [
-      {
-        "Subject": "Rekenen",
-        "Progresslevel": 1
-      },
-      {
-        "Subject": "Taal",
-        "Progresslevel": 1
-      }
-    ]
+    "Breaks": {
+      "2024-06-12T06:43:30.3355458+02:00": "2024-06-12T06:58:30.3355458+02:00",
+      "2024-06-12T09:10:24.0841036+02:00": "2024-06-12T09:25:24.0841036+02:00"
+    }
   },
   {
     "Id": 1,
@@ -78,8 +72,7 @@
     "EnergyOfTheDay": [
       5,
       7,
-      77,
-      5
+      77
     ],
     "Appointments": null,
     "ProfilePicture": "images/Book.png",
@@ -87,16 +80,7 @@
       "images/stickFigure.png",
       "images/kind.jpg"
     ],
-    "SubjectProgress": [
-      {
-        "Subject": "Rekenen",
-        "Progresslevel": 1
-      },
-      {
-        "Subject": "Taal",
-        "Progresslevel": 1
-      }
-    ]
+    "Breaks": {}
   },
   {
     "Id": 2,
@@ -206,73 +190,15 @@
     "Username": "45grvxs",
     "Password": "ceerce",
     "EnergyOfTheDay": [
-      64
-    ],
-    "Appointments": null,
-    "ProfilePicture": null,
-    "unlockedImages": null
-  },
-  {
-    "Id": 9,
-    "First_Name": "Soufianea",
-    "Last_Name": "a",
-    "Gender": "other",
-    "Date_of_Birth": "0001-01-01T00:00:00",
-    "Group": "343",
-    "Email": "a@dnfv",
-    "Phonenumber": "456474",
-    "Username": "a",
-    "Password": "jdfevb njd2",
-    "EnergyOfTheDay": [],
-    "Appointments": null,
-    "ProfilePicture": null,
-    "unlockedImages": null
-  },
-  {
-    "Id": 10,
-    "First_Name": "jwnx",
-    "Last_Name": "djcnq",
-    "Gender": "male",
-    "Date_of_Birth": "2002-11-10T00:00:00",
-    "Group": "3",
-    "Email": "edcjn@gmail.com",
-    "Phonenumber": "234543",
-    "Username": "123432345",
-    "Password": "djcndnsdnc@jeNEN#33",
-    "EnergyOfTheDay": [
-      63
-    ],
-    "Appointments": null,
-    "ProfilePicture": "images/kind.jpg",
-    "unlockedImages": [
-      "images/stickFigure.png",
-      "images/kind.jpg"
-    ],
-    "SubjectProgress": [
-      {
-        "Subject": "Rekenen",
-        "Progresslevel": 1
-      },
-      {
-        "Subject": "Taal",
-        "Progresslevel": 1
-      }
-    ]
-  },
-  {
-    "Id": 3,
-    "First_Name": "Pieter ",
-    "Last_Name": "van Spijk",
-    "Gender": "male",
-    "Date_of_Birth": "0001-01-01T00:00:00",
-    "Group": "5",
-    "Email": "hoi@gmail.com",
-    "Phonenumber": "\u002B31638020177",
-    "Username": "Pieterbaas40",
-    "Password": "1234567!",
-    "EnergyOfTheDay": [
-      100,
-      13,
+      1,
+      99,
+      60,
+      9,
+      1,
+      60,
+      99,
+      12,
+      1,
       1
     ],
     "Appointments": null,
@@ -281,15 +207,6 @@
       "images/stickFigure.png",
       "images/kind.jpg"
     ],
-    "SubjectProgress": [
-      {
-        "Subject": "Rekenen",
-        "Progresslevel": 1
-      },
-      {
-        "Subject": "Taal",
-        "Progresslevel": 1
-      }
-    ]
+    "Breaks": {}
   }
 ]

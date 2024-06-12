@@ -3,6 +3,8 @@
 @{
     ViewData["Title"] = "Home page";
 }
+
+
 <partial name="Taskbar" />
 @{
 var person = Model.People;
@@ -41,45 +43,39 @@ var person = Model.People;
     </a>
 </div>
 <div class="Home-box-Right">
-                
-                @if (person.EnergyOfTheDay != null && person.EnergyOfTheDay.Count > 0)
-                {
-                    var currentEnergy = person.EnergyOfTheDay[person.EnergyOfTheDay.Count - 1];
-                    if (currentEnergy > 50)
+                @{
+
+                    List<string> errors = new List<string>();
+                    errors = Model.breakService.BreakMessages(person);
+                    if (errors.Count == 0)
                     {
-                        <button type="button">
+                        <form method="post" asp-page-handler="TakeBreak">
+                        <button type="submit">
+                            <span>
+                                <img src="images/Book.png" alt="Book"/>
+                                <h4>Pauze</h4>
+                            </span>
+                        </button>
+                        </form>
+                    }
+                    else
+                    {
+                        <div class="popupbox">
+                        <button type="button" class="popup-trigger">
                         <span>
                             <img src="images/slot.png" alt="Slotje"/>
                             <h4>Pauze</h4>
                         </span>
                         </button>
-                        
-                    }
-                    else
-                    {
-                        <a href="Break">
-                        <button type="button">
-                        <span>
-                            <img src="images/Book.png" alt="Book"/>
-                            <h4>Pauze</h4>
+                        </div>
+                        <span id="change" class="change">
+                            @foreach (var error in errors)
+                            {
+                                <p style="margin: 10px;">@error</p>
+                            }
                         </span>
-                        </button>
-                        </a>
                     }
-                }
-                else
-                {
-                    <a href="Break">
-                        <button type="button">
-                        <span>
-                            <img src="images/Book.png" alt="Book"/>
-                            <h4>Pauze</h4>
-                        </span>
-                        </button>
-                    </a>
-                }
-
-                
+                }     
 
     <a href="/">
     <a href="EnergieHistory">
@@ -104,6 +100,6 @@ var person = Model.People;
 </div>
 
 <div class="stick-figure">
-    <img src="images/astronaut.png" alt="">
+    <img src="images/stickFigure.png" alt="">
 </div>
 </div>

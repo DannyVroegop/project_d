@@ -1,5 +1,5 @@
 @page
-@model ADHD_App.Pages.Break
+@model ADHD_App.Pages.BreakModel
 @{
     ViewData["Title"] = "Break";
 }
@@ -71,8 +71,43 @@
         color: darkgrey;
     }
 
+    #timer {
+        font-size: 20px;
+        color: white;
+        margin: auto;
+    }
+
 </style>
-<partial name="Taskbar" />
+
+<nav class="taskbar">
+    <ul>
+        <li>
+            <a href="/home">
+                <img src="images/Home.png" alt="Home" style="height: 40px; width: 40px;" />
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/EnergiePopUp">
+                <img src="images/EnergiePic.png" alt="Home" style="height: 40px; width: 40px;" />
+                Energie meten
+            </a>
+        </li>
+        <li id="timer"></li>
+        <li>
+        <div style="width: 600px;"></div>
+       
+        </li>
+        <li>
+            <a href="/">
+                <img src="images/LogOut.png" alt="Home" style="height: 40px; width: 40px;" />
+                uitloggen
+            </a>
+        </li>
+
+        <!-- Add other links as needed -->
+    </ul>
+</nav>
 
 <div class="header-box">
     @* Todo: klok toevoegen *@
@@ -104,3 +139,35 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
 </div>
+
+<script>
+    //Pauze tijd ophalen van de BreakService
+   
+    var secleft = @Model.breakService.SecondsLeft(Model.People);
+    var text = document.getElementById("timer");
+    function update() 
+    {
+        
+        var minutes = Math.floor(secleft / 60);
+        var seconds = secleft % 60;
+
+        //aantal secondes bestaat altijd uit 2 cijfers
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+
+        text.textContent = "Resterende tijd: " + minutes + ":" + seconds;
+
+        // Check of pauze voorbij is
+        if (secleft < 0) {
+            window.location.href = "/Home";
+            text.textContent = "Pauze is voorbij";
+        }
+
+        //-1 seconde iedere keer
+        secleft--;
+    }
+
+    // Update elke keer
+    setInterval(update, 1000);
+</script>

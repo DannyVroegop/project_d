@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc;
 using ADHD_App.Models;
 using ADHD_App.Services;
 namespace ADHD_App.Pages
@@ -6,16 +7,20 @@ namespace ADHD_App.Pages
 
     public class HomeModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ILogger<HomeModel> _logger;
         public JsonFilePeopleService PeopleService;
+        public JsonFileHandler Jsonfilehandler;
+        public BreakService breakService;
         //public JsonFileUserInfoService UserInfoService;
         public Person People { get; private set; }
 
-        public HomeModel(ILogger<IndexModel> logger,
-            JsonFilePeopleService productService)
+        public HomeModel(ILogger<HomeModel> logger,
+            JsonFilePeopleService productService, JsonFileHandler jsonfilehandler)
         {
             _logger = logger;
             PeopleService = productService;
+            Jsonfilehandler = jsonfilehandler;
+            breakService = new BreakService(Jsonfilehandler);
             //UserInfoService = userinfoservice;
         }
 
@@ -28,6 +33,23 @@ namespace ADHD_App.Pages
             //{
                 //userinfo = UserInfoService.LoadInfo(People);
             //}
+        }
+
+        public IActionResult OnPostTakeBreak()
+        {
+            if (People == null)
+            {
+                int id = int.Parse(Request.Cookies["id"]);
+                if (PeopleService.getUserById(id) != null)
+                    People = PeopleService.getUserById(id);
+            }
+            
+            if (breakService.BreakOngoing(People) == false)
+            {
+                breakService.CreateBreak(People);
+            }
+
+            return RedirectToPage("/Break");
         }
 
 
