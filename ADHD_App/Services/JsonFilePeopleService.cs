@@ -70,34 +70,5 @@ namespace ADHD_App.Services
                 return null;
             }
         }
-
-        public List<QuestionAnswerPair> GetQuestions(string subject)
-        {
-            try
-            {
-                using (var jsonFileReader = File.OpenText(JsonFileName))
-                {
-
-                    string json = jsonFileReader.ReadToEnd();
-                    Console.WriteLine("JSON read from file:");
-                    Console.WriteLine(json);
-                    Exercise[] exercises = JsonConvert.DeserializeObject<Exercise[]>(json);
-                    foreach (Exercise e in exercises)
-                    {
-                        if (e.Subject == subject)
-                            Console.WriteLine(e.QuestionsAndAnswers[0].Question);
-                            return e.QuestionsAndAnswers;
-                    }
-                    return null;
-
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine("Error during deserialization of Exercise: ");
-                Debug.WriteLine(ex.Message);
-                return null;
-            }
-        }
     }
 }

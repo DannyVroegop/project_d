@@ -48,25 +48,5 @@
     "Description": "**omschrijving**",
     "EnergyCost": 15,
     "UID": 0
-  },
-  {
-    "ID": 5,
-    "Start": "2024-06-05T12:00:00",
-    "End": "2024-06-05T12:30:00",
-    "Name": "pauze",
-    "Type": "huiswerk maken",
-    "Description": "in dit half uur ga ik zorgen dat ik mijn reken opdrachten af heb",
-    "EnergyCost": 20,
-    "UID": 2
-  },
-  {
-    "ID": 6,
-    "Start": "2024-06-05T16:00:00",
-    "End": "2024-06-05T18:00:00",
-    "Name": "relaxen",
-    "Type": "roblox spelen",
-    "Description": "ik ga lekker uitrusten na school",
-    "EnergyCost": 5,
-    "UID": 2
   }
 ]
