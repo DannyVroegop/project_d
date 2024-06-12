@@ -20,14 +20,40 @@
       40,
       60,
       60,
-      30
+      30,
+      30,
+      30,
+      30,
+      30,
+      30,
+      70,
+      70,
+      70,
+      70,
+      70,
+      70,
+      70,
+      70,
+      70,
+      30,
+      70,
+      30,
+      30,
+      30,
+      20,
+      20,
+      20,
+      20
     ],
     "Appointments": null,
     "ProfilePicture": "images/Book.png",
     "unlockedImages": [
       "images/Book.png",
       "kind.jpg"
-    ]
+    ],
+    "Breaks": {
+      "2024-06-12T06:43:30.3355458+02:00": "2024-06-12T06:58:30.3355458+02:00"
+    }
   },
   {
     "Id": 1,
@@ -50,7 +76,8 @@
     "unlockedImages": [
       "images/stickFigure.png",
       "images/kind.jpg"
-    ]
+    ],
+    "Breaks": {}
   },
   {
     "Id": 2,
@@ -80,6 +107,7 @@
     "unlockedImages": [
       "images/stickFigure.png",
       "images/kind.jpg"
-    ]
+    ],
+    "Breaks": {}
   }
 ]

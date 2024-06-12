@@ -88,15 +88,7 @@ namespace ADHD_App.Services
             });
             File.WriteAllText(FileName, jsonString);
         }
-        //Verwijdert de pauze gegevens van voorgaande dagen
-        public void ClearBreaks(Person person)
-        {
-            Dictionary<DateTime, DateTime> breaks = person.Breaks;
-            DateTime today = DateTime.Today;
 
-            person.Breaks = person.Breaks.Where(b => b.Key.Date == today).ToDictionary(b => b.Key, b => b.Value);
-            UpdatePerson(person);
-        }
     }
 
     
