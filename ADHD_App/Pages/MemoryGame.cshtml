@@ -193,9 +193,9 @@
             CardElement.setAttribute("data-name", card.name);
             CardElement.innerHTML = `
                 <div class = "front">
-                    <p> {card.ENG} </p>
+                    <div class="front-image" style="color: black;"> {card.ENG} </div>
                 </div>
-                <<div class = "back"></div>
+                <div class = "back"></div>
             `;
             gridcontainer.appendChild(CardElement);
             CardElement.addEventListener("click", flipCard);

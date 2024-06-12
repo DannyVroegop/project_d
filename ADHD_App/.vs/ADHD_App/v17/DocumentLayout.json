@@ -38,22 +38,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MemoryGame.cshtml",
-              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\MemoryGame.cshtml",
-              "RelativeDocumentMoniker": "Pages\\MemoryGame.cshtml",
-              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\MemoryGame.cshtml*",
-              "RelativeToolTip": "Pages\\MemoryGame.cshtml*",
-              "ViewState": "AQIAALYAAAAAAAAAAAAQwMQAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-29T08:20:01.64Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -61,6 +47,20 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MemoryGame.cshtml",
+              "DocumentMoniker": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\MemoryGame.cshtml",
+              "RelativeDocumentMoniker": "Pages\\MemoryGame.cshtml",
+              "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\Pages\\MemoryGame.cshtml",
+              "RelativeToolTip": "Pages\\MemoryGame.cshtml",
+              "ViewState": "AQIAALkAAAAAAAAAAAAAAMMAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-29T08:20:01.64Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -72,8 +72,7 @@
               "RelativeToolTip": "wwwroot\\data\\Appointments.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-05T09:37:19.879Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T09:37:19.879Z"
             },
             {
               "$type": "Document",
@@ -97,8 +96,7 @@
               "RelativeToolTip": "Pages\\Profiel.cshtml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T07:35:08.673Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T07:35:08.673Z"
             },
             {
               "$type": "Document",
@@ -110,8 +108,7 @@
               "RelativeToolTip": "Pages\\Profiel.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-05T07:34:22.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T07:34:22.921Z"
             },
             {
               "$type": "Document",
@@ -123,8 +120,7 @@
               "RelativeToolTip": "wwwroot\\data\\Cards.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-05T07:05:12.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T07:05:12.397Z"
             },
             {
               "$type": "Document",
@@ -134,10 +130,9 @@
               "RelativeDocumentMoniker": "wwwroot\\data\\people.json",
               "ToolTip": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\wwwroot\\data\\people.json",
               "RelativeToolTip": "wwwroot\\data\\people.json",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAADQAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-05T08:02:53.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T08:02:53.169Z"
             }
           ]
         }
