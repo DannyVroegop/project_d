@@ -3,27 +3,31 @@
 @{
     ViewData["Title"] = "vraag";
 }
+
+@{
+    var person = Model.People;
+}
 <div id="screen"></div>
 <div id="titel">
     <h2 style="color: #172118; text-align:center">Verbind de vraag met het goede antwoord</h2>
 </div>
-<form method="post">
-    <div id="container" style="width: 100%; height: 100%; top:0; left:0; position:absolute;">
 
-        <div id="vraag1" onclick="recordButtonPress(1)"></div>
-        <div id="vraag2" onclick="recordButtonPress(2)"></div>
-        <div id="vraag3" onclick="recordButtonPress(3)"></div>
+<div id="container" style="width: 100%; height: 100%; top:0; left:0; position:absolute;">
 
-        <div id="antwoord1" onclick="recordButtonPress(4)"></div>
-        <div id="antwoord2" onclick="recordButtonPress(5)"></div>
-        <div id="antwoord3" onclick="recordButtonPress(6)"></div>
-        <svg id="svg-container" width="1500" height="800"></svg>
+    <div id="vraag1" onclick="recordButtonPress(1)"></div>
+    <div id="vraag2" onclick="recordButtonPress(2)"></div>
+    <div id="vraag3" onclick="recordButtonPress(3)"></div>
+
+    <div id="antwoord1" onclick="recordButtonPress(4)"></div>
+    <div id="antwoord2" onclick="recordButtonPress(5)"></div>
+    <div id="antwoord3" onclick="recordButtonPress(6)"></div>
+    <svg id="svg-container" width="1500" height="800"></svg>
 
 
-        <!-- Add a button to submit the order of clicks to the backend -->
-        <button type="submit" id="homeknop">Home</button>
-    </div>
-</form>
+    <!-- Add a button to submit the order of clicks to the backend -->
+    <button type="button" id="homeknop" onclick="submitOrder()">Home</button>
+</div>
+
 
 
 
@@ -34,27 +38,24 @@
     let topOfScreen = 100;
     let leftOfScreen = 500;
 
-    const vragen = [
-        {
-            vraag: "3+6",
-            antwoord: "5"
-        },
-        {
-            vraag: "5+11",
-            antwoord: "9"
-        },
-        {
-            vraag: "3+2",
-            antwoord: "16"
-        }
-    ]
+    const urlParams = new URLSearchParams(window.location.search);
+    const vak = urlParams.get('vak');
+    const progress = urlParams.get('progress');
 
-    vragen.map((vraag, index) => {
-        const vraagDiv = document.getElementById('vraag' + (index + 1));
-        vraagDiv.textContent = vraag.vraag;
-        const antwoordDiv = document.getElementById('antwoord' + (index + 1));
-        antwoordDiv.textContent = vraag.antwoord;
-    })
+
+    fetch(`api/ExerciseController?vak=${encodeURIComponent(vak)}&progress=${encodeURIComponent(progress)}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log({ data })
+
+
+            data.map((question, index) => {
+                const vraagDiv = document.getElementById('vraag' + (index + 1));
+                vraagDiv.textContent = question.question;
+                const antwoordDiv = document.getElementById('antwoord' + (index + 1));
+                antwoordDiv.textContent = question.answer;
+            })
+        });
 
     function recordButtonPress(buttonId) {
         if (buttonId < 4) {
@@ -114,12 +115,24 @@
 
 
     function submitOrder() {
-        fetch('/ConnectQTOA/SubmitOrder', {
+
+        var data = lijnen.map((lijn, index) => {
+            const vraagDiv = document.getElementById('vraag' + lijn[0]);
+            var tekstVraag = vraagDiv.textContent;
+            const antwoordDiv = document.getElementById('antwoord' + (lijn[1] - 3));
+            var tekstAntwoord = antwoordDiv.textContent;
+            return {
+                question: tekstVraag,
+                answer: tekstAntwoord
+            }
+        })
+
+        fetch('api/AwnserController', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ lijnen })
+            body: JSON.stringify(data)
         })
             .then(response => response.json())
             .then(data => {
@@ -167,13 +180,13 @@
         height: 100px;
         top: 100px;
         left: 400px;
-        background: #96e4a2;
+        background: #656f67;
         position: absolute;
         border-radius: 15px;
         align-content: center;
         text-align: center;
-        color: #3a7941;
-
+        font-weight: bold;
+    @*color:#3a7941;*@
     }
 
     #vraag2 {
@@ -181,7 +194,7 @@
         height: 100px;
         top: 250px;
         left: 400px;
-        background: #8bc667;
+        background: #96e4a2;
         position: absolute;
         border-radius: 15px;
         align-content: center;
@@ -193,7 +206,7 @@
         height: 100px;
         top: 400px;
         left: 400px;
-        background: #3a7941;
+        background: #96e4a2;
         position: absolute;
         border-radius: 15px;
         align-content: center;
@@ -205,11 +218,12 @@
         height: 100px;
         top: 100px;
         left: 800px;
-        background: #6d2121;
+        background: #244ee9;
         position: absolute;
         border-radius: 15px;
         align-content: center;
         text-align: center;
+        font-weight: bold;
     }
 
     #antwoord2 {
@@ -217,7 +231,7 @@
         height: 100px;
         top: 250px;
         left: 800px;
-        background: #703b3b;
+        background: #ad4b4b;
         position: absolute;
         border-radius: 15px;
         align-content: center;

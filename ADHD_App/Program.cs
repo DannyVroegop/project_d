@@ -14,6 +14,7 @@ namespace ADHD_App
             builder.Services.AddRazorPages();
             builder.Services.AddSingleton<JsonFileHandler>();
             builder.Services.AddSingleton<BreakService>();
+            builder.Services.AddControllers();
 
             builder.Services.AddTransient<JsonFilePeopleService>();
 
@@ -35,6 +36,8 @@ namespace ADHD_App
             app.UseAuthorization();
 
             app.MapRazorPages();
+
+            app.MapControllers();
 
             app.Run();
         }

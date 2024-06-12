@@ -3,48 +3,49 @@
     "Id": 0,
     "First_Name": "Danny",
     "Last_Name": "ririr",
-    "Gender": "female",
+    "Gender": "a",
     "Date_of_Birth": "2000-05-05T00:00:00",
     "Group": "5",
     "Email": "dr@gmail.com",
     "Phonenumber": "958694859",
-    "Username": "1",
-    "Password": "1",
+    "Username": "abcd",
+    "Password": "123r567!",
     "EnergyOfTheDay": [
       5,
       50,
       50,
-      23,
-      23,
-      34,
-      40,
-      60,
-      60,
-      30,
-      30,
-      30,
-      30,
-      30,
-      30,
-      70,
-      70,
-      70,
-      70,
-      70,
-      70,
-      70,
-      70,
-      70,
-      30,
-      70,
-      30,
-      30,
-      30,
-      20,
-      20,
-      20,
-      20,
-      20
+      5,
+      5,
+      4,
+      88,
+      7,
+      55,
+      55,
+      55,
+      55,
+      55,
+      55,
+      55,
+      55,
+      55,
+      55,
+      66,
+      66,
+      61,
+      61,
+      65,
+      87,
+      64,
+      55,
+      87,
+      98,
+      99,
+      88,
+      77,
+      77,
+      63,
+      77,
+      44
     ],
     "Appointments": null,
     "ProfilePicture": "images/Book.png",
@@ -52,17 +53,23 @@
       "images/Book.png",
       "kind.jpg"
     ],
-    "Breaks": {
-      "2024-06-12T06:43:30.3355458+02:00": "2024-06-12T06:58:30.3355458+02:00",
-      "2024-06-12T09:10:24.0841036+02:00": "2024-06-12T09:25:24.0841036+02:00"
-    }
+    "SubjectProgress": [
+      {
+        "Subject": "Rekenen",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Taal",
+        "Progresslevel": 1
+      }
+    ]
   },
   {
     "Id": 1,
-    "First_Name": "r",
-    "Last_Name": "o",
+    "First_Name": "Soufiane",
+    "Last_Name": null,
     "Gender": "male",
-    "Date_of_Birth": "2005-08-06T00:00:00",
+    "Date_of_Birth": "0001-01-01T00:00:00",
     "Group": "5",
     "Email": "h@y",
     "Phonenumber": "089475858",
@@ -71,7 +78,8 @@
     "EnergyOfTheDay": [
       5,
       7,
-      77
+      77,
+      5
     ],
     "Appointments": null,
     "ProfilePicture": "images/Book.png",
@@ -79,28 +87,206 @@
       "images/stickFigure.png",
       "images/kind.jpg"
     ],
-    "Breaks": {}
+    "Breaks": {},
+    "SubjectProgress": [
+      {
+        "Subject": "Rekenen",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Taal",
+        "Progresslevel": 1
+      }
+    ]
   },
   {
     "Id": 2,
+    "First_Name": "a",
+    "Last_Name": "a",
+    "Gender": "male",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Group": "s",
+    "Email": "aa@gmail.com",
+    "Phonenumber": "34546454",
+    "Username": "4",
+    "Password": "fekdkcwmc",
+    "EnergyOfTheDay": [],
+    "Appointments": null,
+    "ProfilePicture": null,
+    "unlockedImages": null
+  },
+  {
+    "Id": 3,
+    "First_Name": null,
+    "Last_Name": null,
+    "Gender": null,
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Group": null,
+    "Email": null,
+    "Phonenumber": null,
+    "Username": null,
+    "Password": null,
+    "EnergyOfTheDay": [],
+    "Appointments": null,
+    "ProfilePicture": null,
+    "unlockedImages": null
+  },
+  {
+    "Id": 4,
+    "First_Name": "a",
+    "Last_Name": "a",
+    "Gender": "male",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Group": "3",
+    "Email": "sss@gmail.com",
+    "Phonenumber": "93493",
+    "Username": "234543443",
+    "Password": "ejfdnkdmc",
+    "EnergyOfTheDay": [],
+    "Appointments": null,
+    "ProfilePicture": null,
+    "unlockedImages": null
+  },
+  {
+    "Id": 5,
+    "First_Name": "2343k",
+    "Last_Name": "kksm",
+    "Gender": "female",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Group": "3",
+    "Email": "333@gmail.com",
+    "Phonenumber": "3432",
+    "Username": "34",
+    "Password": "dcde",
+    "EnergyOfTheDay": [],
+    "Appointments": null,
+    "ProfilePicture": null,
+    "unlockedImages": null
+  },
+  {
+    "Id": 6,
+    "First_Name": "a",
+    "Last_Name": "a",
+    "Gender": "other",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Group": "aa",
+    "Email": "a@gmail.com",
+    "Phonenumber": "123456",
+    "Username": "dwew",
+    "Password": "msnjwmd",
+    "EnergyOfTheDay": [],
+    "Appointments": null,
+    "ProfilePicture": null,
+    "unlockedImages": null
+  },
+  {
+    "Id": 7,
+    "First_Name": "Soufiane",
+    "Last_Name": "nbb",
+    "Gender": "male",
+    "Date_of_Birth": "2002-11-11T00:00:00",
+    "Group": "345",
+    "Email": "34jrf@gmail.com",
+    "Phonenumber": "56754",
+    "Username": "45grvx",
+    "Password": "efdweedw",
+    "EnergyOfTheDay": [],
+    "Appointments": null,
+    "ProfilePicture": null,
+    "unlockedImages": null
+  },
+  {
+    "Id": 8,
+    "First_Name": "Soufiane",
+    "Last_Name": "smdcnnd",
+    "Gender": "male",
+    "Date_of_Birth": "1111-11-11T00:00:00",
+    "Group": "2kmwn",
+    "Email": "efewwm@gmail",
+    "Phonenumber": "45342",
+    "Username": "45grvxs",
+    "Password": "ceerce",
+    "EnergyOfTheDay": [
+      64
+    ],
+    "Appointments": null,
+    "ProfilePicture": null,
+    "unlockedImages": null
+  },
+  {
+    "Id": 9,
+    "First_Name": "Soufianea",
+    "Last_Name": "a",
+    "Gender": "other",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Group": "343",
+    "Email": "a@dnfv",
+    "Phonenumber": "456474",
+    "Username": "a",
+    "Password": "jdfevb njd2",
+    "EnergyOfTheDay": [],
+    "Appointments": null,
+    "ProfilePicture": null,
+    "unlockedImages": null
+  },
+  {
+    "Id": 10,
+    "First_Name": "jwnx",
+    "Last_Name": "djcnq",
+    "Gender": "male",
+    "Date_of_Birth": "2002-11-10T00:00:00",
+    "Group": "3",
+    "Email": "edcjn@gmail.com",
+    "Phonenumber": "234543",
+    "Username": "123432345",
+    "Password": "djcndnsdnc@jeNEN#33",
+    "EnergyOfTheDay": [
+      63
+    ],
+    "Appointments": null,
+    "ProfilePicture": "images/kind.jpg",
+    "unlockedImages": [
+      "images/stickFigure.png",
+      "images/kind.jpg"
+    ],
+    "SubjectProgress": [
+      {
+        "Subject": "Rekenen",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Taal",
+        "Progresslevel": 1
+      }
+    ]
+  },
+  {
+    "Id": 3,
     "First_Name": "Pieter ",
     "Last_Name": "van Spijk",
     "Gender": "male",
-    "Date_of_Birth": "2004-06-25T00:00:00",
+    "Date_of_Birth": "0001-01-01T00:00:00",
     "Group": "5",
     "Email": "hoi@gmail.com",
     "Phonenumber": "\u002B31638020177",
-    "Username": "Pieterbaas4",
+    "Username": "Pieterbaas40",
     "Password": "1234567!",
     "EnergyOfTheDay": [
+      100,
+      13,
       1,
-      99,
-      60,
-      9,
       1,
-      60,
-      99,
-      12,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
       1,
       1
     ],
@@ -110,6 +296,19 @@
       "images/stickFigure.png",
       "images/kind.jpg"
     ],
-    "Breaks": {}
+    "SubjectProgress": [
+      {
+        "Subject": "Rekenen",
+        "Progresslevel": 3
+      },
+      {
+        "Subject": "Taal",
+        "Progresslevel": 4
+      },
+      {
+        "Subject": "verkeer",
+        "Progresslevel": 6
+      }
+    ]
   }
 ]
