@@ -48,5 +48,15 @@
     "Description": "**omschrijving**",
     "EnergyCost": 15,
     "UID": 0
+  },
+  {
+    "ID": 5,
+    "Start": "2024-06-19T12:00:00",
+    "End": "2024-06-23T16:00:00",
+    "Name": "eindatum project",
+    "Type": "begrafenis",
+    "Description": ":(",
+    "EnergyCost": 100,
+    "UID": 0
   }
 ]

@@ -561,11 +561,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\sunmi\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\danny\\.nuget\\packages\\": {}
+>>>>>>> MemoryGameEnglish
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\sunmi\\OneDrive\\Bureaublad\\school bs\\jaar 2\\project D\\project_d\\ADHD_App\\ADHD_App.csproj",
       "projectName": "ADHD_App",
       "projectPath": "C:\\Users\\sunmi\\OneDrive\\Bureaublad\\school bs\\jaar 2\\project D\\project_d\\ADHD_App\\ADHD_App.csproj",
@@ -574,6 +579,17 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sunmi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+      "projectUniqueName": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\ADHD_App.csproj",
+      "projectName": "ADHD_App",
+      "projectPath": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\ADHD_App.csproj",
+      "packagesPath": "C:\\Users\\danny\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\danny\\source\\repos\\DannyVroegop\\project_d\\ADHD_App\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\danny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> MemoryGameEnglish
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -591,6 +607,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -625,7 +646,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.409\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+>>>>>>> MemoryGameEnglish
       }
     }
   }

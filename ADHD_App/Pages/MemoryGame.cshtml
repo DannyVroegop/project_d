@@ -1,0 +1,213 @@
+﻿@page
+@model ADHD_App.Pages.MemoryGameModel
+@{
+
+    ViewData["Title"] = "MemoryGame";
+    //Memory game: Danny Vroegop
+}
+
+
+<style>
+    body{
+        min-height: 100vh;
+        min-width: 100vw;
+        background-color:aliceblue;
+        color: white;
+    }
+
+    h1{
+        text-align: center;
+        font-weight: 700;
+        font-size: 50px;
+    }
+        
+    p{
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .actions{
+        display: flex;
+        justify-content: center;
+    }
+    .actions button{
+        padding: 8px 16px;
+        font-size: 30px;
+        border-radius: 10px;
+        background-color: #00ffff;
+        color: white;
+    }
+
+    .grid-container{
+        display: grid;
+        justify-content: center;
+        grid-gap: 16px;
+        grid-template-columns: repeat(6, 140px);
+        grid-template-rows: repeat(2, calc(140px/2*3));
+    }
+
+    .card{
+        height: calc(140px/2*3);
+        width: 140px;
+        border-radius: 10px;
+        background-color: white;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .front-image{
+        width: 60px;
+        height: 60px;
+    }
+    .card.flipped{
+        transform: rotateY(180deg);
+    }
+    .front, .back{
+        backface-visibility: hidden;
+        position: absolute;
+        border-radius: 10px;
+        top; 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .card .front{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card .back {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='25' height='25' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M25 30a5 5 0 110-10 5 5 0 010 10zm0-25a5 5 0 110-10 5 5 0 010 10zM0 30a5 5 0 110-10 5 5 0 010 10zM0 5A5 5 0 110-5 5 5 0 010 5zm12.5 12.5a5 5 0 110-10 5 5 0 010 10z' stroke-width='1' stroke='none' fill='hsla(174, 100%, 29%, 1)'/><path d='M0 15a2.5 2.5 0 110-5 2.5 2.5 0 010 5zm25 0a2.5 2.5 0 110-5 2.5 2.5 0 010 5zM12.5 2.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5zm0 25a2.5 2.5 0 110-5 2.5 2.5 0 010 5z' stroke-width='1' stroke='none' fill='hsla(187, 100%, 42%, 1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+        background-position: center center;
+        background-size: cover;
+    }
+
+</style>
+
+<html>
+    <head>
+        Nederlands - Engels Memory
+    </head>
+    <body>
+        <h1>Game</h1>
+        <div class="grid-container">
+        </div>
+        <p>Score: <span class="score"></span></p>
+        <div class="actions">
+            <button onclick="restart()">Restart</button>
+        </div>
+    </body>
+</html>
+
+<script>
+    const gridcontainer = document.querySelector(".grid-container");
+    let cards = [];
+    let firstCard, secondCard;
+    let lockboard = false;
+    let score = 0;
+    var scorecounter = document.querySelector(".score");
+
+    scorecounter.textContent = score;
+
+    function Shuffle() {
+        let cIndex = cards.length,
+            randomIndex,
+            tValue;
+        while (cIndex !== 0) { 
+            randomIndex = Math.floor(Math.random() * cIndex);
+            cIndex -= 1;
+            tIndex = cards[cIndex];
+            cards[cIndex] = cards[randomIndex];
+            cards[tIndex] = tValue;
+        }
+    }
+
+    function checkmatch() {
+        let isMatch = firstCard.dataset.name === secondCard.dataset.name;
+
+        isMatch ? disableCards() : unflipcards();
+        if (isMatch) {
+            score++;
+            scorecounter.textContent = score;
+            disableCards();
+        }
+        else {
+            unflipcards();
+        }
+    }
+
+    function disableCards() {
+        firstCard.removeEventListener("click", flipCard);
+        secondCard.removeEventListener("click", flipCard);
+
+        resetBoard();
+    }
+
+    function unflipcards() {
+        setTimeout(() => {
+            firstCard.classList.remove("flipped");
+            secondCard.classList.remove("flipped");
+            resetBoard();
+        }, 1000);
+    }
+
+    function resetBoard() {
+        firstCard = null;
+        secondCard = null;
+        lockboard = false;
+    }
+
+    function restart() {
+        resetBoard();
+        Shuffle();
+        score = 0;
+        document.querySelector(".score").textContent = score;
+        gridcontainer.innerHTML = "";
+        genCards();
+    }
+
+    function flipCard() {
+        if (lockboard) return;
+        if (this == firstCard) return;
+
+        this.classList.add("flipped");
+
+        if (!firstCard) {
+            firstCard = this;
+            return;
+        }
+
+        secondCard = this;
+        lockboard = true;
+
+        checkmatch();
+    }
+
+    function genCards() {
+        for (let card of cards) {
+            const CardElement = document.createElement("div");
+            CardElement.classList.add("card");
+            CardElement.setAttribute("data-name", card.name);
+            CardElement.innerHTML = `
+                <div class = "front">
+                    <div class="front-image" style="color: black;"> {card.ENG} </div>
+                </div>
+                <div class = "back"></div>
+            `;
+            gridcontainer.appendChild(CardElement);
+            CardElement.addEventListener("click", flipCard);
+        }
+    }
+
+
+    fetch("./data/Cards.json")
+        .then((res) => res.json())
+        .then((data) => {
+            cards = [...data, ...data];
+            Shuffle();
+            genCards();
+        })
+</script>
