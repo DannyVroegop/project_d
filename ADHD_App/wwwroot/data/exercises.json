@@ -1,199 +1,381 @@
 [
     {
-        "Subject": "Math",
+        "Subject": "Rekenen",
         "Progresslevel": 1,
-        "Questions&Awnsers": [
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
             {
                 "Question": "3+6",
-                "Awnser": "5"
+                "Answer": "5"
             },
             {
                 "Question": "5+11",
-                "Awnser": "9"
+                "Answer": "9"
             },
             {
                 "Question": "3+2",
-                "Awnser": "16"
+                "Answer": "16"
             }
         ]
     },
     {
-        "Subject": "Math",
+        "Subject": "Rekenen",
         "Progresslevel": 2,
-        "Questions&Awnsers": [
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
             {
                 "Question": "4+7",
-                "Awnser": "11"
+                "Answer": "11"
             },
             {
                 "Question": "6+12",
-                "Awnser": "18"
+                "Answer": "18"
             },
             {
                 "Question": "4+3",
-                "Awnser": "7"
+                "Answer": "7"
             }
         ]
     },
     {
-        "Subject": "Math",
+        "Subject": "Rekenen",
         "Progresslevel": 3,
-        "Questions&Awnsers": [
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
             {
                 "Question": "5+8",
-                "Awnser": "13"
+                "Answer": "13"
             },
             {
                 "Question": "7+13",
-                "Awnser": "20"
+                "Answer": "20"
             },
             {
                 "Question": "5+4",
-                "Awnser": "9"
+                "Answer": "9"
             }
         ]
     },
     {
-        "Subject": "Math",
+        "Subject": "Rekenen",
         "Progresslevel": 4,
-        "Questions&Awnsers": [
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
             {
                 "Question": "6+9",
-                "Awnser": "15"
+                "Answer": "15"
             },
             {
                 "Question": "8+14",
-                "Awnser": "22"
+                "Answer": "22"
             },
             {
                 "Question": "6+5",
-                "Awnser": "11"
+                "Answer": "11"
             }
         ]
     },
     {
-        "Subject": "Math",
+        "Subject": "Rekenen",
         "Progresslevel": 5,
-        "Questions&Awnsers": [
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
             {
                 "Question": "7+10",
-                "Awnser": "17"
+                "Answer": "17"
             },
             {
                 "Question": "9+15",
-                "Awnser": "24"
+                "Answer": "24"
             },
             {
                 "Question": "7+6",
-                "Awnser": "13"
+                "Answer": "13"
             }
         ]
     },
     {
-        "Subject": "Math",
+        "Subject": "Rekenen",
         "Progresslevel": 6,
-        "Questions&Awnsers": [
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
             {
                 "Question": "8+11",
-                "Awnser": "19"
+                "Answer": "19"
             },
             {
                 "Question": "10+16",
-                "Awnser": "26"
+                "Answer": "26"
             },
             {
                 "Question": "8+7",
-                "Awnser": "15"
+                "Answer": "15"
+            }
+        ]
+    },
+    {
+        "Subject": "Rekenen",
+        "Progresslevel": 7,
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
+            {
+                "Question": "2+3",
+                "Answer": "5"
+            },
+            {
+                "Question": "4+1",
+                "Answer": "5"
+            },
+            {
+                "Question": "1+1",
+                "Answer": "2"
+            }
+        ]
+    },
+    {
+        "Subject": "Rekenen",
+        "Progresslevel": 8,
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
+            {
+                "Question": "5+3",
+                "Answer": "8"
+            },
+            {
+                "Question": "2+7",
+                "Answer": "9"
+            },
+            {
+                "Question": "6+2",
+                "Answer": "8"
+            }
+        ]
+    },
+    {
+        "Subject": "Rekenen",
+        "Progresslevel": 9,
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
+            {
+                "Question": "7+5",
+                "Answer": "12"
+            },
+            {
+                "Question": "3+6",
+                "Answer": "9"
+            },
+            {
+                "Question": "4+8",
+                "Answer": "12"
+            }
+        ]
+    },
+    {
+        "Subject": "Rekenen",
+        "Progresslevel": 10,
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
+            {
+                "Question": "8+4",
+                "Answer": "12"
+            },
+            {
+                "Question": "9+6",
+                "Answer": "15"
+            },
+            {
+                "Question": "5+7",
+                "Answer": "12"
             }
         ]
     },
     {
         "Subject": "Taal",
         "Progresslevel": 1,
-        "Questions&Awnsers": [
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
             {
                 "Question": "juist",
-                "Awnser": "onjuist"
+                "Answer": "onjuist"
             },
             {
                 "Question": "achter",
-                "Awnser": "voor"
+                "Answer": "voor"
             },
             {
                 "Question": "ander",
-                "Awnser": "soortgelijk"
+                "Answer": "soortgelijk"
             }
         ]
     },
     {
         "Subject": "Taal",
         "Progresslevel": 2,
-        "Questions&Awnsers": [
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
             {
                 "Question": "fout",
-                "Awnser": "correct"
+                "Answer": "correct"
             },
             {
                 "Question": "boven",
-                "Awnser": "onder"
+                "Answer": "onder"
             },
             {
                 "Question": "gelijk",
-                "Awnser": "verschillend"
+                "Answer": "verschillend"
             }
         ]
     },
     {
         "Subject": "Taal",
         "Progresslevel": 3,
-        "Questions&Awnsers": [
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
             {
                 "Question": "vóór",
-                "Awnser": "na"
+                "Answer": "na"
             },
             {
                 "Question": "binnen",
-                "Awnser": "buiten"
+                "Answer": "buiten"
             },
             {
                 "Question": "hetzelfde",
-                "Awnser": "verschillend"
+                "Answer": "verschillend"
             }
         ]
     },
     {
         "Subject": "Taal",
         "Progresslevel": 4,
-        "Questions&Awnsers": [
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
             {
                 "Question": "voor",
-                "Awnser": "na"
+                "Answer": "na"
             },
             {
                 "Question": "rechts",
-                "Awnser": "links"
+                "Answer": "links"
             },
             {
                 "Question": "identiek",
-                "Awnser": "verschillend"
+                "Answer": "verschillend"
             }
         ]
     },
     {
         "Subject": "Taal",
         "Progresslevel": 5,
-        "Questions&Awnsers": [
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
             {
                 "Question": "onderste",
-                "Awnser": "bovenste"
+                "Answer": "bovenste"
             },
             {
                 "Question": "gelijkwaardig",
-                "Awnser": "ongelijk"
+                "Answer": "ongelijk"
             },
             {
                 "Question": "eerst",
-                "Awnser": "laatst"
+                "Answer": "laatst"
+            }
+        ]
+    },
+    {
+        "Subject": "Taal",
+        "Progresslevel": 6,
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
+            {
+                "Question": "klein",
+                "Answer": "groot"
+            },
+            {
+                "Question": "dik",
+                "Answer": "dun"
+            },
+            {
+                "Question": "lang",
+                "Answer": "kort"
+            }
+        ]
+    },
+    {
+        "Subject": "Taal",
+        "Progresslevel": 7,
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
+            {
+                "Question": "zwart",
+                "Answer": "wit"
+            },
+            {
+                "Question": "zwaar",
+                "Answer": "licht"
+            },
+            {
+                "Question": "hoog",
+                "Answer": "laag"
+            }
+        ]
+    },
+    {
+        "Subject": "Taal",
+        "Progresslevel": 8,
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
+            {
+                "Question": "moeilijk",
+                "Answer": "gemakkelijk"
+            },
+            {
+                "Question": "snel",
+                "Answer": "traag"
+            },
+            {
+                "Question": "nat",
+                "Answer": "droog"
+            }
+        ]
+    },
+    {
+        "Subject": "Taal",
+        "Progresslevel": 9,
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
+            {
+                "Question": "oud",
+                "Answer": "nieuw"
+            },
+            {
+                "Question": "warm",
+                "Answer": "koud"
+            },
+            {
+                "Question": "sterk",
+                "Answer": "zwak"
+            }
+        ]
+    },
+    {
+        "Subject": "Taal",
+        "Progresslevel": 10,
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
+            {
+                "Question": "glad",
+                "Answer": "ruw"
+            },
+            {
+                "Question": "vol",
+                "Answer": "leeg"
+            },
+            {
+                "Question": "hard",
+                "Answer": "zacht"
             }
         ]
     }
