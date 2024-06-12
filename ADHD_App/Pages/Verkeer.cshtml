@@ -1,0 +1,206 @@
+﻿@page
+@model ADHD_App.Pages.VerkeerModel
+@{
+    ViewData["Title"] = "verkeer";
+}
+<div id="screen"></div>
+<div id="titel">
+    <h2 style="color: #172118; text-align:center">selecteer de auto's in de volgorde waarin ze voorang hebben</h2>
+</div>
+<form method="post">
+    <div id="container" style="width: 100%; height: 100%; top:0; left:0; position:absolute;">
+        <div class="image-container">
+            <img src="images/road.jpg" class="center" style="width: 700px; height: 475px;">
+        </div>
+        <div id="auto1" onclick="recordButtonPress(1)">
+            <img src="images/Bcar.png" style="width: 100px; height: 200px;" />
+        </div>
+        <div id="auto2" onclick="recordButtonPress(2)">
+            <img src="images/Bcar.png" style="width: 100px; height: 200px;" />
+        </div>
+        <div id="auto3" onclick="recordButtonPress(3)">
+            <img src="images/Bcar.png" style="width: 100px; height: 200px;" />
+        </div>
+
+        <svg id="svg-container" width="1500" height="800"></svg>
+
+        <!-- Add a button to submit the order of clicks to the backend -->
+        <button type="submit" id="homeknop">Home</button>
+        <div id="resetButton" onclick="reset()">
+            <img src="images/undo.png" style="width: 100px; height: 100px;" />
+        </div>
+    </div>
+</form>
+
+<script>
+    const correctOrder = [1, 2, 3];
+    let clickOrder = [];
+
+    function recordButtonPress(buttonId) {
+        if (clickOrder.length < 3 && !clickOrder.includes(buttonId)) {
+            clickOrder.push(buttonId);
+            updateSelection(buttonId);
+            if (clickOrder.length === 3) {
+                updateCarImages();
+            }
+        }
+    }
+
+    function updateSelection(buttonId) {
+        // Add the selected class to the clicked image
+        if (buttonId > 0) {
+            const autoDiv = document.getElementById('auto' + buttonId);
+            const img = autoDiv.querySelector('img');
+            img.classList.add('selected');
+        }
+    }
+
+    function updateCarImages() {
+        const carImages = clickOrder.every((val, index) => val === correctOrder[index]) ?
+            ['images/Gcar.png', 'images/Gcar.png', 'images/Gcar.png'] : // All images green if order is correct
+            ['images/Rcar.png', 'images/Rcar.png', 'images/Rcar.png']; // All images red if order is wrong
+
+        clickOrder.forEach((buttonId, index) => {
+            const autoDiv = document.getElementById('auto' + buttonId);
+            const img = autoDiv.querySelector('img');
+            img.src = carImages[index];
+        });
+    }
+
+    function reset() {
+        clickOrder = [];
+        document.querySelectorAll('.selected').forEach(img => {
+            img.classList.remove('selected');
+        });
+    }
+
+    function undoLastSelection() {
+        if (clickOrder.length > 0) {
+            const lastButtonId = clickOrder.pop();
+            resetCarImage(lastButtonId); // Reset the image and border of the last clicked car
+        }
+    }
+    function resetCarImage(buttonId) {
+        const autoDiv = document.getElementById('auto' + buttonId);
+        const img = autoDiv.querySelector('img');
+        img.classList.remove('selected'); // Remove the selected class
+        img.src = 'images/Bcar.png'; // Reset to the original image
+    }
+
+    function submitOrder() {
+        fetch('/schoolTasks', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ lijnen })
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                // Clear the button order after submission if needed
+                clickOrder = [];
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }
+</script>
+
+<style>
+    #screen {
+        width: 800px;
+        height: 700px;
+        top: 10px;
+        left: 300px;
+        background: #a2aaa3;
+        position: absolute;
+        border-radius: 15px;
+        align-content: center;
+        text-align: center;
+        z-index: 0;
+    }
+
+    #titel {
+        top: 10px;
+        left: 300px;
+        width: 800px;
+        background: #96e4a2;
+        position: absolute;
+        border-start-end-radius: 15px;
+        border-start-start-radius: 15px;
+        align-content: center;
+        text-align: center;
+        color: #3a7941;
+    }
+
+    .image-container {
+        width: 800px;
+        height: 700px;
+        top: 10px;
+        left: 300px;
+        position: absolute;
+        align-content: center;
+        text-align: center;
+        z-index: 1;
+    }
+
+    #auto1, #auto2, #auto3 {
+        width: 200px;
+        height: 100px;
+        position: absolute;
+        border-radius: 15px;
+        align-content: center;
+        text-align: center;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    #auto1 {
+        top: 225px;
+        left: 400px;
+        transform: rotate(90deg);
+    }
+
+    #auto2 {
+        top: 140px;
+        left: 800px;
+        transform: rotate(270deg);
+    }
+
+    #auto3 {
+        top: 350px;
+        left: 655px;
+    }
+
+    #homeknop {
+        width: 200px;
+        height: 100px;
+        top: 600px;
+        left: 600px;
+        background: #e3e571;
+        position: absolute;
+        border-radius: 15px;
+        align-content: center;
+        text-align: center;
+        z-index: 3;
+    }
+
+    #resetButton {
+        width: 100px;
+        height: 50px;
+        top: 600px;
+        left: 400px;
+        background: #e3e571;
+        position: absolute;
+        border-radius: 15px;
+        align-content: center;
+        text-align: center;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    .selected {
+        border: 3px solid blue;
+    }
+</style>
