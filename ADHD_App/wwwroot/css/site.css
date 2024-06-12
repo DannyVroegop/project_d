@@ -257,62 +257,6 @@ body {
 
 
 
-.schoolvakken {
-    background-color: rgb(192, 192, 192);
-    border-end-end-radius: 15px;
-    border-end-start-radius: 15px;
-    flex-direction: column;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.schoolvak {
-    display: flex;
-    column-gap: 20px;
-    margin: 10px;
-    flex-wrap: wrap;
-}
-
-.vak {}
-
-.progressbar {
-    margin-right: 20px;
-    align-self: center;
-    flex-grow: 2;
-    background-color: lightgray;
-    border-radius: 15px;
-}
-
-.skill {
-    background-color: rgb(116, 194, 92);
-    color: white;
-    padding: 1%;
-    text-align: right;
-    font-size: 20px;
-    border-radius: 15px;
-}
-
-
-.html {
-    width: 10%;
-}
-
-.php {
-    width: 60%;
-}
-
-.react {
-    width: 30%;
-}
-
-.empty {
-    flex: 1;
-}
-
-img {
-    width: 100px;
-    height: 100px;
-}
 
 .Agenda {
     font-family: Arial;

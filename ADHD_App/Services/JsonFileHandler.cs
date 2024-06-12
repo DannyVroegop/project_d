@@ -17,11 +17,13 @@ namespace ADHD_App.Services
 
         private string FileName => Path.Combine(WebHostEnvironment.WebRootPath, "data", "people.json");
 
+        private string ExerciseFile => Path.Combine(WebHostEnvironment.WebRootPath, "data", "exercises.json");
+
         public void AddPerson(Person person)
         {
             var people = GetAllPeople();
             person.Id = people.Count;
-            person.unlockedImages = new string[] {"images/stickFigure.png", "images/kind.jpg"};
+            person.unlockedImages = new string[] { "images/stickFigure.png", "images/kind.jpg" };
             person.ProfilePicture = "images/kind.jpg";
             people.Add(person);
             var jsonString = JsonSerializer.Serialize(people, new JsonSerializerOptions
@@ -43,6 +45,18 @@ namespace ADHD_App.Services
             return people;
         }
 
+        public List<Exercise> GetAllExercises()
+        {
+            if (!File.Exists(ExerciseFile))
+            {
+                return new List<Exercise>();
+            }
+
+            var json = File.ReadAllText(ExerciseFile);
+            var exercises = JsonSerializer.Deserialize<List<Exercise>>(json);
+            return exercises;
+        }
+
         public Person GetPerson(string username, string password)
         {
             var people = GetAllPeople();
@@ -55,7 +69,7 @@ namespace ADHD_App.Services
 
                 }
             }
-            return null;  
+            return null;
         }
 
         public void UpdatePerson(Person updatedPerson)

@@ -131,6 +131,20 @@
     "EnergyOfTheDay": [
       100,
       13,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
       1
     ],
     "Appointments": null,
@@ -142,11 +156,15 @@
     "SubjectProgress": [
       {
         "Subject": "Rekenen",
-        "Progresslevel": 1
+        "Progresslevel": 3
       },
       {
         "Subject": "Taal",
-        "Progresslevel": 1
+        "Progresslevel": 4
+      },
+      {
+        "Subject": "verkeer",
+        "Progresslevel": 6
       }
     ]
   }

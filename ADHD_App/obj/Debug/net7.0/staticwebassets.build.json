@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aFO51K7jlmgzGRFVNO8AH8A9iYWafHJng9T77HrWWoE=",
+  "Hash": "fZ0wvoIlCEqT+Lq0MKgs3PGdneuFfd2UrvKH5uF6tMs=",
   "Source": "ADHD_App",
   "BasePath": "_content/ADHD_App",
   "Mode": "Default",
@@ -168,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\data\\people.json.txt"
+    },
+    {
+      "Identity": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\data\\QuestionCheck.json",
+      "SourceId": "ADHD_App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\",
+      "BasePath": "_content/ADHD_App",
+      "RelativePath": "data/QuestionCheck.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\QuestionCheck.json"
     },
     {
       "Identity": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\favicon.ico",

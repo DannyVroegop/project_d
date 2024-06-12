@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\data\\Appointments.json"
     },
     {
+      "Id": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\data\\QuestionCheck.json",
+      "PackagePath": "staticwebassets\\data\\QuestionCheck.json"
+    },
+    {
       "Id": "C:\\Users\\pvspi\\OneDrive\\Documenten\\GitHub\\project_d\\ADHD_App\\wwwroot\\data\\exercises.json",
       "PackagePath": "staticwebassets\\data\\exercises.json"
     },
