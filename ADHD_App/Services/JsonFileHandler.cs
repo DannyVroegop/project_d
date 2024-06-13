@@ -100,5 +100,22 @@ namespace ADHD_App.Services
             });
             File.WriteAllText(FileName, jsonString);
         }
+        public async void UpdateSubjectProgress(int id, string subject, int newProgressLevel)
+        {
+            var people = GetAllPeople();
+            Person person = people.FirstOrDefault(x => x.Id == id);
+            foreach (var progress in person.SubjectProgress)
+            {
+                if (progress.Subject.Equals(subject, StringComparison.OrdinalIgnoreCase))
+                {
+                    progress.Progresslevel = newProgressLevel;
+                }
+            }
+            // Thread.Sleep(10000);
+            var cancellationTokenSource = new CancellationTokenSource();
+            cancellationTokenSource.CancelAfter(10000);
+            await Task.Delay(2000, cancellationTokenSource.Token);
+            SavePeople(people);
+        }
     }
 }

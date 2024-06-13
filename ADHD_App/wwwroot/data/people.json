@@ -146,6 +146,15 @@
       1,
       1,
       1,
+      1,
+      1,
+      0,
+      11,
+      1,
+      1,
+      1,
+      1,
+      1,
       1
     ],
     "Appointments": null,
@@ -161,11 +170,7 @@
       },
       {
         "Subject": "Taal",
-        "Progresslevel": 4
-      },
-      {
-        "Subject": "verkeer",
-        "Progresslevel": 6
+        "Progresslevel": 1
       }
     ]
   },
@@ -197,6 +202,39 @@
       {
         "Subject": "Taal",
         "Progresslevel": 1
+      }
+    ]
+  },
+  {
+    "Id": 5,
+    "First_Name": "werf",
+    "Last_Name": "werg",
+    "Gender": "male",
+    "Date_of_Birth": "2006-12-01T00:00:00",
+    "Group": "5",
+    "Email": "asdfghnm@gmail.com",
+    "Phonenumber": "\u002B31638020177",
+    "Username": "Pieterbaas400",
+    "Password": "1234567!",
+    "EnergyOfTheDay": [
+      1,
+      1,
+      1
+    ],
+    "Appointments": null,
+    "ProfilePicture": "images/kind.jpg",
+    "unlockedImages": [
+      "images/stickFigure.png",
+      "images/kind.jpg"
+    ],
+    "SubjectProgress": [
+      {
+        "Subject": "Rekenen",
+        "Progresslevel": 0
+      },
+      {
+        "Subject": "Taal",
+        "Progresslevel": 0
       }
     ]
   }

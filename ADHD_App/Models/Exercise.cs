@@ -11,10 +11,13 @@ namespace ADHD_App.Models
         public int Progresslevel {get;set;}
         public string Type {get;set;}
         public List<QuestionAnswerPair> QuestionsAndAnswers { get; set; }
-        public Exercise()
+        public Exercise(string subject, int progresslevel, string type)
         {
-            QuestionsAndAnswers = new List<QuestionAnswerPair>();
+            Subject = subject;
+            Progresslevel = progresslevel;
+            Type = type;
         }
+
 
         
     }
