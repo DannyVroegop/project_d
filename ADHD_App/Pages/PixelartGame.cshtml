@@ -1,0 +1,233 @@
+@page
+@model ADHD_App.Pages.PixelartGame
+@{
+    ViewData["Title"] = "PixelartGame";
+}
+
+<style>
+    .pixelart-box
+    {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .pixelart-box h2{
+        color: white;
+        margin-top: 40px;
+    }
+    .back-button {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 200px;
+            height: 50px;
+    }
+    #pixelbox {
+        margin: auto;
+        margin-top: 70px;
+        display: block;
+        border: 1px solid black;
+    }
+
+    .pixelart-box button{
+        margin: 0 30px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .buttons{
+        padding-top: 20px;
+        margin-top: 50px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .color-options {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .color-option {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        border: 1px solid black;
+    }
+
+    .color-options.selected {
+        border-color: white;
+        transform: scale(1.2);
+    }
+    
+</style>
+<button class="back-button" onclick="window.location.href = '/Break';">Terug naar pauze menu</button>
+
+<div class="pixelart-box">
+    <h2>Pixelart</h2>
+    <div class="color-options" id="color-options"></div>
+    <canvas id= "pixelbox"></canvas>
+    <div class="buttons">
+        <button id="easy">Makkelijk</button>
+        <button id="normal">Normaal</button>
+        <button id="hard">Moeilijk</button>
+        <button id="check">Controleer</button>
+        <button id="restart">Restart</button>
+    </div>
+</div>
+
+<script>
+    //bronnen:
+    //https://www.w3schools.com/jsref/dom_obj_document.asp
+    //https://www.w3schools.com/js/default.asp    
+    let currentColor = ''; 
+    let painting = null; //geen pixel
+    let colors = []
+
+
+    class Pixel{
+        constructor(colorcode){
+            this.colorcode = colorcode;
+        }
+    }
+
+
+    class Painting{
+        //paint
+        constructor(width, height, paintingarray){
+            this.width = width;
+            this.height = height;
+            this.paintingarray = paintingarray; //2d array
+            this.colors = this.MakeColorList(); // tupple array => (1, rood)
+            this.numberofcolors = this.colors.length;
+        }
+        
+        MakeColorList(){
+            let colorlist = [];
+            //Elke kleur wordt toegevoegd aan de lijst
+            for (let i = 0; i < this.paintingarray.length; i ++)
+            {
+                var row = this.paintingarray[i];
+                for (var j = 0; j < row.length; j ++)
+                {
+                    if (!colorlist.includes(this.paintingarray[i][j]))
+                    {
+                        colorlist.push(this.paintingarray[i][j]);
+                    }
+                }
+            }
+
+            //lijst met nummers wordt gegenereerd
+            let availablenums = [];
+            for (let i = 1; i <= colorlist.length; i++) {
+                availablenums.push(i);
+            }
+
+            //Shuffle
+            for (let i = availablenums.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [availablenums[i], availablenums[j]] = [availablenums[j], availablenums[i]];
+            }
+            
+            let colortuplelist = [];
+            for (let m = 0; m < colorlist.length; m++) {
+                colortuplelist.push([availablenums[m], colorlist[m]]);
+            }
+
+            return colortuplelist;
+        }        
+    }
+
+    
+
+    window.onload = function() {
+        const canvas = document.getElementById("pixelbox");
+        const context = canvas.getContext("2d");
+        const blockSize = 100; 
+
+        const examplePaintingArray = [
+    ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF', '#FFFFFF', '#000000', '#888888'],
+    ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF', '#FFFFFF', '#000000', '#888888'],
+    ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF', '#FFFFFF', '#000000', '#888888'],
+    ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF', '#FFFFFF', '#000000', '#888888'],
+    ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF', '#FFFFFF', '#000000', '#888888'],
+    ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF', '#FFFFFF', '#000000', '#888888'],
+    ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF', '#FFFFFF', '#000000', '#888888'],
+    ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF', '#FFFFFF', '#000000', '#888888'],
+    ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF', '#FFFFFF', '#000000', '#888888']
+];
+
+        const painting = new Painting(3, 3, examplePaintingArray);
+        canvas.width = painting.width * blockSize;
+        canvas.height = painting.height * blockSize;
+
+        drawPainting(context, painting, blockSize); //voor het maken van de painting
+        updateColorOptions(painting);
+    }
+
+    function drawPainting(context, painting, blockSize) {
+        for (let i = 0; i < painting.paintingarray.length; i++) {
+            for (let j = 0; j < painting.paintingarray[i].length; j++) {
+                context.fillStyle = "#CCCCCC"; // Grijs kleur voor de grijze blokjes
+                context.fillRect(j * blockSize, i * blockSize, blockSize, blockSize);
+                context.strokeStyle = "black";
+                context.lineWidth = 2;
+                context.strokeRect(j * blockSize, i * blockSize, blockSize, blockSize);
+                context.fillStyle = "black";
+                context.fillText(getRandomNumber(painting.colors, painting.paintingarray[i][j]), j * blockSize + blockSize / 2, i * blockSize + blockSize / 2);
+            }
+        }
+    }
+
+    //random nummer genereren zodat dit verbonden kan worden aan een kleur
+    function getRandomNumber(colors, color) {
+        for (let i = 0; i < colors.length; i++) {
+            if (colors[i][1] == color) {
+                return colors[i][0];
+            }
+        }
+        return "X";
+    }
+
+    function selectColor(color, x, y) {
+        currentColor = color;
+
+        const canvas = document.getElementById("pixelbox");
+        const context = canvas.getContext("2d");
+        const blockSize = 100;
+
+        context.fillStyle = currentColor;
+        context.fillRect(x * blockSize, y * blockSize, blockSize, blockSize);
+
+        context.fillStyle = "black";//Zwart voor het nummer
+        context.font = "20px Arial"; 
+        context.textAlign = "center";
+        context.fillText(getRandomNumber(painting.colors, painting.paintingArray[y][x]), x * blockSize + blockSize / 2, y * blockSize + blockSize / 2);
+    }
+
+
+    function updateColorOptions(painting) {
+    //Hier wordt het aantal kleurenknopjes in de html geupdate zodat dit dynamisch werkt
+    let optionshtml = '';
+    for (let i = 0; i < painting.colors.length; i++) {
+        optionshtml += '<div class="color-option" style="background-color: ' + painting.colors[i][1] + '" onclick="selectColor(\'' + painting.colors[i][1] + '\')">' + painting.colors[i][0] + '</div>';
+    }
+    document.getElementById("color-options").innerHTML = optionshtml;
+    }
+
+    function handleClick(event) {
+    const canvas = document.getElementById("pixelbox");
+    const context = canvas.getContext("2d");
+    const blockSize = 100;
+
+    const rect = canvas.getBoundingClientRect();
+    const x = Math.floor((event.clientX - rect.left) / blockSize);
+    const y = Math.floor((event.clientY - rect.top) / blockSize);
+
+    
+    context.fillStyle = currentColor;
+    context.fillRect(x * blockSize, y * blockSize, blockSize, blockSize);
+}
+
+document.getElementById("pixelbox").addEventListener("click", handleClick)
+</script>
