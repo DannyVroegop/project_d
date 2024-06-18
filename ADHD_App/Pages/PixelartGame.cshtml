@@ -146,7 +146,7 @@
     let currentColor = ''; 
     let painting = null; 
     let colorToNumbers = {};
-    const pixelPaintings = [[
+    const pixelPaintings = [ [
     ['#2B7CC9', '#2B7CC9', '#2B7CC9', '#2B7CC9', '#2B7CC9', '#FFFF00', '#FFFF00', '#FFFF00'],
     ['#2B7CC9', '#2B7CC9', '#2B7CC9', '#FF0000', '#2B7CC9', '#2B7CC9', '#FFFF00', '#FFFF00'],
     ['#2B7CC9', '#2B7CC9', '#FF0000', '#FFFF00', '#FF0000', '#2B7CC9', '#2B7CC9', '#FFFF00'],
@@ -155,14 +155,8 @@
     ['#2B7CC9', '#2B7CC9', '#006400', '#1FF138', '#2B7CC9', '#2B7CC9', '#2B7CC9', '#2B7CC9'],
     ['#2B7CC9', '#2B7CC9', '#2B7CC9', '#1FF138', '#2B7CC9', '#2B7CC9', '#2B7CC9', '#2B7CC9'], 
     ['#006400', '#006400', '#006400', '#006400', '#006400', '#006400', '#006400', '#006400']
-]
+    ]
     ];
-
-    class Pixel {
-        constructor(colorcode) {
-            this.colorcode = colorcode;
-        }
-    }
 
     class Painting {
         constructor(width, height, paintingarray) {
