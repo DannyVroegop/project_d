@@ -166,6 +166,7 @@
       2,
       1,
       1,
+      1,
       1
     ],
     "Appointments": null,
@@ -185,6 +186,10 @@
       },
       {
         "Subject": "verkeer",
+        "Progresslevel": 1
+      }, 
+      {
+        "Subject": "Engels",
         "Progresslevel": 1
       }
     ]

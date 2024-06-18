@@ -422,5 +422,24 @@
         "Progresslevel": 1,
         "Type": "verkeer",
         "QuestionsAndAnswers": []
+    },
+    {
+        "Subject": "Engels",
+        "Progresslevel": 1,
+        "Type": "testgame",
+        "QuestionsAndAnswers": [
+          {
+            "Question": "Dog",
+            "Answer": "Hond"
+          },
+          {
+            "Question": "Empty",
+            "Answer": "Leeg"
+          },
+          {
+            "Question": "House",
+            "Answer": "Huis"
+          }
+        ]
     }
-]
+] 
