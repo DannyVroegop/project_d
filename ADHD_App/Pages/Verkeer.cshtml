@@ -25,7 +25,7 @@
         <svg id="svg-container" width="1500" height="800"></svg>
 
         <!-- Add a button to submit the order of clicks to the backend -->
-        <button type="submit" id="homeknop">Home</button>
+        <button type="button" id="homeknop" onclick="home()">Home</button>
         <div id="resetButton" onclick="reset()">
             <img src="images/undo.png" style="width: 100px; height: 100px;" />
         </div>
@@ -56,15 +56,35 @@
     }
 
     function updateCarImages() {
-        const carImages = clickOrder.every((val, index) => val === correctOrder[index]) ?
-            ['images/Gcar.png', 'images/Gcar.png', 'images/Gcar.png'] : // All images green if order is correct
-            ['images/Rcar.png', 'images/Rcar.png', 'images/Rcar.png']; // All images red if order is wrong
+        if (clickOrder.length === 0) {
+            // If clickOrder is empty, set all images to blue
+            for (let i = 1; i <= 3; i++) {
+                const autoDiv = document.getElementById('auto' + i);
+                const img = autoDiv.querySelector('img');
+                img.src = 'images/Bcar.png';
+            }
+        } else {
+            // Determine the car images based on the correctness of the order
+            let carImages = clickOrder.every((val, index) => val === correctOrder[index]) ?
+                ['images/Gcar.png', 'images/Gcar.png', 'images/Gcar.png'] : // All images green if order is correct
+                ['images/Rcar.png', 'images/Rcar.png', 'images/Rcar.png'];  // All images red if order is wrong
 
-        clickOrder.forEach((buttonId, index) => {
-            const autoDiv = document.getElementById('auto' + buttonId);
-            const img = autoDiv.querySelector('img');
-            img.src = carImages[index];
-        });
+            // Apply the images to the cars in the current clickOrder
+            clickOrder.forEach((buttonId, index) => {
+                const autoDiv = document.getElementById('auto' + buttonId);
+                const img = autoDiv.querySelector('img');
+                img.src = carImages[index];
+            });
+
+            // Set the remaining cars to blue if the clickOrder is not empty
+            for (let i = 1; i <= 3; i++) {
+                if (!clickOrder.includes(i)) {
+                    const autoDiv = document.getElementById('auto' + i);
+                    const img = autoDiv.querySelector('img');
+                    img.src = 'images/Bcar.png';
+                }
+            }
+        }
     }
 
     function reset() {
@@ -72,12 +92,23 @@
         document.querySelectorAll('.selected').forEach(img => {
             img.classList.remove('selected');
         });
+        updateCarImages(); // Ensure images are updated when reset
     }
 
     function undoLastSelection() {
         if (clickOrder.length > 0) {
             const lastButtonId = clickOrder.pop();
             resetCarImage(lastButtonId); // Reset the image and border of the last clicked car
+
+            // Reset all car images to original state if any changes have been made
+            clickOrder.forEach(buttonId => {
+                const autoDiv = document.getElementById('auto' + buttonId);
+                const img = autoDiv.querySelector('img');
+                img.src = 'images/Bcar.png'; // Reset to the original image
+            });
+
+            // Apply correct car images based on current order
+            updateCarImages();
         }
     }
     function resetCarImage(buttonId) {
@@ -86,6 +117,42 @@
         img.classList.remove('selected'); // Remove the selected class
         img.src = 'images/Bcar.png'; // Reset to the original image
     }
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    function home() {
+        const userId = getCookie("id");
+        const subject = "Verkeer"; // or fetch the subject dynamically if needed
+
+        if (clickOrder.length === correctOrder.length && clickOrder.every((val, index) => val === correctOrder[index])) {
+            fetch(`/api/SubjectAndProgressController/updateProgress?userId=${userId}&subject=${subject}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('Progress updated successfully.');
+                        // Redirect only after the progress update is successful
+                        window.location.href = "/SchoolTasks";
+                    } else {
+                        console.error('Failed to update progress.');
+                        // Handle failure scenario if needed
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        } else {
+            // If condition is not met, redirect immediately
+            window.location.href = "/SchoolTasks";
+        }
+    }
+
 
     function submitOrder() {
         fetch('/schoolTasks', {

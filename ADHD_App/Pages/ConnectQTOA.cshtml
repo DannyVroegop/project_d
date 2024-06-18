@@ -42,7 +42,9 @@
     const vak = urlParams.get('vak');
     const progress = urlParams.get('progress');
 
-
+    if (vak === "Verkeer") {
+        window.location.href = "Verkeer";
+    }
     fetch(`api/ExerciseController?vak=${encodeURIComponent(vak)}&progress=${encodeURIComponent(progress)}`)
         .then(response => response.json())
         .then(data => {

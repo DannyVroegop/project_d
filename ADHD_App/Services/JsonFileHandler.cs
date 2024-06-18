@@ -3,6 +3,7 @@ using System.IO;
 using System.Text.Json;
 using ADHD_App.Models;
 using System.Linq;
+using System.Diagnostics;
 // using Newtonsoft.Json;
 
 namespace ADHD_App.Services
@@ -101,6 +102,30 @@ namespace ADHD_App.Services
                 WriteIndented = true
             });
             File.WriteAllText(FileName, jsonString);
+        }
+        public bool UpdateProgressLevel(int userId, string subject)
+        {
+            try
+            {
+                var people = GetAllPeople();
+                var person = people.FirstOrDefault(p => p.Id == userId);
+                if (person == null) return false;
+
+                var subjectProgress = person.SubjectProgress.FirstOrDefault(sp => sp.Subject == subject);
+                if (subjectProgress != null)
+                {
+                    subjectProgress.Progresslevel += 1;
+                    SavePeople(people);
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Error updating progress level: ");
+                Debug.WriteLine(ex.Message);
+                return false;
+            }
         }
 
     }
