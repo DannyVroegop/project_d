@@ -125,7 +125,7 @@
 
     function home() {
         const userId = getCookie("id");
-        const subject = "Verkeer"; // or fetch the subject dynamically if needed
+        const subject = "verkeer"; // or fetch the subject dynamically if needed
 
         if (clickOrder.length === correctOrder.length && clickOrder.every((val, index) => val === correctOrder[index])) {
             fetch(`/api/SubjectAndProgressController/updateProgress?userId=${userId}&subject=${subject}`, {
