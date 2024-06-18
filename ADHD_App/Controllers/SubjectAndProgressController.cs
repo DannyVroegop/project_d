@@ -51,5 +51,12 @@ namespace ADHD_App.Controllers
 
             // };
         }
+        [HttpPost("updateProgress")]
+        public IActionResult UpdateProgress([FromQuery] int userId, [FromQuery] string subject)
+        {
+            var result = _json.UpdateProgressLevel(userId, subject);
+            if (result) return Ok();
+            return BadRequest();
+        }
     }
 }
