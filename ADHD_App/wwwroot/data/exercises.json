@@ -1,20 +1,39 @@
 [
     {
         "Subject": "Rekenen",
+        "Progresslevel": 0,
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
+            {
+                "Question": "3+2",
+                "Answer": "5"
+            },
+            {
+                "Question": "5+11",
+                "Answer": "16"
+            },
+            {
+                "Question": "3+8",
+                "Answer": "11"
+            }
+        ]
+    },
+    {
+        "Subject": "Rekenen",
         "Progresslevel": 1,
         "Type": "ConnectQTOA",
         "QuestionsAndAnswers": [
             {
                 "Question": "3+6",
-                "Answer": "5"
-            },
-            {
-                "Question": "5+11",
                 "Answer": "9"
             },
             {
-                "Question": "3+2",
+                "Question": "5+11",
                 "Answer": "16"
+            },
+            {
+                "Question": "3+2",
+                "Answer": "5"
             }
         ]
     },
@@ -192,6 +211,25 @@
     {
         "Subject": "Taal",
         "Progresslevel": 1,
+        "Type": "ConnectQTOA",
+        "QuestionsAndAnswers": [
+            {
+                "Question": "juist",
+                "Answer": "onjuist"
+            },
+            {
+                "Question": "achter",
+                "Answer": "voor"
+            },
+            {
+                "Question": "ander",
+                "Answer": "soortgelijk"
+            }
+        ]
+    },
+    {
+        "Subject": "Taal",
+        "Progresslevel": 0,
         "Type": "ConnectQTOA",
         "QuestionsAndAnswers": [
             {

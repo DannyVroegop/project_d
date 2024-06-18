@@ -11,7 +11,7 @@ namespace ADHD_App.Services
 {
     public class JsonFilePeopleService
     {
-        public JsonFilePeopleService(IWebHostEnvironment webHostEnvironment) 
+        public JsonFilePeopleService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
@@ -37,7 +37,8 @@ namespace ADHD_App.Services
                     return person;
 
                 }
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 Debug.WriteLine("Error during deserialization of Person: ");
                 Debug.WriteLine(ex.Message);
@@ -55,15 +56,16 @@ namespace ADHD_App.Services
                     Debug.WriteLine("JSON read from file:");
                     Debug.WriteLine(json);
                     Person[] person = JsonConvert.DeserializeObject<Person[]>(json);
-                    foreach(Person p in person)
+                    foreach (Person p in person)
                     {
                         if (p.Id == id)
-                           return p;
+                            return p;
                     }
                     return default;
 
                 }
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 Debug.WriteLine("Error during deserialization of Person: ");
                 Debug.WriteLine(ex.Message);
@@ -79,13 +81,10 @@ namespace ADHD_App.Services
                 {
 
                     string json = jsonFileReader.ReadToEnd();
-                    Console.WriteLine("JSON read from file:");
-                    Console.WriteLine(json);
                     Exercise[] exercises = JsonConvert.DeserializeObject<Exercise[]>(json);
                     foreach (Exercise e in exercises)
                     {
                         if (e.Subject == subject)
-                            Console.WriteLine(e.QuestionsAndAnswers[0].Question);
                             return e.QuestionsAndAnswers;
                     }
                     return null;
@@ -99,5 +98,7 @@ namespace ADHD_App.Services
                 return null;
             }
         }
+
+
     }
 }

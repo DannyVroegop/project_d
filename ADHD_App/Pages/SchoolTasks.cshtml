@@ -25,7 +25,7 @@
         .then(response => response.json())
         .then(data => {
             console.log({ data })
-            var vakken = data?.[0].map((vak) => {
+            var vakken = data?.map((vak) => {
 
                 // Create a div element
                 const div = document.createElement('div');
@@ -34,7 +34,7 @@
                 div.innerHTML = `
             <div class="schoolvak">
                 <div class="vak">
-                    <a href="ConnectQTOA?vak=${vak.subject}&progress=${vak.progresslevel}">
+                    <a href="${vak.type}?vak=${vak.subject}&progress=${vak.progresslevel}">
                         <button type="button">
                             <span>
                                 <img src="images/Book.png" />
