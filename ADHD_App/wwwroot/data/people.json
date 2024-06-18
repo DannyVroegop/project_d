@@ -408,7 +408,11 @@
       2,
       1,
       1,
-      1
+      1,
+      1,
+      44,
+      44,
+      44
     ],
     "Appointments": null,
     "ProfilePicture": "images/kind.jpg",
@@ -428,6 +432,10 @@
       },
       {
         "Subject": "verkeer",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Engels",
         "Progresslevel": 1
       }
     ]

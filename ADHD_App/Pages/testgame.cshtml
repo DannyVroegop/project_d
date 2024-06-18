@@ -1,0 +1,267 @@
+@page
+@model ADHD_App.Pages.testgameModel
+@{
+    ViewData["Title"] = "Dutch-English shooter";
+}
+
+
+<head>
+    <title>@ViewData["Title"]</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .intro {
+            background-color: #ffff;
+            color: black;
+            padding: 20px;
+            width: 500px;
+            margin: 0 auto;
+            border-radius: 25px;
+            margin-top: 100px;
+        }
+
+        #dutchWord {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: deepskyblue;
+            line-height: 100px;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            user-select: none;
+            position: absolute;
+            opacity: 0;
+            transform: scale(0);
+            transition: transform 0.5s, opacity 0.5s;
+        }
+
+        .circle.grow {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .red-cross, .green-check {
+            user-select: none;
+            font-size: 48px;
+            position: absolute;
+        }
+
+        .red-cross {
+            color: red;
+        }
+
+        .green-check {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="intro">
+        <div id="dutchWord">testword</div>
+    </div>
+    <div id="score"> Score: 0</div>
+    <div id="area" style="position: relative; height: 500px; width: 100%; border: 1px solid #ccc; background-color: white; border-radius: 25px;"></div>
+    <button class="back-button" onclick="window.location.href = '/Home';">Home</button>
+</body>
+
+<script>
+    //TODO integrate exercises
+
+    let words = [
+       
+    ];
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const vak = urlParams.get('vak');
+    const progress = urlParams.get('progress');
+
+    fetch(`api/ExerciseController?vak=${encodeURIComponent(vak)}&progress=${encodeURIComponent(progress)}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log({ data });
+
+            data.forEach((question) => {
+                let word = { dutch: question.answer, english: question.question };
+                words.push(word);
+            });
+
+            startGame(); // Start the game after words are fetched
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+
+    
+    let score = 0;
+    let maxscore = 10;
+    let currentWord = {};
+    let currentLanguage = '';
+
+    function getRandomWord() {
+        return words[Math.floor(Math.random() * words.length)];
+    }
+
+    function showNewWord() {
+        if (score < 10) {
+            currentWord = getRandomWord();
+            currentLanguage = Math.random() > 0.5 ? 'english' : 'dutch';
+            document.getElementById('dutchWord').innerText = currentWord[currentLanguage];
+        } else {
+            alert("You won!! Je hebt gewonnen!! Yahoo!!!")
+            home()
+        }
+    }
+
+    function createCircleText(text, language, correct) {
+        const area = document.getElementById('area');
+        const circle = document.createElement('div');
+        circle.classList.add('circle');
+        circle.innerText = text;
+
+        const maxTop = area.clientHeight - 100;
+        const maxLeft = area.clientWidth - 100;
+        circle.style.top = Math.random() * maxTop + 'px';
+        circle.style.left = Math.random() * maxLeft + 'px';
+
+        circle.addEventListener('click', () => {
+            if (correct && language !== currentLanguage) {
+                score++;
+                showNewWord();
+                showGreenCheck(circle);
+            } else {
+                showRedCross(circle);
+            }
+            circle.remove();
+            document.getElementById('score').innerText = `Score: ${score}`;
+        });
+
+        document.getElementById('area').appendChild(circle);
+
+        setTimeout(() => circle.classList.add('grow'), 10);
+        setTimeout(() => {
+            circle.classList.remove('grow');
+            setTimeout(() => {
+                if (document.body.contains(circle)) {
+                    circle.remove();
+                }
+            }, 1000);
+        }, Math.random() * 4000 + 1000);
+
+    }
+
+    function showRedCross(circle) {
+        const cross = document.createElement('div');
+        cross.classList.add('red-cross');
+        cross.innerText = 'X';
+        cross.style.top = circle.style.top;
+        cross.style.left = circle.style.left;
+        document.getElementById('area').appendChild(cross);
+
+        setTimeout(() => {
+            cross.remove();
+        }, 500);
+    }
+
+    function showGreenCheck(circle) {
+        const check = document.createElement('div');
+        check.classList.add('green-check');
+        check.innerText = '✔';
+        check.style.top = circle.style.top;
+        check.style.left = circle.style.left;
+        document.getElementById('area').appendChild(check);
+
+        setTimeout(() => {
+            check.remove();
+        }, 500);
+    }
+
+    function startGame() {
+        if (words.length === 0) return;
+        showNewWord();
+        setInterval(() => {
+            const correctCircle = Math.random() < 0.5; // 50% chance to spawn a correct circle
+            const showEnglish = Math.random() > 0.5;
+            if (correctCircle) {
+                const correctText = currentLanguage === 'english' ? currentWord.dutch : currentWord.english;
+                createCircleText(correctText, currentLanguage === 'english' ? 'dutch' : 'english', true);
+            } else {
+                const randomWord = getRandomWord();
+                const incorrectLanguage = Math.random() > 0.5 ? 'english' : 'dutch';
+                const incorrectText = randomWord[incorrectLanguage];
+                createCircleText(incorrectText, incorrectLanguage, false);
+            }
+        }, 1000);
+    }
+
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+
+    function home() {
+        const userId = getCookie("id");
+        const subject = "engels"; 
+
+        if (score == 10) {
+            fetch(`/api/SubjectAndProgressController/updateProgress?userId=${userId}&subject=${subject}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('Progress updated successfully.');
+                        // Redirect only after the progress update is successful
+                        window.location.href = "/SchoolTasks";
+                    } else {
+                        console.error('Failed to update progress.');
+                        // Handle failure scenario if needed
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        } else {
+            // If condition is not met, redirect immediately
+            window.location.href = "/SchoolTasks";
+        }
+    }
+
+
+    function submitOrder() {
+        fetch('/schoolTasks', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ lijnen })
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                // Clear the button order after submission if needed
+                clickOrder = [];
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }
+
+
+</script>
