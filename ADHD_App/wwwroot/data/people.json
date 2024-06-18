@@ -61,6 +61,10 @@
       {
         "Subject": "Taal",
         "Progresslevel": 1
+      },
+      {
+        "Subject": "verkeer",
+        "Progresslevel": 6
       }
     ]
   },
@@ -96,6 +100,10 @@
       {
         "Subject": "Taal",
         "Progresslevel": 1
+      },
+      {
+        "Subject": "verkeer",
+        "Progresslevel": 6
       }
     ]
   },
@@ -257,6 +265,10 @@
       {
         "Subject": "Taal",
         "Progresslevel": 1
+      },
+      {
+        "Subject": "verkeer",
+        "Progresslevel": 6
       }
     ]
   },
