@@ -65,6 +65,14 @@ namespace ADHD_App.Models
                 new SubjectProgress(){
                     Subject = "Taal",
                     Progresslevel = 1
+                },
+                new SubjectProgress(){
+                    Subject = "verkeer",
+                    Progresslevel = 1
+                },
+                new SubjectProgress(){
+                    Subject = "Engels",
+                    Progresslevel = 1
                 }
 
             };

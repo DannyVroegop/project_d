@@ -2,19 +2,20 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc;
 using ADHD_App.Models;
 using ADHD_App.Services;
+using ADHD_App.Pages;
 namespace ADHD_App.Pages
 {
 
-    public class BreakModel : PageModel
+    public class PixelartGame : PageModel
     {
-        private readonly ILogger<BreakModel> _logger;
+        private readonly ILogger<PixelartGame> _logger;
         public JsonFilePeopleService PeopleService;
         public JsonFileHandler Jsonfilehandler;
-        public BreakService breakService;
+        public BreakService breakService {get; set;}
         //public JsonFileUserInfoService UserInfoService;
         public Person People { get; set; }
 
-        public BreakModel(ILogger<BreakModel> logger,
+        public PixelartGame(ILogger<PixelartGame> logger,
             JsonFilePeopleService productService, JsonFileHandler jsonfilehandler)
         {
             _logger = logger;
@@ -51,7 +52,5 @@ namespace ADHD_App.Pages
 
             return RedirectToPage("/Break");
         }
-
-
     }
 }

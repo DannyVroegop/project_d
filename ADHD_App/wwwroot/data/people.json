@@ -147,7 +147,10 @@
     "Phonenumber": null,
     "Username": null,
     "Password": null,
-    "EnergyOfTheDay": [],
+    "EnergyOfTheDay": [
+      20,
+      20
+    ],
     "Appointments": null,
     "ProfilePicture": null,
     "unlockedImages": null,
@@ -201,11 +204,15 @@
     "Phonenumber": "3432",
     "Username": "34",
     "Password": "dcde",
-    "EnergyOfTheDay": [],
+    "EnergyOfTheDay": [
+      20
+    ],
     "Appointments": null,
     "ProfilePicture": null,
     "unlockedImages": null,
-    "Breaks": {},
+    "Breaks": {
+      "2024-06-19T00:41:14.7890423+02:00": "2024-06-19T00:56:14.7890423+02:00"
+    },
     "SubjectProgress": [
       {
         "Subject": "Rekenen",
@@ -503,6 +510,128 @@
       {
         "Subject": "Taal",
         "Progresslevel": 0
+      }
+    ]
+  },
+  {
+    "Id": 14,
+    "First_Name": "A",
+    "Last_Name": "B",
+    "Gender": "male",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Group": "1",
+    "Email": "aaa@gmail.com",
+    "Phonenumber": "0612345678",
+    "Username": "1",
+    "Password": "a",
+    "EnergyOfTheDay": [
+      20,
+      20,
+      60,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "Appointments": null,
+    "ProfilePicture": "images/kind.jpg",
+    "unlockedImages": [
+      "images/stickFigure.png",
+      "images/kind.jpg"
+    ],
+    "Breaks": {
+      "2024-06-19T01:10:14.4347534+02:00": "2024-06-19T01:25:14.4347534+02:00"
+    },
+    "SubjectProgress": [
+      {
+        "Subject": "Rekenen",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Taal",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "verkeer",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Engels",
+        "Progresslevel": 1
+      }
+    ]
+  },
+  {
+    "Id": 15,
+    "First_Name": "a",
+    "Last_Name": "a",
+    "Gender": "other",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Group": "aa",
+    "Email": "aaaaa@gmail.com",
+    "Phonenumber": "01234567",
+    "Username": "abcdefg123",
+    "Password": "abcdefg123!",
+    "EnergyOfTheDay": [
+      20
+    ],
+    "Appointments": null,
+    "ProfilePicture": "images/kind.jpg",
+    "unlockedImages": [
+      "images/stickFigure.png",
+      "images/kind.jpg"
+    ],
+    "Breaks": {},
+    "SubjectProgress": [
+      {
+        "Subject": "Rekenen",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Taal",
+        "Progresslevel": 1
+      }
+    ]
+  },
+  {
+    "Id": 16,
+    "First_Name": "aaaa",
+    "Last_Name": "naaaa",
+    "Gender": "other",
+    "Date_of_Birth": "0001-01-01T00:00:00",
+    "Group": "aa",
+    "Email": "aaa@gmail.com",
+    "Phonenumber": "12345678",
+    "Username": "123abc!!",
+    "Password": "123abc!!",
+    "EnergyOfTheDay": [
+      20
+    ],
+    "Appointments": null,
+    "ProfilePicture": "images/kind.jpg",
+    "unlockedImages": [
+      "images/stickFigure.png",
+      "images/kind.jpg"
+    ],
+    "Breaks": {},
+    "SubjectProgress": [
+      {
+        "Subject": "Rekenen",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Taal",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "verkeer",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Engels",
+        "Progresslevel": 1
       }
     ]
   }

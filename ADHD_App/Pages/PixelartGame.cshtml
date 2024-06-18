@@ -1,0 +1,303 @@
+@page
+@model ADHD_App.Pages.PixelartGame
+@{
+    ViewData["Title"] = "PixelartGame";
+}
+
+<style>
+    .pixelart-box {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .pixelart-box h2 {
+        color: white;
+        margin-top: 40px;
+    }
+
+    .back-button {
+        position: absolute;
+        top: 100px;
+        left: 30px;
+        width: 200px;
+        height: 50px;
+    }
+
+    #pixelbox {
+        margin: auto;
+        margin-top: 70px;
+        display: block;
+        border: 1px solid black;
+    }
+
+    .pixelart-box button {
+        margin: 0 30px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .buttons {
+        padding-top: 20px;
+        margin-top: 50px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .color-options {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .color-option {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        border: 1px solid black;
+    }
+
+    .color-options.selected {
+        border-color: white;
+        transform: scale(1.2);
+    }
+
+    #timer {
+        font-size: 20px;
+        color: white;
+        margin: auto;
+    }
+</style>
+
+<nav class="taskbar">
+    <ul>
+        <li>
+            <a href="/home">
+                <img src="images/Home.png" alt="Home" style="height: 40px; width: 40px;" />
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/EnergiePopUp">
+                <img src="images/EnergiePic.png" alt="Home" style="height: 40px; width: 40px;" />
+                Energie meten
+            </a>
+        </li>
+        <li id="timer"></li>
+        <li>
+        <div style="width: 600px;"></div>
+       
+        </li>
+        <li>
+            <a href="/">
+                <img src="images/LogOut.png" alt="Home" style="height: 40px; width: 40px;" />
+                uitloggen
+            </a>
+        </li>
+
+    </ul>
+</nav>
+
+<button class="back-button" onclick="window.location.href = '/Break';">Terug naar pauze menu</button>
+
+<div class="pixelart-box">
+    <h2>Pixelart</h2>
+    <div class="color-options" id="color-options"></div>
+    <canvas id="pixelbox"></canvas>
+    <div class="buttons">
+        <button id="check">Controleer</button>
+        <button id="restart">Restart</button>
+    </div>
+</div>
+
+<script>
+    //Pauze tijd ophalen van de BreakService
+    var secleft = @Model.breakService.SecondsLeft(@Model.People);
+    var text = document.getElementById("timer");
+    function update() 
+    {
+        
+        var minutes = Math.floor(secleft / 60);
+        var seconds = secleft % 60;
+
+        //aantal secondes bestaat altijd uit 2 cijfers
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+
+        text.textContent = "Resterende tijd: " + minutes + ":" + seconds;
+
+        // Check of pauze voorbij is
+        if (secleft < 0) {
+            window.location.href = "/Home";
+            text.textContent = "Pauze is voorbij";
+        }
+
+        //-1 seconde iedere keer
+        secleft--;
+    }
+
+    // Update elke keer
+    setInterval(update, 1000);
+</script>
+
+
+<script>
+    let currentColor = ''; 
+    let painting = null; 
+    let colorToNumbers = {};
+    const pixelPaintings = [ [
+    ['#2B7CC9', '#2B7CC9', '#2B7CC9', '#2B7CC9', '#2B7CC9', '#FFFF00', '#FFFF00', '#FFFF00'],
+    ['#2B7CC9', '#2B7CC9', '#2B7CC9', '#FF0000', '#2B7CC9', '#2B7CC9', '#FFFF00', '#FFFF00'],
+    ['#2B7CC9', '#2B7CC9', '#FF0000', '#FFFF00', '#FF0000', '#2B7CC9', '#2B7CC9', '#FFFF00'],
+    ['#2B7CC9', '#2B7CC9', '#2B7CC9', '#FF0000', '#2B7CC9', '#2B7CC9', '#2B7CC9', '#2B7CC9'],
+    ['#2B7CC9', '#2B7CC9', '#2B7CC9', '#1FF138', '#006400', '#2B7CC9', '#2B7CC9', '#2B7CC9'],
+    ['#2B7CC9', '#2B7CC9', '#006400', '#1FF138', '#2B7CC9', '#2B7CC9', '#2B7CC9', '#2B7CC9'],
+    ['#2B7CC9', '#2B7CC9', '#2B7CC9', '#1FF138', '#2B7CC9', '#2B7CC9', '#2B7CC9', '#2B7CC9'], 
+    ['#006400', '#006400', '#006400', '#006400', '#006400', '#006400', '#006400', '#006400']
+    ]
+    ];
+
+    class Painting {
+        constructor(width, height, paintingarray) {
+            this.width = width;
+            this.height = height;
+            this.paintingarray = paintingarray;
+            this.colors = this.makeColorList();
+            this.numberofcolors = this.colors.length;
+        }
+        
+        makeColorList() {
+            let colorlist = [];
+            for (let i = 0; i < this.paintingarray.length; i++) {
+                var row = this.paintingarray[i];
+                for (var j = 0; j < row.length; j++) {
+                    if (!colorlist.includes(this.paintingarray[i][j])) {
+                        colorlist.push(this.paintingarray[i][j]);
+                    }
+                }
+            }
+
+            let availablenums = [];
+            for (let i = 1; i <= colorlist.length; i++) {
+                availablenums.push(i);
+            }
+
+            for (let i = availablenums.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [availablenums[i], availablenums[j]] = [availablenums[j], availablenums[i]];
+            }
+            
+            let colortuplelist = [];
+            for (let m = 0; m < colorlist.length; m++) {
+                colortuplelist.push([availablenums[m], colorlist[m]]);
+                colorToNumbers[colorlist[m]] = availablenums[m];
+            }
+
+            return colortuplelist;
+        }        
+    }
+
+    function drawPainting(context, painting, blockSize) {
+        for (let i = 0; i < painting.paintingarray.length; i++) {
+            for (let j = 0; j < painting.paintingarray[i].length; j++) {
+                context.fillStyle = "#CCCCCC";
+                context.fillRect(j * blockSize, i * blockSize, blockSize, blockSize);
+                context.strokeStyle = "black";
+                context.lineWidth = 2;
+                context.strokeRect(j * blockSize, i * blockSize, blockSize, blockSize);
+                context.fillStyle = "black";
+                context.font = "20px Arial";
+                context.textAlign = "center";
+                context.fillText(colorToNumbers[painting.paintingarray[i][j]], j * blockSize + blockSize / 2, i * blockSize + blockSize / 2 + 10);
+            }
+        }
+    }
+
+    function selectColor(color) {
+        currentColor = color;
+    }
+
+    function updateColorOptions(painting) {
+        let optionshtml = '';
+        for (let i = 0; i < painting.colors.length; i++) {
+            optionshtml += '<div class="color-option" style="background-color: ' + painting.colors[i][1] + '" onclick="selectColor(\'' + painting.colors[i][1] + '\')">' + painting.colors[i][0] + '</div>';
+        }
+        document.getElementById("color-options").innerHTML = optionshtml;
+    }
+
+    function handleClick(event) {
+    const canvas = document.getElementById("pixelbox");
+    const context = canvas.getContext("2d");
+    const blockSize = 100;
+
+    const rect = canvas.getBoundingClientRect();
+    const x = Math.floor((event.clientX - rect.left) / blockSize);
+    const y = Math.floor((event.clientY - rect.top) / blockSize);
+
+    context.fillStyle = currentColor;
+    context.fillRect(x * blockSize, y * blockSize, blockSize, blockSize);
+
+    context.fillStyle = "black";
+    context.font = "20px Arial";
+    context.textAlign = "center";
+    context.fillText(colorToNumbers[painting.paintingarray[y][x]], x * blockSize + blockSize / 2, y * blockSize + blockSize / 2 + 10);
+    }
+
+    function checkPainting() {
+    const canvas = document.getElementById("pixelbox");
+    const context = canvas.getContext("2d");
+    const blockSize = 100;
+    let correct = true;
+
+    for (let i = 0; i < painting.paintingarray.length; i++) {
+        for (let j = 0; j < painting.paintingarray[i].length; j++) {
+            const rect = context.getImageData(j * blockSize, i * blockSize, blockSize, blockSize);
+            const pixelData = rect.data;
+            const currentColor = rgbToHex(pixelData[0], pixelData[1], pixelData[2]);
+            const expectedColor = painting.paintingarray[i][j];
+            if (currentColor.toUpperCase() !== expectedColor.toUpperCase()) {
+                correct = false;
+            }
+        }
+        if (!correct) break;
+    }
+
+    if (correct) {
+        alert("Goed gedaan!");
+    } else {
+        alert("Niet correct, probeer het opnieuw.");
+    }
+}
+
+    function rgbToHex(r, g, b) {
+        return "#" + stringToHex(r) + stringToHex(g) + stringToHex(b);
+    }
+
+    function stringToHex(c) {
+        const hex = c.toString(16);
+        return hex.length === 1 ? "0" + hex : hex;
+    }
+
+    function restartGame() {
+        const randomIndex = Math.floor(Math.random() * pixelPaintings.length);
+        const randomPaintingArray = pixelPaintings[randomIndex];
+
+        painting = new Painting(randomPaintingArray.length, randomPaintingArray[0].length, randomPaintingArray);
+        
+        const canvas = document.getElementById("pixelbox");
+        const context = canvas.getContext("2d");
+        const blockSize = 100;
+
+        canvas.width = painting.width * blockSize;
+        canvas.height = painting.height * blockSize;
+
+        drawPainting(context, painting, blockSize);
+        updateColorOptions(painting);
+    }
+
+    document.getElementById("pixelbox").addEventListener("click", handleClick);
+    document.getElementById("check").addEventListener("click", checkPainting);
+    document.getElementById("restart").addEventListener("click", restartGame);
+
+    window.onload = restartGame;
+</script>
