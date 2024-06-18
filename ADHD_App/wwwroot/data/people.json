@@ -53,6 +53,7 @@
       "images/Book.png",
       "kind.jpg"
     ],
+    "Breaks": {},
     "SubjectProgress": [
       {
         "Subject": "Rekenen",
@@ -113,7 +114,18 @@
     "EnergyOfTheDay": [],
     "Appointments": null,
     "ProfilePicture": null,
-    "unlockedImages": null
+    "unlockedImages": null,
+    "Breaks": {},
+    "SubjectProgress": [
+      {
+        "Subject": "Rekenen",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Taal",
+        "Progresslevel": 1
+      }
+    ]
   },
   {
     "Id": 3,
@@ -126,10 +138,24 @@
     "Phonenumber": null,
     "Username": null,
     "Password": null,
-    "EnergyOfTheDay": [],
+    "EnergyOfTheDay": [
+      42,
+      44
+    ],
     "Appointments": null,
     "ProfilePicture": null,
-    "unlockedImages": null
+    "unlockedImages": null,
+    "Breaks": {},
+    "SubjectProgress": [
+      {
+        "Subject": "Rekenen",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Taal",
+        "Progresslevel": 1
+      }
+    ]
   },
   {
     "Id": 4,
@@ -145,7 +171,18 @@
     "EnergyOfTheDay": [],
     "Appointments": null,
     "ProfilePicture": null,
-    "unlockedImages": null
+    "unlockedImages": null,
+    "Breaks": {},
+    "SubjectProgress": [
+      {
+        "Subject": "Rekenen",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Taal",
+        "Progresslevel": 1
+      }
+    ]
   },
   {
     "Id": 5,
@@ -161,7 +198,18 @@
     "EnergyOfTheDay": [],
     "Appointments": null,
     "ProfilePicture": null,
-    "unlockedImages": null
+    "unlockedImages": null,
+    "Breaks": {},
+    "SubjectProgress": [
+      {
+        "Subject": "Rekenen",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Taal",
+        "Progresslevel": 1
+      }
+    ]
   },
   {
     "Id": 6,
@@ -177,7 +225,18 @@
     "EnergyOfTheDay": [],
     "Appointments": null,
     "ProfilePicture": null,
-    "unlockedImages": null
+    "unlockedImages": null,
+    "Breaks": {},
+    "SubjectProgress": [
+      {
+        "Subject": "Rekenen",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Taal",
+        "Progresslevel": 1
+      }
+    ]
   },
   {
     "Id": 7,
@@ -193,7 +252,18 @@
     "EnergyOfTheDay": [],
     "Appointments": null,
     "ProfilePicture": null,
-    "unlockedImages": null
+    "unlockedImages": null,
+    "Breaks": {},
+    "SubjectProgress": [
+      {
+        "Subject": "Rekenen",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Taal",
+        "Progresslevel": 1
+      }
+    ]
   },
   {
     "Id": 8,
@@ -211,7 +281,18 @@
     ],
     "Appointments": null,
     "ProfilePicture": null,
-    "unlockedImages": null
+    "unlockedImages": null,
+    "Breaks": {},
+    "SubjectProgress": [
+      {
+        "Subject": "Rekenen",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Taal",
+        "Progresslevel": 1
+      }
+    ]
   },
   {
     "Id": 9,
@@ -227,7 +308,18 @@
     "EnergyOfTheDay": [],
     "Appointments": null,
     "ProfilePicture": null,
-    "unlockedImages": null
+    "unlockedImages": null,
+    "Breaks": {},
+    "SubjectProgress": [
+      {
+        "Subject": "Rekenen",
+        "Progresslevel": 1
+      },
+      {
+        "Subject": "Taal",
+        "Progresslevel": 1
+      }
+    ]
   },
   {
     "Id": 10,
@@ -249,6 +341,7 @@
       "images/stickFigure.png",
       "images/kind.jpg"
     ],
+    "Breaks": {},
     "SubjectProgress": [
       {
         "Subject": "Rekenen",
@@ -296,6 +389,7 @@
       "images/stickFigure.png",
       "images/kind.jpg"
     ],
+    "Breaks": {},
     "SubjectProgress": [
       {
         "Subject": "Rekenen",
@@ -308,6 +402,10 @@
       {
         "Subject": "verkeer",
         "Progresslevel": 6
+      },
+      {
+        "Subject": "engels",
+        "Progresslevel": 1
       }
     ]
   }

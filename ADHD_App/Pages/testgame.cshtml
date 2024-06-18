@@ -86,6 +86,7 @@
         { dutch: 'auto', english: 'car' },
     ];
     let score = 0;
+    let maxscore = 10;
     let currentWord = {};
     let currentLanguage = '';
 
@@ -94,9 +95,14 @@
     }
 
     function showNewWord() {
-        currentWord = getRandomWord();
-        currentLanguage = Math.random() > 0.5 ? 'english' : 'dutch';
-        document.getElementById('dutchWord').innerText = currentWord[currentLanguage];
+        if (score < 10) {
+            currentWord = getRandomWord();
+            currentLanguage = Math.random() > 0.5 ? 'english' : 'dutch';
+            document.getElementById('dutchWord').innerText = currentWord[currentLanguage];
+        } else {
+            alert("You won!! Je hebt gewonnen!! Yahoo!!!")
+            home()
+        }
     }
 
     function createCircleText(text, language, correct) {
@@ -177,6 +183,63 @@
                 createCircleText(incorrectText, incorrectLanguage, false);
             }
         }, 1000);
+    }
+
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+
+    function home() {
+        const userId = getCookie("id");
+        const subject = "engels"; 
+
+        if (score == 10) {
+            fetch(`/api/SubjectAndProgressController/updateProgress?userId=${userId}&subject=${subject}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('Progress updated successfully.');
+                        // Redirect only after the progress update is successful
+                        window.location.href = "/SchoolTasks";
+                    } else {
+                        console.error('Failed to update progress.');
+                        // Handle failure scenario if needed
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        } else {
+            // If condition is not met, redirect immediately
+            window.location.href = "/SchoolTasks";
+        }
+    }
+
+
+    function submitOrder() {
+        fetch('/schoolTasks', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ lijnen })
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                // Clear the button order after submission if needed
+                clickOrder = [];
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
     }
 
     startGame();
