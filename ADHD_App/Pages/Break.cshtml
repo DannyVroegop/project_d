@@ -104,13 +104,10 @@
                 uitloggen
             </a>
         </li>
-
-        <!-- Add other links as needed -->
     </ul>
 </nav>
 
 <div class="header-box">
-    @* Todo: klok toevoegen *@
     <img src="images/breakheader.jpg" alt="Header">
     <h1>Tijd om even pauze te nemen!</h1>
 </div>
@@ -134,16 +131,18 @@
     </div>
 
     <div class="game-item">
-        <img src="images/puzzel.jpg" alt="Header">
+        <a href="PixelartGame">
+        <img src="images/pixelartimage.png" alt="Header">
         <h2>Pixelart</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </a>
     </div>
 </div>
 
 <script>
     //Pauze tijd ophalen van de BreakService
    
-    var secleft = @Model.breakService.SecondsLeft(Model.People);
+    var secleft = @Model.breakService.SecondsLeft(@Model.People);
     var text = document.getElementById("timer");
     function update() 
     {

@@ -81,6 +81,10 @@
       "PackagePath": "staticwebassets\\images\\logOut.png"
     },
     {
+      "Id": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Informatica\\Jaar 2\\Project D\\project d 2024_2025\\project_d\\ADHD_App\\wwwroot\\images\\pixelartimage.png",
+      "PackagePath": "staticwebassets\\images\\pixelartimage.png"
+    },
+    {
       "Id": "C:\\Users\\soufi\\OneDrive - Hogeschool Rotterdam\\Informatica\\Jaar 2\\Project D\\project d 2024_2025\\project_d\\ADHD_App\\wwwroot\\images\\profile.png",
       "PackagePath": "staticwebassets\\images\\profile.png"
     },

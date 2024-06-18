@@ -49,7 +49,8 @@
       20,
       80,
       20,
-      20
+      20,
+      10
     ],
     "Appointments": null,
     "ProfilePicture": "images/Book.png",
@@ -58,7 +59,8 @@
       "kind.jpg"
     ],
     "Breaks": {
-      "2024-06-18T09:18:20.2252055+02:00": "2024-06-18T09:33:20.2252055+02:00"
+      "2024-06-18T09:18:20.2252055+02:00": "2024-06-18T09:33:20.2252055+02:00",
+      "2024-06-18T12:49:35.4803605+02:00": "2024-06-18T13:04:35.4803605+02:00"
     }
   },
   {
@@ -70,12 +72,15 @@
     "Group": "5",
     "Email": "h@y",
     "Phonenumber": "089475858",
-    "Username": "abcdef",
-    "Password": "1234r567!",
+    "Username": "3",
+    "Password": "3",
     "EnergyOfTheDay": [
       5,
       7,
-      77
+      77,
+      10,
+      80,
+      20
     ],
     "Appointments": null,
     "ProfilePicture": "images/Book.png",
@@ -83,7 +88,9 @@
       "images/stickFigure.png",
       "images/kind.jpg"
     ],
-    "Breaks": {}
+    "Breaks": {
+      "2024-06-18T13:37:48.6776433+02:00": "2024-06-18T13:52:48.6776433+02:00"
+    }
   },
   {
     "Id": 2,

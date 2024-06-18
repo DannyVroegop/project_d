@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Snakegame";
 }
+
 <style>
     .snake-box
     {
@@ -15,21 +16,87 @@
     }
     .back-button {
             position: absolute;
-            top: 30px;
+            top: 100px;
             left: 30px;
             width: 200px;
             height: 50px;
         }
-
-    
+    #timer{
+            font-size: 20px;
+            color: white;
+            margin: auto;
+    }
 </style>
+
+<nav class="taskbar">
+    <ul>
+        <li>
+            <a href="/home">
+                <img src="images/Home.png" alt="Home" style="height: 40px; width: 40px;" />
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/EnergiePopUp">
+                <img src="images/EnergiePic.png" alt="Home" style="height: 40px; width: 40px;" />
+                Energie meten
+            </a>
+        </li>
+        <li id="timer"></li>
+        <li>
+        <div style="width: 600px;"></div>
+       
+        </li>
+        <li>
+            <a href="/">
+                <img src="images/LogOut.png" alt="Home" style="height: 40px; width: 40px;" />
+                uitloggen
+            </a>
+        </li>
+
+    </ul>
+</nav>
 <button class="back-button" onclick="window.location.href = '/Break';">Terug naar pauze menu</button>
 
 
 <div class="snake-box">
     <h2>Snake</h2>
     <canvas id= "box"></canvas>
+    <button id="restartButton">Speel opnieuw</button>
 </div>
+
+
+<script>
+    //Pauze tijd ophalen van de BreakService
+   
+    var secleft = @Model.breakService.SecondsLeft(Model.People);
+    var text = document.getElementById("timer");
+    function update() 
+    {
+        
+        var minutes = Math.floor(secleft / 60);
+        var seconds = secleft % 60;
+
+        //aantal secondes bestaat altijd uit 2 cijfers
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+
+        text.textContent = "Resterende tijd: " + minutes + ":" + seconds;
+
+        // Check of pauze voorbij is
+        if (secleft < 0) {
+            window.location.href = "/Home";
+            text.textContent = "Pauze is voorbij";
+        }
+
+        //-1 seconde iedere keer
+        secleft--;
+    }
+
+    // Update elke keer
+    setInterval(update, 1000);
+</script>
 
 <script>
     //Javascript code
@@ -64,6 +131,11 @@
         document.addEventListener("keyup", directionhandler);
         //zorgt ervoor dat de update methode om de 100 ms wordt uitgevoerd
         setInterval(update, 1000/10);
+
+        var restartButton = document.getElementById("restartButton");
+        restartButton.addEventListener('click', function () {
+            resetGame();
+        });
     }
 
     function update()
@@ -169,5 +241,14 @@
         }
     }
 
+    function resetGame() {
+        snakeX = blocksize * 10;
+        snakeY = blocksize * 10;
+        speedX = 0;
+        speedY = 0;
+        points = [];
+        gameover = false;
+        moveapple();
+    }
+
 </script>
-    
