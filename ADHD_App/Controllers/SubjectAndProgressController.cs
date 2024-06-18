@@ -17,12 +17,32 @@ namespace ADHD_App.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<List<SubjectProgress>> Get()
+        public List<Exercise> Get()
         {
             var subjectprogress = _json.GetAllPeople().Where(x => x.Id == int.Parse(Request.Cookies["id"])).Select(x => x.SubjectProgress);
-            return subjectprogress;
+            var listOfQuestionAndAwnsers = _json.GetAllExercises();
+            List<Exercise> exercises = new List<Exercise>();
+
+            foreach (var item in subjectprogress)
+            {
+                foreach (var item2 in item)
+                {
+           
+
+                    Exercise add = listOfQuestionAndAwnsers.FirstOrDefault(x => x.Subject == item2.Subject && x.Progresslevel == item2.Progresslevel);
+
+                    Exercise a1 = new Exercise(item2.Subject, item2.Progresslevel, add.Type);
+                    exercises.Add(a1);
+                }
+            }
+
+
+
+
+
+            return exercises;
             // List<SubjectProgress> questionsAndAnswers = new List<SubjectProgress>();
-            
+
             // return new List<SubjectProgress>
             // {
             //     new QuestionAnswerPair { Question = "What is C#?", Answer = "A programming language." },

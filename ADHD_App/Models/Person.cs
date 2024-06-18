@@ -66,9 +66,9 @@ namespace ADHD_App.Models
                     Subject = "Taal",
                     Progresslevel = 1
                 }
-            
+
             };
-            
+
         }
     }
 }

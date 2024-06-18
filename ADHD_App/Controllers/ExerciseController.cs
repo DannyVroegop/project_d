@@ -24,39 +24,20 @@ namespace ADHD_App.Controllers
             string vak = Request.Query["vak"];
             int progress = int.Parse(Request.Query["progress"]);
             listOfQuestionAndAwnsers = listOfQuestionAndAwnsers.FindAll(x => x.Subject == vak && x.Progresslevel == progress);
-            // Console.WriteLine(vak);
-            // Console.WriteLine(progress);
-            foreach (var qa in listOfQuestionAndAwnsers)
-            {
-                Console.WriteLine("hi");
-                Console.WriteLine(listOfQuestionAndAwnsers[0].QuestionsAndAnswers[2].Question);
-
-                foreach (var questionAndAnswer in qa.QuestionsAndAnswers)
-                {
-                    Console.WriteLine($"Question: {questionAndAnswer.Question}, Answer: {questionAndAnswer.Answer}");
-                }
-            }
 
 
-            QuestionAnswerPair a1 = new QuestionAnswerPair(listOfQuestionAndAwnsers[0].QuestionsAndAnswers[0].Question, listOfQuestionAndAwnsers[0].QuestionsAndAnswers[0].Answer);
-            QuestionAnswerPair a2 = new QuestionAnswerPair(listOfQuestionAndAwnsers[0].QuestionsAndAnswers[1].Question, listOfQuestionAndAwnsers[0].QuestionsAndAnswers[1].Answer);
-            QuestionAnswerPair a3 = new QuestionAnswerPair(listOfQuestionAndAwnsers[0].QuestionsAndAnswers[2].Question, listOfQuestionAndAwnsers[0].QuestionsAndAnswers[2].Answer);
+            string[] awnsers = new string[3];
+            awnsers[0] = listOfQuestionAndAwnsers[0].QuestionsAndAnswers[0].Answer;
+            awnsers[1] = listOfQuestionAndAwnsers[0].QuestionsAndAnswers[1].Answer;
+            awnsers[2] = listOfQuestionAndAwnsers[0].QuestionsAndAnswers[2].Answer;
+            Shuffle(awnsers);
 
-            // Print the questions and answers
-            // foreach (var qa in listOfQuestionAndAwnsers)
-            // {
-            //     foreach (var questionAndAnswer in qa.QuestionsAndAnswers)
-            //     {
-            //         Console.WriteLine($"Question: {questionAndAnswer.Question}, Answer: {questionAndAnswer.Answer}");
-            //     }
+            QuestionAnswerPair a1 = new QuestionAnswerPair(listOfQuestionAndAwnsers[0].QuestionsAndAnswers[0].Question, awnsers[0]);
+            QuestionAnswerPair a2 = new QuestionAnswerPair(listOfQuestionAndAwnsers[0].QuestionsAndAnswers[1].Question, awnsers[1]);
+            QuestionAnswerPair a3 = new QuestionAnswerPair(listOfQuestionAndAwnsers[0].QuestionsAndAnswers[2].Question, awnsers[2]);
 
 
-            // }
 
-            // var temp = listOfQuestionAndAwnsers.Select(x => x.QuestionsAndAnswers);
-            // return temp.ToList()[0];
-
-            // List<QuestionAnswerPair> questionsAndAnswers = new List<QuestionAnswerPair>();
 
             return new List<QuestionAnswerPair>
             {
@@ -66,5 +47,18 @@ namespace ADHD_App.Controllers
 
             };
         }
+    public static void Shuffle(string[] array)
+    {
+        Random rng = new Random();
+        int n = array.Length;
+        while (n > 1)
+        {
+            n--;
+            int k = rng.Next(n + 1);
+            string value = array[k];
+            array[k] = array[n];
+            array[n] = value;
+        }
+    }
     }
 }

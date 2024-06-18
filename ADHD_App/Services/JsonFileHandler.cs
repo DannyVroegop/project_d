@@ -103,32 +103,22 @@ namespace ADHD_App.Services
             });
             File.WriteAllText(FileName, jsonString);
         }
-        public bool UpdateProgressLevel(int userId, string subject)
+        public async void UpdateSubjectProgress(int id, string subject, int newProgressLevel)
         {
-            try
+            var people = GetAllPeople();
+            Person person = people.FirstOrDefault(x => x.Id == id);
+            foreach (var progress in person.SubjectProgress)
             {
-                var people = GetAllPeople();
-                var person = people.FirstOrDefault(p => p.Id == userId);
-                if (person == null) return false;
-
-                var subjectProgress = person.SubjectProgress.FirstOrDefault(sp => sp.Subject == subject);
-                if (subjectProgress != null)
+                if (progress.Subject.Equals(subject, StringComparison.OrdinalIgnoreCase))
                 {
-                    subjectProgress.Progresslevel += 1;
-                    SavePeople(people);
-                    return true;
+                    progress.Progresslevel = newProgressLevel;
                 }
-                return false;
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine("Error updating progress level: ");
-                Debug.WriteLine(ex.Message);
-                return false;
-            }
+            // Thread.Sleep(10000);
+            var cancellationTokenSource = new CancellationTokenSource();
+            cancellationTokenSource.CancelAfter(10000);
+            await Task.Delay(2000, cancellationTokenSource.Token);
+            SavePeople(people);
         }
-
     }
-
-    
 }
