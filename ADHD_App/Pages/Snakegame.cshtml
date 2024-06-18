@@ -1,0 +1,173 @@
+@page
+@model ADHD_App.Pages.Snakegame
+@{
+    ViewData["Title"] = "Snakegame";
+}
+<style>
+    .snake-box
+    {
+        text-align: center;
+    }
+
+    .snake-box h2{
+        color: white;
+        margin-top: 40px;
+    }
+    .back-button {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 200px;
+            height: 50px;
+        }
+
+    
+</style>
+<button class="back-button" onclick="window.location.href = '/Break';">Terug naar pauze menu</button>
+
+
+<div class="snake-box">
+    <h2>Snake</h2>
+    <canvas id= "box"></canvas>
+</div>
+
+<script>
+    //Javascript code
+
+    //Het bord
+    var blocksize = 25;
+    var rows = 20;
+    var cols = 20;
+    var box;
+    var context;
+
+    //De slang start
+    var snakeX = blocksize * 10;
+    var snakeY = blocksize * 10;
+    var speedX = 0;
+    var speedY = 0;
+    var points = [];
+
+   //De appel start
+    var appleX;
+    var appleY;
+    
+    var gameover = false;
+
+    window.onload = function() {
+        box = document.getElementById("box");
+        box.height = rows * blocksize;
+        box.width = cols * blocksize;
+        context = box.getContext("2d");
+
+        moveapple();
+        document.addEventListener("keyup", directionhandler);
+        //zorgt ervoor dat de update methode om de 100 ms wordt uitgevoerd
+        setInterval(update, 1000/10);
+    }
+
+    function update()
+    {
+        if (gameover == true)
+        {
+            return;
+        }
+        //grootte van het bord
+        context.fillStyle="black";
+        context.fillRect(0, 0, box.width, box.height);
+
+        //appel
+        context.fillStyle="red";
+        context.fillRect(appleX, appleY, blocksize, blocksize);
+
+        if (snakeX == appleX && snakeY == appleY)
+        {
+            points.push([appleX, appleY]);
+            moveapple();
+        }
+
+        for (let i = points.length -1; i> 0;i --)
+        {
+            points[i] = points[i -1];
+        }
+
+        if (points.length)
+        {
+            points[0] = [snakeX, snakeY];
+        }
+        //slang
+        //to do: gebruiker kan kleur kiezen
+        context.fillStyle="yellow";
+        snakeX += speedX * blocksize;
+        snakeY += speedY * blocksize;
+        context.fillRect(snakeX, snakeY, blocksize, blocksize);
+        //slang word groter
+        for (let i = 0; i < points.length; i ++)
+        {
+            context.fillRect(points[i][0], points[i][1], blocksize, blocksize);
+        }
+
+        checkgameover();
+        
+
+    }
+
+    //apple moet telkens op een random plek worden geplaatst
+    function moveapple()
+    {
+        // genereert getal tussen 0 en 25(exclusive)
+        var x = Math.floor(Math.random() * cols);
+        appleX = x * blocksize;
+        var y = Math.floor(Math.random() * rows);
+        appleY = y * blocksize;
+
+    }
+
+    function directionhandler(i)
+    {
+        if (i.code == "ArrowUp" && speedY != 1)
+        {            
+            speedX = 0;
+            speedY = -1;
+        }
+        else if (i.code == "ArrowDown" && speedY != -1)
+        {            
+            speedX = 0;
+            speedY = 1;
+        }
+        else if (i.code == "ArrowLeft" && speedX != 1)
+        {            
+            speedX = -1;
+            speedY = 0;
+        }
+        else if (i.code == "ArrowRight" && speedX != -1)
+        {            
+            speedX = 1;
+            speedY = 0;
+        }
+    }
+
+    function checkgameover()
+    {
+        //rand aangeraakt
+        if (snakeX < 0 || snakeX >= cols * blocksize || snakeY < 0 || snakeY > rows * blocksize)
+        {
+            gameover = true;
+            alert("Game over! Je hebt de randen aangeraakt");
+            return;
+        }
+
+        //checkt of de head gelijk is aan een bodypart (zichzelf opgegeten)
+        for (let i = 0; i < points.length; i ++)
+        {
+            if (snakeX == points[i][0] && snakeY == points[i][1])
+            {
+            gameover = true;
+            alert("Game over! Je hebt jezelf opgegeten");
+            return;
+            }
+        }
+    }
+
+</script>
+    

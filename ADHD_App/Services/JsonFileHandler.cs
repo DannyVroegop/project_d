@@ -89,6 +89,7 @@ namespace ADHD_App.Services
                 personToUpdate.Phonenumber = updatedPerson.Phonenumber;
                 personToUpdate.Date_of_Birth = updatedPerson.Date_of_Birth;
                 personToUpdate.Group = updatedPerson.Group;
+                personToUpdate.Breaks = updatedPerson.Breaks;
 
                 SavePeople(people);
             }

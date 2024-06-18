@@ -1,0 +1,218 @@
+@page
+@model ADHD_App.Pages.MazeGame
+@{
+    ViewData["Title"] = "Doolhof oplossen";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+
+        }
+
+        canvas {
+            display: block;
+            margin: 20px auto;
+            border: none;
+            background-color: rgb(39, 98, 102);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 210px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="back-button" onclick="window.location.href = '/Break';">Terug naar pauze menu</button>
+        <h1 style="color: white;">@ViewData["Title"]</h1>
+        <canvas id="mazeCanvas" width="600" height="400" style="border: 6px solid rgb(97, 153, 24);"></canvas>
+        <button id="resetButton">Nieuw Spel</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const canvas = document.getElementById('mazeCanvas');
+            const ctx = canvas.getContext('2d');
+            const resetButton = document.getElementById('resetButton');
+
+            const tileSize = 20;
+            const mazeWidth = 30;
+            const mazeHeight = 20;
+
+            let maze = generateMaze(mazeWidth, mazeHeight);
+
+            const player = {
+                x: 1,
+                y: 1,
+                size: tileSize,
+                color: 'yellow'
+            };
+
+            const goal = {
+                x: mazeWidth - 2,
+                y: mazeHeight - 2,
+                size: tileSize,
+                color: 'pink'
+            };
+
+            function generateMaze(width, height) {
+                // Initialize maze with all walls
+                const maze = [];
+                for (let i = 0; i < height; i++) {
+                    maze[i] = [];
+                    for (let j = 0; j < width; j++) {
+                        maze[i][j] = 1;
+                    }
+                }
+
+                // Generate maze using Recursive Backtracking algorithm
+                const stack = [];
+                let currentCell = { x: 1, y: 1 };
+                maze[currentCell.y][currentCell.x] = 0;
+
+                function getUnvisitedNeighbors(cell) {
+                    const neighbors = [];
+                    const { x, y } = cell;
+                    const directions = [
+                        { dx: 0, dy: -2 },
+                        { dx: 2, dy: 0 },
+                        { dx: 0, dy: 2 },
+                        { dx: -2, dy: 0 }
+                    ];
+
+                    for (const dir of directions) {
+                        const nx = x + dir.dx;
+                        const ny = y + dir.dy;
+                        if (nx >= 0 && ny >= 0 && nx < width && ny < height && maze[ny][nx] === 1) {
+                            neighbors.push({ x: nx, y: ny });
+                        }
+                    }
+
+                    return neighbors;
+                }
+
+                while (true) {
+                    const neighbors = getUnvisitedNeighbors(currentCell);
+                    if (neighbors.length > 0) {
+                        const nextCell = neighbors[Math.floor(Math.random() * neighbors.length)];
+                        stack.push(currentCell);
+                        const { x: cx, y: cy } = currentCell;
+                        const { x: nx, y: ny } = nextCell;
+                        maze[(cy + ny) / 2][(cx + nx) / 2] = 0;
+                        maze[ny][nx] = 0;
+                        currentCell = nextCell;
+                    } else if (stack.length > 0) {
+                        currentCell = stack.pop();
+                    } else {
+                        break;
+                    }
+                }
+
+                // Set the goal cell to 0 and ensure it's reachable
+                maze[mazeHeight - 2][mazeWidth - 2] = 0;
+
+                return maze;
+            }
+
+            function drawMaze() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                for (let row = 0; row < maze.length; row++) {
+                    for (let col = 0; col < maze[row].length; col++) {
+                        if (maze[row][col] === 1) {
+                            ctx.fillStyle = 'black';
+                            ctx.fillRect(col * tileSize, row * tileSize, tileSize, tileSize);
+                        }
+                    }
+                }
+
+                ctx.fillStyle = goal.color;
+                ctx.fillRect(goal.x * tileSize, goal.y * tileSize, goal.size, goal.size);
+
+                ctx.fillStyle = player.color;
+                ctx.fillRect(player.x * tileSize, player.y * tileSize, player.size, player.size);
+            }
+
+            function movePlayer(event) {
+                const key = event.key;
+
+                let newX = player.x;
+                let newY = player.y;
+
+                switch (key) {
+                    case 'ArrowUp':
+                        newY -= 1;
+                        break;
+                    case 'ArrowDown':
+                        newY += 1;
+                        break;
+                    case 'ArrowLeft':
+                        newX -= 1;
+                        break;
+                    case 'ArrowRight':
+                        newX += 1;
+                        break;
+                }
+
+                // Ensure the new position is within the maze boundaries
+                if (newX >= 0 && newY >= 0 && newX < mazeWidth && newY < mazeHeight) {
+                    if (maze[newY][newX] === 0) {
+                        player.x = newX;
+                        player.y = newY;
+                    }
+                }
+
+                drawMaze();
+
+                if (player.x === goal.x && player.y === goal.y) {
+                    alert('You win!');
+                    location.reload();
+                }
+            }
+
+            function resetGame() {
+                player.x = 1;
+                player.y = 1;
+                maze = generateMaze(mazeWidth, mazeHeight);
+                drawMaze();
+            }
+
+            drawMaze();
+            document.addEventListener('keydown', movePlayer);
+            resetButton.addEventListener('click', resetGame);
+        });
+    </script>
+</body>
+
+</html>

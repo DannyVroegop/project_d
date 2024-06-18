@@ -5,16 +5,16 @@ using ADHD_App.Services;
 namespace ADHD_App.Pages
 {
 
-    public class HomeModel : PageModel
+    public class BreakModel : PageModel
     {
-        private readonly ILogger<HomeModel> _logger;
+        private readonly ILogger<BreakModel> _logger;
         public JsonFilePeopleService PeopleService;
         public JsonFileHandler Jsonfilehandler;
         public BreakService breakService;
         //public JsonFileUserInfoService UserInfoService;
         public Person People { get; private set; }
 
-        public HomeModel(ILogger<HomeModel> logger,
+        public BreakModel(ILogger<BreakModel> logger,
             JsonFilePeopleService productService, JsonFileHandler jsonfilehandler)
         {
             _logger = logger;

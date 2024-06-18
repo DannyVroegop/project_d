@@ -75,14 +75,6 @@ body {
     margin-top: 10px;
 }
 
-/* Registreren */
-.register-box {
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-    width: 500px;
-    height: 500px;
-    padding: 20px;
-}
 
 .home-bar {
     width: 50px;
@@ -139,6 +131,24 @@ body {
 
 .home-button {
     color: rgba(114, 235, 21, 0.7)
+}
+
+
+.change {
+    display: none;
+  }		
+.popupbox:hover + .change {
+    width: 400px;
+    height: 400px;
+    display: block;
+    position: absolute;
+    color: black;
+    background-color: white;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    z-index: 1;
+    right: 100px;
 }
 
 .EnergiePopUp {
