@@ -52,7 +52,7 @@ namespace ADHD_App.Controllers
                 }
             }
 
-            if (score == 3)
+            if (score >= 3)
             {
                 _json.UpdateSubjectProgress(int.Parse(Request.Cookies["id"]), vak, currProgress + 1);
                 return Ok("{\"result\": \"goed\"}");
